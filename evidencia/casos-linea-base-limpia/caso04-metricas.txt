@@ -1,0 +1,42 @@
+CASO-04 · REVISIÓN METODOLÓGICA · SOLO OFFLINE
+
+DATOS REALES: únicamente baseline normal asumido. ANOMALÍAS: SOLO SINTÉTICAS.
+Baseline SHA256: 6fbe5c7939dfcc5cf254f1bb88d9081ede6ee287e0f91933dbdf602bb66b4427
+Ventanas completas: 29 de 10 s; cola descartada: 3.257370 s (2 paquetes TCP/UDP).
+Train normal: ventanas [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]; embargo: [17]; test normal: [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28].
+Test sintético: 22 variantes sobre 11 ventanas padre de test (SYN/DNS).
+Features (30): n_pkts, n_bytes, n_flows, n_dst_ports, bytes_per_flow, flow_duration_mean_s, flow_duration_max_s, packets_per_s, bytes_per_s, flows_per_min, n_syn, n_syn_ack, n_ack, n_reset, n_fin, syn_ratio, reset_ratio, n_tcp_syn_attempts, connections_per_min, request_count, response_count, request_response_ratio, requests_without_response, requests_per_s, responses_per_s, dns_queries, dns_responses, dns_query_length_mean, http_requests, http_responses
+
+Resultados SOLO TEST; filas=etiqueta, columnas=predicción; orden [normal, anomalía].
+N/A = no definida o no informada por clase única; no se convierte en cero.
+
+real_normal_only:
+  zscore: n=11, CM=[[11, 0], [0, 0]]; accuracy=1.000; precision=N/A; recall=N/A; f1=N/A; false_positive_rate=0.000
+  iforest: n=11, CM=[[6, 5], [0, 0]]; accuracy=0.545; precision=N/A; recall=N/A; f1=N/A; false_positive_rate=0.455
+
+synthetic_syn_only:
+  zscore: n=11, CM=[[0, 0], [0, 11]]; accuracy=1.000; precision=N/A; recall=1.000; f1=N/A; false_positive_rate=N/A
+  iforest: n=11, CM=[[0, 0], [0, 11]]; accuracy=1.000; precision=N/A; recall=1.000; f1=N/A; false_positive_rate=N/A
+
+synthetic_dns_only:
+  zscore: n=11, CM=[[0, 0], [0, 11]]; accuracy=1.000; precision=N/A; recall=1.000; f1=N/A; false_positive_rate=N/A
+  iforest: n=11, CM=[[0, 0], [0, 11]]; accuracy=1.000; precision=N/A; recall=1.000; f1=N/A; false_positive_rate=N/A
+
+mixed_didactic_NOT_independent:
+  zscore: n=33, CM=[[11, 0], [0, 22]]; accuracy=1.000; precision=1.000; recall=1.000; f1=1.000; false_positive_rate=0.000
+  iforest: n=33, CM=[[6, 5], [0, 22]]; accuracy=0.848; precision=0.815; recall=1.000; f1=0.898; false_positive_rate=0.455
+
+ADVERTENCIAS:
+- MUESTRA PEQUEÑA: un único baseline; ventanas correlacionadas, no sujetos independientes.
+- No hay anomalías reales de test: solo normales reales y anomalías SINTÉTICAS tabulares.
+- Las variantes SYN/DNS comparten fondo con su ventana real de test; no aumentan el N independiente.
+- No permite generalización, comparación fuerte entre detectores ni medidas automáticas de bloqueo.
+- Normal es una suposición del segmento baseline, no una certificación de ausencia de ataques.
+- Duraciones truncadas a cada ventana; SYN únicos son intentos observados, no conexiones establecidas.
+- Solo TCP/UDP IPv4/IPv6 decodificados; DNS/HTTP según tshark (sin descifrar TLS, primera ocurrencia).
+- Sin validación externa ni ajuste de hiperparámetros: umbrales prefijados, no elegidos mirando test.
+
+Z-score: media/std SOLO train (ddof=0); |z|>3 en cualquier feature no constante.
+Feature constante: alerta si cambio absoluto >1e-9. Sin calibración sobre test.
+IsolationForest: 200 árboles, contamination=auto, semilla 42, umbral nativo (offset=-0.5).
+Screenshot caso04-consola.png HISTÓRICO/OBSOLETO: conservar y recapturar como caso04-consola-revisada.png.

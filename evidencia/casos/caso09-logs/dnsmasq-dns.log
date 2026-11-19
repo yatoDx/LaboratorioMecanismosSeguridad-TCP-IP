@@ -1,0 +1,60 @@
+Nov 18 20:16:41 dns dnsmasq[1751]: query[A] presence.roblox.com from 192.168.50.10
+Nov 18 20:16:41 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:16:41 dns dnsmasq[1751]: query[A] users.roblox.com from 192.168.50.10
+Nov 18 20:16:41 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:17:00 dns dnsmasq[1751]: query[A] center.qoder.sh from 192.168.50.10
+Nov 18 20:17:00 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:17:00 dns dnsmasq[1751]: query[A] center.qoder.sh from 192.168.50.10
+Nov 18 20:17:00 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:17:00 dns dnsmasq[1751]: query[A] openapi.qoder.sh from 192.168.50.10
+Nov 18 20:17:00 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:17:05 dns dnsmasq[1751]: query[A] ecsv2.roblox.com from 192.168.50.10
+Nov 18 20:17:05 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:17:09 dns dnsmasq[1751]: query[A] btardsb9ml-default-sea.rum.aliyuncs.com from 192.168.50.10
+Nov 18 20:17:09 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:17:15 dns dnsmasq[1751]: query[A] main.vscode-cdn.net from 192.168.50.10
+Nov 18 20:17:15 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:17:16 dns dnsmasq[1751]: query[A] www.googleapis.com from 192.168.50.10
+Nov 18 20:17:16 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:17:16 dns dnsmasq[1751]: query[A] daily-cloudcode-pa.googleapis.com from 192.168.50.10
+Nov 18 20:17:16 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:17:16 dns dnsmasq[1751]: query[A] lh3.googleusercontent.com from 192.168.50.10
+Nov 18 20:17:16 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:17:17 dns dnsmasq[1751]: query[A] web.whatsapp.com from 192.168.50.10
+Nov 18 20:17:17 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:17:41 dns dnsmasq[1751]: query[A] users.roblox.com from 192.168.50.10
+Nov 18 20:17:41 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:00 dns dnsmasq[1751]: query[A] openapi.qoder.sh from 192.168.50.10
+Nov 18 20:18:00 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:02 dns dnsmasq[1751]: query[A] updates.overwolf.com from 192.168.50.10
+Nov 18 20:18:02 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:07 dns dnsmasq[1751]: query[A] ecsv2.roblox.com from 192.168.50.10
+Nov 18 20:18:07 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:14 dns dnsmasq[1751]: query[A] oauth2.googleapis.com from 192.168.50.10
+Nov 18 20:18:14 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:16 dns dnsmasq[1751]: query[A] openapi.qoder.sh from 192.168.50.10
+Nov 18 20:18:16 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:28 dns dnsmasq[1751]: query[A] btardsb9ml-default-sea.rum.aliyuncs.com from 192.168.50.10
+Nov 18 20:18:28 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:31 dns dnsmasq[1751]: query[A] metrics.roblox.com from 192.168.50.10
+Nov 18 20:18:31 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:31 dns dnsmasq[1751]: query[A] apis.roblox.com from 192.168.50.10
+Nov 18 20:18:31 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:39 dns dnsmasq[1751]: query[A] center.qoder.sh from 192.168.50.10
+Nov 18 20:18:39 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:40 dns dnsmasq[1751]: query[A] download.qoder.com.cn from 192.168.50.10
+Nov 18 20:18:40 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:41 dns dnsmasq[1751]: query[A] presence.roblox.com from 192.168.50.10
+Nov 18 20:18:41 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:41 dns dnsmasq[1751]: query[A] safebrowsing.googleapis.com from 192.168.50.10
+Nov 18 20:18:41 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:18:43 dns dnsmasq[1751]: query[A] web.whatsapp.com from 192.168.50.10
+Nov 18 20:18:43 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:19:01 dns dnsmasq[1751]: query[A] openapi.qoder.sh from 192.168.50.10
+Nov 18 20:19:01 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:19:09 dns dnsmasq[1751]: query[A] ecsv2.roblox.com from 192.168.50.10
+Nov 18 20:19:09 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:19:40 dns dnsmasq[1751]: query[A] btardsb9ml-default-sea.rum.aliyuncs.com from 192.168.50.10
+Nov 18 20:19:40 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:19:41 dns dnsmasq[1751]: query[A] users.roblox.com from 192.168.50.10
+Nov 18 20:19:41 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)

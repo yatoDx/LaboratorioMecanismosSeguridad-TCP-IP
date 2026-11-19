@@ -1,0 +1,1704 @@
+======================================================================
+ Evidencia - 2026-11-18 20:55:44.786462
+======================================================================
+archivo : evidencia/baseline-normal.pcapng
+tamano  : 212848 bytes
+mtime   : 2026-11-18 19:54:27.289294
+sha256  : 301ea4766c642919734e3649b1de4c049bb4bebeb8ff9b4125306322b3b076ff
+sha1    : dc2206301d0ef2f500965c1e03bb53cbd754b101
+md5     : a2fe033fe226c36a14bb82aec8c3092c
+----------------------------------------------------------------------
+archivo : evidencia/capturar-consola.ps1
+tamano  : 3431 bytes
+mtime   : 2026-11-18 20:11:20.247821
+sha256  : a5779e1b0c22c6a9edf8e38af9104568a6cc6a11c330c933383cc81034b4b269
+sha1    : 65bda33feefaec2acd66633d523d5e456e3d8b62
+md5     : c4a6247f279a816b7572dbf6c62c0ab7
+----------------------------------------------------------------------
+archivo : evidencia/capturar_pcap_wireshark.ps1
+tamano  : 2578 bytes
+mtime   : 2026-11-18 20:52:58.771923
+sha256  : 4e288dd07bf18f76c059163036aa29153778ff93ebd96455c3626d7a6fbcd2e2
+sha1    : 0cc013016571aebf3188d8c97c37abb9d0624cb9
+md5     : 381e2391f045437b17d6c3c4c36043b6
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso01-analisis.txt
+tamano  : 12070 bytes
+mtime   : 2026-11-18 20:50:49.486392
+sha256  : 8975b42b9d6c70f05ac9ecceb778504e0d9cb77152463b43e9a4fce80c2bb443
+sha1    : d3c55718aca31f81dc4a29c866bb276b2ed353d5
+md5     : 38ab89dbc4981a5cd30317f35a35e0ec
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso01-netstat-host.txt
+tamano  : 12740 bytes
+mtime   : 2026-11-18 20:04:37.064325
+sha256  : 6b2c9e973bedf8e38e587dca7d904d03b0f4ca2892e0c516e5db71cd10cab93f
+sha1    : 3d194822ba697ca6826b44149e1df8dd95bc6502
+md5     : 9fc2afbb07df8be316117ad6e7ff6a13
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso01-regla.nft
+tamano  : 701 bytes
+mtime   : 2026-11-18 20:44:33.926095
+sha256  : fc33058b0587f97ca84073b09119251165a5bda2f79552480723337991a58f20
+sha1    : 75ed4fa9d3ad1e774e5a37a7c12e59b366db2f44
+md5     : ba3fea035d1ff1b1b29d44fe636b1520
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso01-syn-rate.png
+tamano  : 69784 bytes
+mtime   : 2026-11-18 20:50:49.485413
+sha256  : c862e6bb9537ccc2c6bc616e7a9501d9f9fc2507c93a7ecafbf77be27d1795f4
+sha1    : 2aa61eb7bd57b3547471e0566ee9a20e8e0e12f2
+md5     : 3814aa0d650247c2769a630609ba017d
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso01-synflood-ratelimit.pcap
+tamano  : 19092 bytes
+mtime   : 2026-11-18 20:50:46.558676
+sha256  : 89875054c5728a4f5f84e352588a2ca6c1a5e0c17f12c0d5eac753164897865c
+sha1    : 127a3828c34d4f8fff99b268c889e7e119c19c80
+md5     : a9b85d567171077af89bb690c790a1a7
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso01-synflood.pcap
+tamano  : 30292 bytes
+mtime   : 2026-11-18 20:50:46.555745
+sha256  : cdb0035700ebd5db641e0908a15331ceae72148ed3604daa27f9b7496518de27
+sha1    : dac2c1b7f21789d32209e2dc3fb7259de9f5ca58
+md5     : f1618306a9b3b60da154c616f7dbe920
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso01-wireshark-final.png
+tamano  : 96038 bytes
+mtime   : 2026-11-18 20:53:17.716831
+sha256  : ec1b3a3b5159c2d256912e050af4af90b471302dc1c48227774c8eea0fc06208
+sha1    : 1ed303cbc6bf20e7dce930f3a8b28a9bb39f0126
+md5     : 88740113d3916483adf6a404b46d3bbd
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso01-wireshark.png
+tamano  : 93155 bytes
+mtime   : 2026-11-18 20:06:36.209738
+sha256  : 2ac9ab43ab4d94deaa51346d3b2d890e496cd32bbbaa5cc300f4e68b907ebe69
+sha1    : bdda64fde75459381ca8b11bf0bfdfb6fac3cd2c
+md5     : 9790656577323a15ffc6b7341b487ae1
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso02-analisis.txt
+tamano  : 1545 bytes
+mtime   : 2026-11-18 20:50:50.798065
+sha256  : e4ff374a9145bda388fb6e048613597ae3348d58ced9257ff280c96c8ccb4d68
+sha1    : 85ddd9e009dd3146f59cea928b13374edc315065
+md5     : 1fc9732265371ac048f33ecff9527605
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso02-dns-entropy.png
+tamano  : 54675 bytes
+mtime   : 2026-11-18 20:50:50.797084
+sha256  : ecf1fdec39da7af3712bf65bfb19c311db2353f59d2df829f0ee76f0c50a5f45
+sha1    : 3075557ce6debba5537d2d37d2ac69ba08a96065
+md5     : d6e622f6a13ebda91b4f7975cee2ffc0
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso02-dns-tunneling.pcap
+tamano  : 4344 bytes
+mtime   : 2026-11-18 20:50:46.614696
+sha256  : 4432598be91337ab04e6749604bfa9a2f16266ae3b264bd366d825c185da4988
+sha1    : 6982159ec38ed3f572b9025e7bf68edb8b43045b
+md5     : 127734d40d08658820d582ab81263071
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso02-dnsmasq-log.txt
+tamano  : 3323 bytes
+mtime   : 2026-11-18 20:08:54.043377
+sha256  : 87be6c3d6af0bf4ac27dc27a7e475c2954990859e6a29a1774ff292018a505d8
+sha1    : 2b42189e601150d0ddcfc997f50583fe7fbf2954
+md5     : f48250f07c50be7896341c88a32c0eec
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso02-regla-dns.nft
+tamano  : 878 bytes
+mtime   : 2026-11-18 20:44:34.119829
+sha256  : 189c35e95e2950ce42850f6f9d13f7689c79dac75ee19d9e76a68b25ca15619e
+sha1    : a4b3d6394a0f877e6f0c1651f8e0b412b3f7c3ab
+md5     : 00e2e05cd4a6829996180ce2b5e7240c
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso02-wireshark-final.png
+tamano  : 104356 bytes
+mtime   : 2026-11-18 20:53:24.741350
+sha256  : 94c23f5c832d5406d557fba33dbd12a3d1825b5230ac4122f002cb7ddb6c228a
+sha1    : 25df7aa1d2358cfc018d1572e19d9ede7094ed39
+md5     : 3b282e0cea456f46f563856ba9dd6dbb
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso02-wireshark.png
+tamano  : 104310 bytes
+mtime   : 2026-11-18 20:09:35.722774
+sha256  : d5971654d6ebd0469d612a77a200d370de36d4108de28052521e0b11569f26b1
+sha1    : e09b4bb339865e418b00834a13fe2eeaa015933c
+md5     : 908a44c04c7873a830f176bccdbe230e
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso03-auth-events.txt
+tamano  : 5223 bytes
+mtime   : 2026-11-18 20:10:24.420675
+sha256  : 674228747ed41dd5254e5bfdf7eb203784261122f8276a451ba9ad23d4db3432
+sha1    : eca816f4363319794424ea265e261b5e7486e395
+md5     : 6ad4bc00bfa5078cb7b8a54d5dff26af
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso03-netstat-consola.png
+tamano  : 65256 bytes
+mtime   : 2026-11-18 20:11:34.971489
+sha256  : d86c544ee76742c48a5836f8d7a8d7d900653eaf93f138eb34052cd7e6e5b39b
+sha1    : 251713e979be0ccfaff7c13ea5e128c91ca5bac0
+md5     : 4f8b42bb937ae0b778d781b632850821
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso03-netstat-host.txt
+tamano  : 14662 bytes
+mtime   : 2026-11-18 20:10:29.077163
+sha256  : fb0cc64afced9e8c113a35be30d3209bae72947f189f4c39f1f908ede991b44c
+sha1    : 0323025f011510ada8e9597656a3fd0ecda2e2c4
+md5     : 55618c7cc5b4b581dcfeadede52068e4
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso03-riesgo.png
+tamano  : 57215 bytes
+mtime   : 2026-11-18 20:50:51.840208
+sha256  : d914da91970021c089ba066fee38050d93c7849536f078b83f7c5edca2d8d01b
+sha1    : fc6827b8a69d28b66ba01c86f9f852ab4edffb44
+md5     : 5bbb38898e2613ef520a0ad58eb21c25
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso03-ss-tulpn.txt
+tamano  : 5544 bytes
+mtime   : 2026-11-18 20:10:13.131617
+sha256  : ab267d3d56beef4794c9c6a2044cf08607557e02ea6b2977fb88a56f7bb9b59a
+sha1    : d47ccff438a90f3b194637b807c272d2701e32b8
+md5     : 02a9be0b67050759d39eab9632201503
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-baseline-paquetes.csv
+tamano  : 466354 bytes
+mtime   : 2026-11-18 20:46:06.139548
+sha256  : 1d5d1ff81a5a661b807d9546fb88b78ad89ce9d7261cc5631c35bb69e63efe65
+sha1    : dff59c65cad0e8682143af5c672dac2c45d8ceab
+md5     : 60d19a90d59d1b3401a0eb7ce761555f
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-consola-revisada.png
+tamano  : 72864 bytes
+mtime   : 2026-11-18 20:49:54.274972
+sha256  : ac90964a7c151c1e0bac91cb2610e9aa2944997f3169948931ab3dfa52a55121
+sha1    : 4ec8bc6973a8dbf6f71a385cd96e115f73dc2caa
+md5     : a92625699268372230b1ef8a52bddab5
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-consola.png
+tamano  : 44094 bytes
+mtime   : 2026-11-18 20:13:42.940947
+sha256  : d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f
+sha1    : f0a72002440aa7dd9fc330ce8967ef18f27b20d0
+md5     : 37bbfce9afc131bff1dca5be9bc82cfb
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-dataset.csv
+tamano  : 41642 bytes
+mtime   : 2026-11-18 20:46:06.141502
+sha256  : 74d4226fe8d0355b0a5354584a352c030a0a43b21ffa2334a5a694f22fdfe57f
+sha1    : 19cf603ef33a7ffb630f2696611b6f5965dcff9c
+md5     : 3456cbbffa21d644da3bac812fc99047
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-manifiesto.json
+tamano  : 4333 bytes
+mtime   : 2026-11-18 20:46:06.588019
+sha256  : 974cdab84bedfef53355388c2c3413a97f40cc5c2adfbdad053b136055ee9924
+sha1    : 92208ce5c176dc866d81432060789cb76b53f18c
+md5     : cfa9587935f82c78389a85efbff5c1f7
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-matriz-confusion.png
+tamano  : 73543 bytes
+mtime   : 2026-11-18 20:46:06.349478
+sha256  : b30ca9f43e25873c944bf145b71411a10985a57412a7ff8a55af247b1b779806
+sha1    : 8b6537224ce484c71db5ddf9568758d10d7233d0
+md5     : 22f596bc103c88d13580012a3c6c0882
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-metricas.json
+tamano  : 3882 bytes
+mtime   : 2026-11-18 20:46:06.143454
+sha256  : 035b4906820c631601d65196981e81a01063c854803ea4764483d02b9ff57b29
+sha1    : 9c070704888b0888fe2c47a8691c5dbed05fea9c
+md5     : f6bc9b5223aeec849e2bb7f9b2006054
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-metricas.txt
+tamano  : 3357 bytes
+mtime   : 2026-11-18 20:46:06.143454
+sha256  : 59a301f976104c9a61fa84de9cdcd6acf319bb76d6cf470dafd070917ac9f47e
+sha1    : 74705f9e0f01d7201b6a27918750537c47a14d45
+md5     : 02f48984dbc51c1f3d63ec1870755318
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-modelo-parametros.json
+tamano  : 3860 bytes
+mtime   : 2026-11-18 20:46:06.142479
+sha256  : d073fd5b172c3fdf106de9c8884d4a7acd1fb49c973f63cb3129c193135ac01d
+sha1    : dc90927104ff5d816135a60492f941706644c226
+md5     : ad835233c4ca1ec551b192faf4a1e76b
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-pantallazos-obsoletos.txt
+tamano  : 262 bytes
+mtime   : 2026-11-18 20:46:06.144432
+sha256  : 68d4a95f6707a05c44c4bbab266e45f479b195e407d937aa9cde92c33abf27ec
+sha1    : 0f4f9cd10508ba397e78f671f277120aacd20cb9
+md5     : 2e62ae1e5c0ef2445cb87cf8752907f9
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-predicciones.csv
+tamano  : 29485 bytes
+mtime   : 2026-11-18 20:46:06.142479
+sha256  : 2bbdceefae6222863083c584f8d453b8cbef68e0d19db83139f88887c54a983c
+sha1    : b93250e469fcab2ff506db6b13a35efa989b45a1
+md5     : f45593cd593c431734f61eb4289e2f0a
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-pruebas.txt
+tamano  : 2433 bytes
+mtime   : 2026-11-18 20:46:06.138573
+sha256  : 2c0f3f1e03b907ecf38c3b643e89a85e42bdcb6cab2b945490779f4280e782ed
+sha1    : f5382e4d5d2b83231553f88ed701d367e6b0ed02
+md5     : 0678a9d22623e434c922a8199d65aa1f
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-reproducibilidad.json
+tamano  : 1755 bytes
+mtime   : 2026-11-18 20:48:03.115861
+sha256  : b99f5cc6f7b2bfd447f4e5f9b17e8bf09421918e7d4466faa4a68eb6999fdde7
+sha1    : 3394a8d138264f2f4a3e946ef29acca7a9d04a18
+md5     : 86d977ca407f9cc2815940ce556400a5
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-scatter.png
+tamano  : 85438 bytes
+mtime   : 2026-11-18 20:46:06.578161
+sha256  : 47ec1d4f041cea1574bf5a477b1166d4e22b1d91b5908305f22b696e7e2d5f70
+sha1    : 38ab47a7a0d21eb65bfd5b889c44afc1b9a98ed1
+md5     : 696ea89b3471f88cbf404c5b0acea987
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-segmentos.csv
+tamano  : 2162 bytes
+mtime   : 2026-11-18 20:46:06.140524
+sha256  : 933915f6597466389c520f887aeebd1def61c3a492380607dc6863e3c4ac03c4
+sha1    : 1db7f3685c6937efbff35762a3b92d85c1c72586
+md5     : 68f51d619125444a5c44529413f38909
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso04-sinteticos-paquetes.csv
+tamano  : 820491 bytes
+mtime   : 2026-11-18 20:46:06.140524
+sha256  : aebe272b6a2a9a63dbdebaa6b37d802377258c8c3583e93034cd78a5d6962161
+sha1    : 41fb4d211e99f0ca997572b879e14bb522a0fe1a
+md5     : 9ac49334235399c80866f5105d144d28
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso05-analisis.txt
+tamano  : 1519 bytes
+mtime   : 2026-11-18 20:50:52.927501
+sha256  : 9add441518abe01cd30cb2d6fb86466cc419ca8e81f84f2f250ff40bbad810f8
+sha1    : 8bc273144552f14bd91d7c0e77c7b8a6657fb05d
+md5     : d1d765ea2f069b593ecceff7bfffc121
+----------------------------------------------------------------------
+fin
+======================================================================
+ Evidencia - 2026-11-18 20:55:44.938300
+======================================================================
+archivo : evidencia/casos/caso05-logs-correlacion.txt
+tamano  : 4672 bytes
+mtime   : 2026-11-18 20:14:47.359525
+sha256  : 4e97654b2af87356985c874d24c2c22e19236c8f303ddcb332ddeebfb8a46a6b
+sha1    : 0bc70e87082711ee7cd1547f42b8cc23561c0beb
+md5     : 8befaa470fe83c60eeff74bba1639033
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso05-rst.pcap
+tamano  : 1183 bytes
+mtime   : 2026-11-18 20:50:46.666330
+sha256  : abea3dec5ae31d8f2f9fa49c6188a8ed1b0b1bdcedeb1420bfdc422736fb621a
+sha1    : 69d7fdadc4e07e75f027ea9c9f228ed58d23f1db
+md5     : cb9cf8d1e58a126511aad076e99f92d4
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso05-wireshark-final.png
+tamano  : 58809 bytes
+mtime   : 2026-11-18 20:53:31.762329
+sha256  : e88ec514fba517fe01974d8b4d2733d01229af6c57eb5dd6da5f427a5224ddda
+sha1    : 05c0d4ddab4e49ee6864449b520f20393c921d69
+md5     : 7b4be7dcb0a38fc6f971d9c8a4139580
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso05-wireshark.png
+tamano  : 58135 bytes
+mtime   : 2026-11-18 20:15:15.499253
+sha256  : 0317669e64e6a474294c14b584fc597a2ead06aba1f967156d0547f03030e62b
+sha1    : 188c7c7328c5807bf06fb90a8c3069d2160b8109
+md5     : db0951dc3b63c49f48e41b73a5dba3bc
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso06-analisis.txt
+tamano  : 1405 bytes
+mtime   : 2026-11-18 20:50:54.300334
+sha256  : 5a8ccc8d362da0c25c6a67c083fe0e7fa85cfb78cf4fe02d174b198997e8c6a2
+sha1    : 2d7e77fea4b1642c8cb61e0ed0d4e90ddc9a3ec6
+md5     : 8dc7eaa719eee60b6929902030006df9
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso06-openresolver-revision.txt
+tamano  : 1227 bytes
+mtime   : 2026-11-18 20:47:43.659396
+sha256  : 7fbae85e398509d66fddf9dd25d1c7a655d42ae1bfd3a53cc4262e9539d988a7
+sha1    : 08b74314df345d7a09cff264d6441da5cec2e907
+md5     : dc85b476f7b9dbcd20a6a6222f8259ea
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso06-openresolver.txt
+tamano  : 358 bytes
+mtime   : 2026-11-18 20:16:26.095639
+sha256  : 6ed815d78c3cd2c65c0cbb60d24b8bcc9db0a49bf63d79b11201f450a5d22f8c
+sha1    : 9d1895d95a6cdf6c451e89ef1f733aa1b4f1000a
+md5     : c254e59b040ae714529b01869229154f
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso06-reflexion-udp.pcap
+tamano  : 12858 bytes
+mtime   : 2026-11-18 20:50:46.716480
+sha256  : 512bd19bacdcad6deb19956e7456fd6d0041713156f14fb2983d664325822862
+sha1    : 747ab3110da283130d6f4b07aa374bcf655af2d4
+md5     : ac79a9dc34c53fa19f9bc48074a5bb83
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso06-udp-rate.png
+tamano  : 41610 bytes
+mtime   : 2026-11-18 20:50:54.489625
+sha256  : 1a10b610106fd8a048bb5f592077099bf8a6fdd541f975d9c1ed649aceed809e
+sha1    : b73a6cc21b4012a7b7f9b561d2ff4fa891ad593e
+md5     : 983177e202033804df640e9612e3dd9b
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso06-wireshark-final.png
+tamano  : 81942 bytes
+mtime   : 2026-11-18 20:53:38.770252
+sha256  : b13a437c582fea8d9816f848b3de528b5cc221773ed8b10e1b6ee59c8412a25b
+sha1    : 10d0c673ea758ae704320fc5e61a6e6aac3298cd
+md5     : 48a3c16428fec9d667e48865ab85002b
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso06-wireshark.png
+tamano  : 82561 bytes
+mtime   : 2026-11-18 20:16:42.840362
+sha256  : 1b032d88c1216773335d03314e950e72c5e2120902a965cc17e23aadeacf9554
+sha1    : cc3b1cd7c1e1c4e27dcbb1be336e48bde0bf8ba4
+md5     : 88edbf03127555004ed4540683631185
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso07-analisis.txt
+tamano  : 4376 bytes
+mtime   : 2026-11-18 20:50:56.604529
+sha256  : 97a7413b7f84ac5117c1dc91ac37c2b4c732fab9de3125aa56844df8cb4ed892
+sha1    : e3cce7529820db56329ae85a96aa872c1c9c982b
+md5     : 6c18e62d65868d8ec7a6da6be36e030f
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso07-icmp-freq.png
+tamano  : 55288 bytes
+mtime   : 2026-11-18 20:50:56.842166
+sha256  : d98190e6a734078800e40627c7034db13f272162f1d9075076e138064b7f5305
+sha1    : 02d4f685b066c43d4f1937b5b82a4d7337d7b03d
+md5     : 61e81a5b6218e70adc5ef0c86146f7f3
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso07-icmp.pcap
+tamano  : 13395 bytes
+mtime   : 2026-11-18 20:50:46.767202
+sha256  : 1a2fb2b2291ea1cd7a87b370ca33053b0693b8526c6c77d0890a9dbab13a41ac
+sha1    : acbb4e2e61b646c9781a31006d07df9533eb3158
+md5     : 79d70c4bf0169053e11a289eb76d8742
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso07-regla-icmp.nft
+tamano  : 650 bytes
+mtime   : 2026-11-18 20:44:34.243718
+sha256  : 305ba6280781009af669c3403515974f9c8ecda22935466c735362bd8d6c5d83
+sha1    : ec3814a23d6d7d804cf05c17974e7368cd0fed32
+md5     : e4aedcdff13655197ac955b0b308fa74
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso07-wireshark-final.png
+tamano  : 105995 bytes
+mtime   : 2026-11-18 20:53:45.827787
+sha256  : 092519cd79ec267e2d1dda12f385a408e86fd1fb155105920a6b5e26f8ffc121
+sha1    : 1690a29809085c332fc3e0df5f9466f033d09803
+md5     : dc439d88234529d26e5ab15910154d1c
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso07-wireshark.png
+tamano  : 105995 bytes
+mtime   : 2026-11-18 20:18:00.350019
+sha256  : 092519cd79ec267e2d1dda12f385a408e86fd1fb155105920a6b5e26f8ffc121
+sha1    : 1690a29809085c332fc3e0df5f9466f033d09803
+md5     : dc439d88234529d26e5ab15910154d1c
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso08-analisis.txt
+tamano  : 1634 bytes
+mtime   : 2026-11-18 20:50:57.947852
+sha256  : fb7daea7d2b8d0f6526aaed490f566f4a90aea0f66e0700fc917c2a98271bb81
+sha1    : 1c74ae66f0ecde5c6529fc371f782873162d8be5
+md5     : 1c005b87ffac1079656dffb0cccf89d9
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso08-portscan.pcap
+tamano  : 3524 bytes
+mtime   : 2026-11-18 20:50:46.820817
+sha256  : 322d148fe355df3f13d16b9749cc34e058f8a35b2468a010f5eb305a70e7f313
+sha1    : 6d326fc1ca7171b94ba710e98c6b3af953cf7aff
+md5     : 4c15055ddd871774909191306a2f8489
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso08-portscan.png
+tamano  : 35088 bytes
+mtime   : 2026-11-18 20:50:58.080685
+sha256  : 456afe0d5019e5098b532b9aa4cdfb104d6db4ea7809d8eabf763ffff3ae7cee
+sha1    : 84aff5b79d515dab0aaed5f5811212a082f76f37
+md5     : 65d1d9a5398b6c97fbf3f90baee2e065
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso08-regla-portscan.nft
+tamano  : 746 bytes
+mtime   : 2026-11-18 20:44:34.346193
+sha256  : 2ddcd843e23365499ffbc462d096adf96edba6a49cdde492872e384e0cfebea4
+sha1    : 0ff4bb508bf1fede4e417794b33bd98ed53a87b1
+md5     : 46b300b3d53d8a883047ee3463c60ced
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso08-wireshark-final.png
+tamano  : 95928 bytes
+mtime   : 2026-11-18 20:53:52.869529
+sha256  : 1f7575cc09044252b0c42345d2bfb1c0dbdb107b5878d1992af558f9a6298ab9
+sha1    : bf75e4bbb3bb7cbdd3fb396c4979cd468c195556
+md5     : 292b03a054a3c03658e313cbb2b0524d
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso08-wireshark.png
+tamano  : 94218 bytes
+mtime   : 2026-11-18 20:19:18.665015
+sha256  : 4ad1304262bbbdc017e289a11cfb7a28404f0889a823935e9324ee81e0b9dec5
+sha1    : 90f0873e86671171e6aa89ff12c66d99d3ef1913
+md5     : 153d26060c76508a3b8b022a05c81612
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-alerta.txt
+tamano  : 1660 bytes
+mtime   : 2026-11-18 20:45:54.766519
+sha256  : b803d514940cf4b41521f8d52436a52ed149424d473563fad00b961ad2281fd1
+sha1    : 64f82b228d490246b57bd649dbf6698529c0d0b5
+md5     : 66e572b43ee994fa776c083d0405301c
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-alertas.json
+tamano  : 1660 bytes
+mtime   : 2026-11-18 20:45:54.765543
+sha256  : b803d514940cf4b41521f8d52436a52ed149424d473563fad00b961ad2281fd1
+sha1    : 64f82b228d490246b57bd649dbf6698529c0d0b5
+md5     : 66e572b43ee994fa776c083d0405301c
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-caracteristicas.json
+tamano  : 24669 bytes
+mtime   : 2026-11-18 20:45:54.765543
+sha256  : a7b88aed4b132082b0e8ee6d0f543c64a2b94fa7944e1cf809b6c886a8f6f89a
+sha1    : 1a406d9d5ec0fecd2c9741585ec1a94aede49f4e
+md5     : 28e6140105d1071d5480382a5e46bc54
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-cobertura.json
+tamano  : 1026 bytes
+mtime   : 2026-11-18 20:45:54.764559
+sha256  : e55858387b84364d48ac78e9b5c59d95c16952eb20ee818dcf3c3dcee0bac4e6
+sha1    : 38cf50dd61a9f36149bc2a045827779451e2b75a
+md5     : df850fc304f05072ed864230d68a7b39
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-consola-final.png
+tamano  : 42524 bytes
+mtime   : 2026-11-18 20:46:00.178420
+sha256  : 3d5797c0b86e2286183e725894879a3363df61a720db9825e2c8acbe7841ed81
+sha1    : 91f1b3b1ffb84b52708144b877e8412e145bcc0e
+md5     : 928ae5f46164911f597ae22c9197424e
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-escenario-sintetico.json
+tamano  : 4514 bytes
+mtime   : 2026-11-18 20:42:43.278173
+sha256  : 6813878efa358f4df5bb61667402ed32e00b0429af1e9157deda9d1d915c7591
+sha1    : 0301b579036981dd73bb004d6b2c7a7607aa09cd
+md5     : 481e446975c02a259e129697173e27fb
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-escenario-sintetico.jsonl
+tamano  : 3900 bytes
+mtime   : 2026-11-18 20:45:54.760933
+sha256  : 708cf45c777a68dfe96234c53cefe7808718d24bfc2244a7d3469669fcf51341
+sha1    : b97102f68dc6276cb8bec5e114882b5bacc965ff
+md5     : aed38f1aae0f2c365d78045115b9e18f
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-eventos-normalizados.csv
+tamano  : 30518 bytes
+mtime   : 2026-11-18 20:45:54.762034
+sha256  : 3358d1db1bbacb14a646e1aafd4736f82901326c07b7a48687d6c61796570ada
+sha1    : ce01dabf5bad6f1064f03cfc5258d7396179fcc0
+md5     : 88d7f8c10883a68bd8c861a9fb6d12f0
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-logs/auth-gateway.log
+tamano  : 3104 bytes
+mtime   : 2026-11-18 20:19:45.359224
+sha256  : 182a027801a2ed6881becb53baf7e281bdd777eb703fd48f876594e92465167a
+sha1    : 5e712dccda8d303111961b9ace6bc3a13f7886d4
+md5     : f50c215bc5607baf0defc6efed9da8f7
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-logs/dnsmasq-dns.log
+tamano  : 4869 bytes
+mtime   : 2026-11-18 20:19:42.692827
+sha256  : 50c22dd659ba8fa0cb72f31daaf77450eff9b152c885800926b7a2592a37e956
+sha1    : d2c89f523bb67a1756f2ba9d02e5ddea85c3a6bc
+md5     : 890731ef1b108c214562e7702db243b7
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-logs/nftables-gateway.log
+tamano  : 0 bytes
+mtime   : 2026-11-18 20:42:42.374202
+sha256  : e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+sha1    : da39a3ee5e6b4b0d3255bfef95601890afd80709
+md5     : d41d8cd98f00b204e9800998ecf8427e
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-logs/nginx-web.log
+tamano  : 4243 bytes
+mtime   : 2026-11-18 20:19:41.287197
+sha256  : 67429b62584c0778146d3ff928bc02a54f5a3063126fbed15cc83c35b0639f81
+sha1    : d605229cf21e782fd1d01fac5c33864fdfddc751
+md5     : a1b29c2602b0f6e2f7e6ff365a31587c
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-logs/prosody-xmpp.log
+tamano  : 2640 bytes
+mtime   : 2026-11-18 20:19:44.142069
+sha256  : b16bb328f4d77095ea6f96d5ef5389c46f380a7b0a73d5ad1ce1e7866c019699
+sha1    : e211d97c7fe791a83e6fb45d0b76f49aeb60ef70
+md5     : cc9bc65d1a566a0555dee2ae39ed30bd
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-logs/sistema-gateway.log
+tamano  : 1227 bytes
+mtime   : 2026-11-18 20:19:46.270884
+sha256  : 3ad392b319951f7926549145bff03a232132690b7e6cdf7e0800c076e729bc4c
+sha1    : 4fbfdf2ef199fb42aec5d29e6f923fe9f3a7a837
+md5     : 8bc867c681c0b4970906161cd6f30c0a
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-pipeline.png
+tamano  : 33382 bytes
+mtime   : 2026-11-18 20:45:54.907156
+sha256  : 15a884f040623da4cce83fb42ddaa3c61899ea0bbf305238b039eaa3aa1c60af
+sha1    : ce23ebe83fd6d643e6605e88777accdaa43fa088
+md5     : d5459e05cbfc96aafbef5650fa2352db
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-scores.txt
+tamano  : 584 bytes
+mtime   : 2026-11-18 20:45:54.766519
+sha256  : 11ceaf57d7917a525ce28a06e3c4a2d6564b61df303a10491762fcf771b686bc
+sha1    : 887a16d7d46b890a9c2c563602b9da7f65e66c65
+md5     : ccd3e0efb7885ac2f4cee6c1740f5cb3
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso09-validacion-humana.json
+tamano  : 162 bytes
+mtime   : 2026-11-18 20:42:43.283695
+sha256  : b5f7b21d22954f34b7f2ae7e2f4d928423ee8bba8470b119973c456ae643e708
+sha1    : cc6986329a3409becedd4e42206c26bfb79749e7
+md5     : 309c9d9a55adec442bc644dba19db01b
+----------------------------------------------------------------------
+fin
+======================================================================
+ Evidencia - 2026-11-18 20:55:45.090974
+======================================================================
+archivo : evidencia/casos/caso10-antes.json
+tamano  : 1229 bytes
+mtime   : 2026-11-18 20:42:40.379172
+sha256  : 5c55bcff8e8c7c90e9367b74b38a79722d5b831747c2a2b56bf9616d9571bbbf
+sha1    : 97fdbcbe825ed5a939b715a5dfd361ed9614c753
+md5     : bbae5e1f3191878c8ccce3a5fdaf1b77
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-aprovisionamiento.json
+tamano  : 2557 bytes
+mtime   : 2026-11-18 20:42:40.712771
+sha256  : fe49b5b1318828d52f858cd2990c1ca87a0ca3289829e0905c11bc7b60d9e17c
+sha1    : acc6cb2cf412d4046302117370d99582c0f1d1cc
+md5     : 21c3365196fcba4ff668e6a83a1914f5
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-certificado.pem
+tamano  : 1310 bytes
+mtime   : 2026-11-18 20:43:54.651997
+sha256  : 3b90c614249008a0d7c1803d6b57f34704731aad7d5fb433d3898c2eef3b6fc8
+sha1    : 1bbd380540333cbf2ddbd5f8b9989e8add8c94c9
+md5     : 27126cd2ff0351d611b76f734e6b4648
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-certificado.txt
+tamano  : 355 bytes
+mtime   : 2026-11-18 20:43:55.144821
+sha256  : 216e6b689639fcf7fd4acc05175c60c2e6ce2f4b73156a78321f6927670d801d
+sha1    : 9c7ec123235fa7092bd514ef5e65d950cc4140ab
+md5     : 3f1963b4419643d5b7b08414885a02c4
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-confianza_explicita.txt
+tamano  : 2673 bytes
+mtime   : 2026-11-18 20:43:55.144821
+sha256  : 1cbf518aa2d3adf462a2a0165365b314d25ae06ea4dac73a807e9e8830951318
+sha1    : 370a38e802fdee83dd802a6fd938f08e04bde536
+md5     : 5befe7fa3fae98554d4ecc94aa22f94b
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-consola.png
+tamano  : 59685 bytes
+mtime   : 2026-11-18 20:46:06.699897
+sha256  : 10ae7297df028dada7c3119b681f0e31ccc682c193ef5032feca0465a9032eea
+sha1    : 5219f827932d3736be401fee9e0aebb8a8034b50
+md5     : 004afedb5010e5695334402aa76dfdc4
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-estado-servicio.json
+tamano  : 5272 bytes
+mtime   : 2026-11-18 20:43:54.931356
+sha256  : af2ffb31499687cfff9628c717788a2b4690b265f391354a8442726de7573c0f
+sha1    : b023c15224f51713f1e3092888c95f7f05194e18
+md5     : a8432aa970274682e3159edd57f50e18
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-nombre_incorrecto.txt
+tamano  : 2630 bytes
+mtime   : 2026-11-18 20:43:55.145796
+sha256  : 269e16b009239df01121daf16667da995dec81145949f7147b22ba413a4bffef
+sha1    : 8f6f5006c794796cf4e96211284c040754e56a7a
+md5     : 2efadfc41f8285a0bef418f5a6b520e4
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-pre-tls.txt
+tamano  : 305 bytes
+mtime   : 2026-11-18 20:43:55.958061
+sha256  : d3a14019293812ff8a6b1c364bc4d0c1731828f10a1ebbb6fc636423561e9dc4
+sha1    : 7c520cffb16d3af223f94f20a8785206fe270ac8
+md5     : 0c69cddc044a854611660aec1028abcd
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-prosody-log.txt
+tamano  : 3901 bytes
+mtime   : 2026-11-18 20:45:36.824428
+sha256  : a7ce49db5be85f3a9a6fcb5de6dff449268a864af6ae6e5fd4ff732a96485a79
+sha1    : 8a5d0cd4b53cbabad3c867e920d2ac35f9e824ec
+md5     : 396b2ef074b0945bf60088c05507db1d
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-pruebas.json
+tamano  : 8223 bytes
+mtime   : 2026-11-18 20:43:55.101463
+sha256  : 7f4bf8c0efa037c2338c5f446a8ea14c03db343cb85a7ba52766a64e39813729
+sha1    : c9b6cb72b323e2e9ed2107280b796baadeaa6195
+md5     : b50dd552095863aeb7e18d94ed35082c
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-resumen.txt
+tamano  : 890 bytes
+mtime   : 2026-11-18 20:43:55.146773
+sha256  : 35d5c41a9ab1b537a378e9315e8958812b0c4cb990e0e6799064132054e8e327
+sha1    : 028a3b4ed883390fe471d2faa91234d009459808
+md5     : ee9e6c808a62c5f6cd10a99be808d4a7
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-sin_confianza_local.txt
+tamano  : 2546 bytes
+mtime   : 2026-11-18 20:43:55.145796
+sha256  : 82bbebd8627002e7495f07f24052220e581d548a2731b48e3e04b55ae77d0166
+sha1    : 81299e779738a446e41a8533525a69bcf5aef644
+md5     : 8566e680d6897b8073785f472fdc84ad
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-wireshark.png
+tamano  : 123020 bytes
+mtime   : 2026-11-18 20:45:43.980123
+sha256  : c445eae88ba31cb887fa4a849e7274cbefc19fa4af230f597d9cc3a3d3e123e2
+sha1    : ddbb831a66233c2ca5f2e74dee475cd584b4702d
+md5     : 2c03c8f73c92272f0c3cd52234c44149
+----------------------------------------------------------------------
+archivo : evidencia/casos/caso10-xmpp-tls.pcapng
+tamano  : 17980 bytes
+mtime   : 2026-11-18 20:44:07.458334
+sha256  : 2206664fd9c48ebd25af51d6407fc2e3497defde81a66b2f0e5163214a6e51fa
+sha1    : 02d4dd039d89812fc2efae6816bd77e3f6d8c56d
+md5     : 1534ab5fe0508f20323cc7c35e1277fb
+----------------------------------------------------------------------
+archivo : evidencia/casos/pruebas-cierre-parte-i.txt
+tamano  : 6599 bytes
+mtime   : 2026-11-18 20:55:17.785798
+sha256  : 4f981d79bc9af83c8155dbfc41e1b252d9844c49671cfb3d4e6f32032c0d3712
+sha1    : 9561ce22cd46b9e39a1fd237a1f4193d7486979d
+md5     : b1c9e3c001664bd53de9f2f2b97a3e2b
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso01-analisis.txt
+tamano  : 1448 bytes
+mtime   : 2026-11-18 20:40:20.095663
+sha256  : 8e92619014f742505779028fbaf48b3e10fbb7bdf0f9b1b844a1f21c2ec2e278
+sha1    : 4732a54ec3b7dbf0cae53813fdd44831b0a8cb7e
+md5     : 6b65bbfc9e3373c8f39c4dbfbaad6232
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso01-netstat-host.txt
+tamano  : 12740 bytes
+mtime   : 2026-11-18 20:40:20.097624
+sha256  : 6b2c9e973bedf8e38e587dca7d904d03b0f4ca2892e0c516e5db71cd10cab93f
+sha1    : 3d194822ba697ca6826b44149e1df8dd95bc6502
+md5     : 9fc2afbb07df8be316117ad6e7ff6a13
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso01-regla.nft
+tamano  : 850 bytes
+mtime   : 2026-11-18 20:40:20.099574
+sha256  : 35f7b3b6d110886d41899a8b7b99ff81863a6a2130ec335e5f877437d9761141
+sha1    : 0b89165860c16a0f7316199bf3b5bbff673b4cfa
+md5     : 8f480c7945dfe1dfc2ae812a592df27f
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso01-syn-rate.png
+tamano  : 49704 bytes
+mtime   : 2026-11-18 20:40:20.101528
+sha256  : 4cd54bb35c8d4fc9849a091c3a33abb634ff8df419eac23eb1b6cd07062fd00a
+sha1    : 3b9fc7aa456e859709b8a5d1c0523d50b1ef4bfc
+md5     : cfee8d7f903677211223b8cffcfa4860
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso01-synflood-ratelimit.pcap
+tamano  : 16292 bytes
+mtime   : 2026-11-18 20:40:20.103033
+sha256  : 9758f64706243d2b1ada0a8cf13f67d3a892251e2fb2d15f41a33c243f0db309
+sha1    : 0293f13f450fc9d66152fc1ae4ea444e1e8db7ef
+md5     : 753ff5d695b7742a8c0de5cc3c5ba407
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso01-synflood.pcap
+tamano  : 30292 bytes
+mtime   : 2026-11-18 20:40:20.104991
+sha256  : 40327727fc5cffc29661f47da0c6ebfeb3187b2a7b95dff662f9db4ff9e8a6ca
+sha1    : c7a4b0c4d901b597691d2db4d6dd95d3f764ebf6
+md5     : 752eeea44dca3d54bfecfa457f7dd93d
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso01-wireshark.png
+tamano  : 93155 bytes
+mtime   : 2026-11-18 20:40:20.106981
+sha256  : 2ac9ab43ab4d94deaa51346d3b2d890e496cd32bbbaa5cc300f4e68b907ebe69
+sha1    : bdda64fde75459381ca8b11bf0bfdfb6fac3cd2c
+md5     : 9790656577323a15ffc6b7341b487ae1
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso02-analisis.txt
+tamano  : 1167 bytes
+mtime   : 2026-11-18 20:40:20.109909
+sha256  : def7d9c6b8beafbf68edd396eee32189d256bcaccb66f4d16d05d9491dfe7009
+sha1    : ce747da8e1fd9188307cada157ce5de430683971
+md5     : 7517fb0b56270b6949cc8288ba540609
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso02-dns-entropy.png
+tamano  : 54108 bytes
+mtime   : 2026-11-18 20:40:20.111863
+sha256  : 3024f39ed7c0bebe75860905f0147de20c594721119e53dd0e88b65d11bb9e47
+sha1    : 235f2ef0e9f160ccf67ee15a94c561d3a0196afe
+md5     : d5452c4184184986230f4ff50766299a
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso02-dns-tunneling.pcap
+tamano  : 4344 bytes
+mtime   : 2026-11-18 20:40:20.114352
+sha256  : d034c28bc859e2cf8fa5432701c7b421ff7019c9f5e08df7251c5238f90b42a1
+sha1    : 2134ba6ba5fa4a25d79b0473e6651f7804f73203
+md5     : 9776f5affe3de42ac3304263594096bd
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso02-dnsmasq-log.txt
+tamano  : 3323 bytes
+mtime   : 2026-11-18 20:40:20.116334
+sha256  : 87be6c3d6af0bf4ac27dc27a7e475c2954990859e6a29a1774ff292018a505d8
+sha1    : 2b42189e601150d0ddcfc997f50583fe7fbf2954
+md5     : f48250f07c50be7896341c88a32c0eec
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso02-regla-dns.nft
+tamano  : 1176 bytes
+mtime   : 2026-11-18 20:40:20.118294
+sha256  : bab86c7938e9b61cd12257624dc7acf61c398f107a3699f8486512301539944e
+sha1    : 9a2d392a43c585011ad09808df2de6afa94ffead
+md5     : 15c4a8658add887ee9f3aa36569cfc7c
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso02-wireshark.png
+tamano  : 104310 bytes
+mtime   : 2026-11-18 20:40:20.120247
+sha256  : d5971654d6ebd0469d612a77a200d370de36d4108de28052521e0b11569f26b1
+sha1    : e09b4bb339865e418b00834a13fe2eeaa015933c
+md5     : 908a44c04c7873a830f176bccdbe230e
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso03-auth-events.txt
+tamano  : 5223 bytes
+mtime   : 2026-11-18 20:40:20.121223
+sha256  : 674228747ed41dd5254e5bfdf7eb203784261122f8276a451ba9ad23d4db3432
+sha1    : eca816f4363319794424ea265e261b5e7486e395
+md5     : 6ad4bc00bfa5078cb7b8a54d5dff26af
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso03-netstat-consola.png
+tamano  : 65256 bytes
+mtime   : 2026-11-18 20:40:20.124702
+sha256  : d86c544ee76742c48a5836f8d7a8d7d900653eaf93f138eb34052cd7e6e5b39b
+sha1    : 251713e979be0ccfaff7c13ea5e128c91ca5bac0
+md5     : 4f8b42bb937ae0b778d781b632850821
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso03-netstat-host.txt
+tamano  : 14662 bytes
+mtime   : 2026-11-18 20:40:20.126675
+sha256  : fb0cc64afced9e8c113a35be30d3209bae72947f189f4c39f1f908ede991b44c
+sha1    : 0323025f011510ada8e9597656a3fd0ecda2e2c4
+md5     : 55618c7cc5b4b581dcfeadede52068e4
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso03-riesgo.png
+tamano  : 46030 bytes
+mtime   : 2026-11-18 20:40:20.128634
+sha256  : 42c1d49d1f9b99b33e86fa805acd1587c96523d7584ec94a37923c143ed77fcf
+sha1    : 41fab2be7a0fceef3e88e562d3528285d9c2c5af
+md5     : 7806e758508d00b3d47ee4dc40735ed4
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso03-ss-tulpn.txt
+tamano  : 5544 bytes
+mtime   : 2026-11-18 20:40:20.130587
+sha256  : ab267d3d56beef4794c9c6a2044cf08607557e02ea6b2977fb88a56f7bb9b59a
+sha1    : d47ccff438a90f3b194637b807c272d2701e32b8
+md5     : 02a9be0b67050759d39eab9632201503
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso05-analisis.txt
+tamano  : 920 bytes
+mtime   : 2026-11-18 20:40:20.131563
+sha256  : 2d75c507e53851a900a0dfe44793381dffc3ee4c8b13d827dc0133f1e14f930f
+sha1    : 96371c02065f023bd4c3677902a622a19a43a05c
+md5     : bccb234003bba57dff35784b2062aff7
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso05-logs-correlacion.txt
+tamano  : 4672 bytes
+mtime   : 2026-11-18 20:40:20.134089
+sha256  : 4e97654b2af87356985c874d24c2c22e19236c8f303ddcb332ddeebfb8a46a6b
+sha1    : 0bc70e87082711ee7cd1547f42b8cc23561c0beb
+md5     : 8befaa470fe83c60eeff74bba1639033
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso05-rst.pcap
+tamano  : 1183 bytes
+mtime   : 2026-11-18 20:40:20.136051
+sha256  : 004f2f53c0344438473461b4933cfd0f8086a88e1426959d89da1e4f3081de42
+sha1    : 38134247420c48ed267a6addf29c88478052508a
+md5     : 97edfefef78cb8a4e8e6748d77f75736
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso05-wireshark.png
+tamano  : 58135 bytes
+mtime   : 2026-11-18 20:40:20.137058
+sha256  : 0317669e64e6a474294c14b584fc597a2ead06aba1f967156d0547f03030e62b
+sha1    : 188c7c7328c5807bf06fb90a8c3069d2160b8109
+md5     : db0951dc3b63c49f48e41b73a5dba3bc
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso06-analisis.txt
+tamano  : 474 bytes
+mtime   : 2026-11-18 20:40:20.139017
+sha256  : be140815d12d715d8e2802f6fcb2d54447305c9f46516b05ffb7d6a123c06737
+sha1    : 5e88940a33c8c43fdde2b3e8c6247466bdc3ff7e
+md5     : 0f4dde4704962707d13a2b6e63ea120a
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso06-openresolver.txt
+tamano  : 358 bytes
+mtime   : 2026-11-18 20:40:20.141948
+sha256  : 6ed815d78c3cd2c65c0cbb60d24b8bcc9db0a49bf63d79b11201f450a5d22f8c
+sha1    : 9d1895d95a6cdf6c451e89ef1f733aa1b4f1000a
+md5     : c254e59b040ae714529b01869229154f
+----------------------------------------------------------------------
+fin
+======================================================================
+ Evidencia - 2026-11-18 20:55:45.242175
+======================================================================
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso06-reflexion-udp.pcap
+tamano  : 13046 bytes
+mtime   : 2026-11-18 20:40:20.144430
+sha256  : 2aedcd38bf3e4f2d2f99a1e6b0838022e42fd04d9f340d0579648944556ac5bf
+sha1    : 003b29abec2adf7b9e29d5c4c24e6bce0475818e
+md5     : b3dbf964fb9d0d843eb4a839df8e6aae
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso06-udp-rate.png
+tamano  : 35368 bytes
+mtime   : 2026-11-18 20:40:20.147398
+sha256  : 27160ec795a8bafd01af6bc739b4c8ec69b60fcb541f270f0d7771d8818ec201
+sha1    : 1bf291654a9c311c0ea49cae0fc83133197978e9
+md5     : d37f6823f523fe22ad4a1cbdbd0b4ae0
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso06-wireshark.png
+tamano  : 82561 bytes
+mtime   : 2026-11-18 20:40:20.149356
+sha256  : 1b032d88c1216773335d03314e950e72c5e2120902a965cc17e23aadeacf9554
+sha1    : cc3b1cd7c1e1c4e27dcbb1be336e48bde0bf8ba4
+md5     : 88edbf03127555004ed4540683631185
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso07-analisis.txt
+tamano  : 830 bytes
+mtime   : 2026-11-18 20:40:20.151310
+sha256  : ac346e03dfb7a358a1376d9bbd81a512b91e949cd1506cefbd67ac78e0ea2a19
+sha1    : 3831c29d5ef5f6478ae7ff82d53afd3011deddda
+md5     : 0a11ddbfc17cb486337601a3dd22b878
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso07-icmp-freq.png
+tamano  : 36835 bytes
+mtime   : 2026-11-18 20:40:20.153263
+sha256  : 31881b353eb0ed04b7a437eb3846735f5f11d371e06e995735342182c1fd365e
+sha1    : 32ccb1c57d38899f33555614da00f048e1f84987
+md5     : b3a28b81152aa4917b095f415f0ab833
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso07-icmp.pcap
+tamano  : 13395 bytes
+mtime   : 2026-11-18 20:40:20.154767
+sha256  : 5ff9a70661c20b83eea18e067d75ec2bc2961422704d96da5ff7ef5bfb9bc92d
+sha1    : 19e08e7d21ac21f57a1c89a9bd9730e949b6780c
+md5     : 607822696e42d2c8d55bd89d3fc83392
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso07-regla-icmp.nft
+tamano  : 772 bytes
+mtime   : 2026-11-18 20:40:20.156725
+sha256  : 044977ff95249d2ebe549735dd2268c63131bff7f7e7f42a701a06b13ede3d10
+sha1    : e2b251c00da6a0042082af44fcb7d48e21420e88
+md5     : fea590b17e1b6b50dc3dec7e56e5ff97
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso07-wireshark.png
+tamano  : 105995 bytes
+mtime   : 2026-11-18 20:40:20.158715
+sha256  : 092519cd79ec267e2d1dda12f385a408e86fd1fb155105920a6b5e26f8ffc121
+sha1    : 1690a29809085c332fc3e0df5f9466f033d09803
+md5     : dc439d88234529d26e5ab15910154d1c
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso08-analisis.txt
+tamano  : 446 bytes
+mtime   : 2026-11-18 20:40:20.160666
+sha256  : b6be5952a0ec7fb0f4b18590af5b5a62b73053230adfacf529ac36ae6e3b3400
+sha1    : 0ee3d2aaa8644fb1173cb1780e0753b540e21aa4
+md5     : bea2ad28299380c5b855a5b487e78d24
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso08-portscan.pcap
+tamano  : 3524 bytes
+mtime   : 2026-11-18 20:40:20.162621
+sha256  : 7b28cedaaa45c243deea400c493c7f7a0f1d7e71f140f4fb0c784e96ce8e4e15
+sha1    : c09d75d5d2aff687aa3d37ddf71fe9848dfedf32
+md5     : 82e27b4268484cee852d844bf88b6913
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso08-portscan.png
+tamano  : 22055 bytes
+mtime   : 2026-11-18 20:40:20.165104
+sha256  : 48d0ae348fc5521d08265dfbc67cb7bcd0ac2b195aaf968bc7ee637c3f6f581a
+sha1    : 6459c79dc491c7e300ee07fe6125c9ddf3601ceb
+md5     : 8da3dbd3d1f2e02685297b4f64d65e52
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso08-regla-portscan.nft
+tamano  : 798 bytes
+mtime   : 2026-11-18 20:40:20.166088
+sha256  : c7ddc669a6dd5426ff83d9461e8ac9f48913c9d2c069c69a5e0ff88eb4dc96e2
+sha1    : e03ad9489fc09684cbb08c402458568c5903d05a
+md5     : 6ee55d315017c09bed0f54b60f0ebcad
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/evidencia/casos/caso08-wireshark.png
+tamano  : 94218 bytes
+mtime   : 2026-11-18 20:40:20.168069
+sha256  : 4ad1304262bbbdc017e289a11cfb7a28404f0889a823935e9324ee81e0b9dec5
+sha1    : 90f0873e86671171e6aa89ff12c66d99d3ef1913
+md5     : 153d26060c76508a3b8b022a05c81612
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/fichas/caso01-syn-flood.md
+tamano  : 3580 bytes
+mtime   : 2026-11-18 20:40:20.047753
+sha256  : 463ff2e25ffe77446722e4270c71f480277e822c9b8942728ca2e6e42c527ac6
+sha1    : 59cbde415a6970b644c95d5bcc28a8f472881baf
+md5     : f07c82a6ceffe87fb5e7ad9b8574b48e
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/fichas/caso02-dns-tunneling.md
+tamano  : 3558 bytes
+mtime   : 2026-11-18 20:40:20.049704
+sha256  : 370d4f1a67e458731fc04212673bb455b2de3fd2bf2c47df7584ff7c4313fc2a
+sha1    : ee316ac08175e0c108ea69d25e8fbb7bf4788574
+md5     : 631192e4331435ef7abc3ca05cfa80e3
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/fichas/caso03-servicios-expuestos.md
+tamano  : 4049 bytes
+mtime   : 2026-11-18 20:40:20.059721
+sha256  : f7617cafd930fb6ba0dc257206a153aeaa9a11ca4938e3814e9408932f09a2f9
+sha1    : f0a103b133b933186f4a533ac5fc2a7710cdb8ef
+md5     : 2bb142e77e5344fac43e4e672ca304d7
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/fichas/caso05-rst-tcp.md
+tamano  : 3433 bytes
+mtime   : 2026-11-18 20:40:20.061697
+sha256  : 919e15b1e058d558c7fff86fc587a09c2f216e4a27b9297945aa554cadd1c275
+sha1    : aa2a33ecaedf12463826faadef71a05e7e7f7752
+md5     : 3249edbffc8ad6f15995bdf8e0f9ffb9
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/fichas/caso06-reflexion-udp.md
+tamano  : 3881 bytes
+mtime   : 2026-11-18 20:40:20.062679
+sha256  : 43b3c2f1ca0122b8c98a8bd88b9fad8a7a03e05a2f2dd9e536f4777976605a74
+sha1    : 4472c72a969207c80c1a23f28c1c79174033e4ec
+md5     : 4986fc93cf68570dfd742b9d917b11cb
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/fichas/caso07-icmp.md
+tamano  : 2758 bytes
+mtime   : 2026-11-18 20:40:20.064661
+sha256  : 0dcd32d94778e6f9e994499e82c7d20a975c8569eacaa89a8417b81d0377f130
+sha1    : 9a2ade9fb42e5bca9d472b6e681fa4127a16c226
+md5     : 2b6d2b9a97781edb264bad0da7473612
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/fichas/caso08-escaneo-puertos.md
+tamano  : 3078 bytes
+mtime   : 2026-11-18 20:40:20.066618
+sha256  : ff084e6d9942006a0daeef56b20cacb0cdddb4f4e24da1658b80935d593c516a
+sha1    : fdd66a939cb5b55da931bdf3810fbb63798dd9b9
+md5     : 4416640edd240267d7ed75437b78dde0
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/fichas/plantilla_hallazgo.md
+tamano  : 1664 bytes
+mtime   : 2026-11-18 20:40:20.068574
+sha256  : 4042f1f63d3885977be1c73d9e30fbfc79df54eb7a26f833476191f6dcdb5be0
+sha1    : e56886db6b9a86ca984f609e496da6b85e39cb16
+md5     : ea275aa7ab0738024f22e20cf407ff0f
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/analizar_caso01.py
+tamano  : 3831 bytes
+mtime   : 2026-11-18 20:40:20.070525
+sha256  : 507acab4d185d3c147cf34c1cb7cb3ef7d66104587cd07821be95e6e2f2ef4bd
+sha1    : a75c414cd6a5705c9322fca9b8b5ff62f6345a16
+md5     : a45968aae36c0eb07f89d7c96ef17dae
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/analizar_caso02.py
+tamano  : 4260 bytes
+mtime   : 2026-11-18 20:40:20.072028
+sha256  : b16d352c948ff7c24cf8380ed4a33291c9d7c67c1734f80c84b6009fc1e29cd7
+sha1    : 9a5fdc24aabe44d5a8f0567406d85d673be6663b
+md5     : a94d8779db7967ee4219f574e3fd4265
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/analizar_caso03.py
+tamano  : 1970 bytes
+mtime   : 2026-11-18 20:40:20.073987
+sha256  : 4dbf7dfb4a0e5b39554e47293b74aa8161f9c604634751faed1e1f13acae23d9
+sha1    : 936e61fd068f81652237097abc9da2ae8c411a8b
+md5     : 7ea0cd2f9579781a6a338cb8747b0553
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/analizar_caso05.py
+tamano  : 1649 bytes
+mtime   : 2026-11-18 20:40:20.076951
+sha256  : c76e9d4f1af7433e5c003345ea170f4f8c775c2b41ed03206c034cfbbd2d21be
+sha1    : 6ab6b2180f17f014042fdf596e61cd510c72f39b
+md5     : ece238362b0ff000ce8d70e131a24e72
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/analizar_caso06.py
+tamano  : 2680 bytes
+mtime   : 2026-11-18 20:40:20.077927
+sha256  : 224c04032862a50b698389c1928a903feae674929f46960e567d84aed447e70a
+sha1    : 23e81c7d63bf7d131c7dda06217a8598645c4a48
+md5     : 1346295049947c07cf64dba4069f7ac2
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/analizar_caso07.py
+tamano  : 2368 bytes
+mtime   : 2026-11-18 20:40:20.079880
+sha256  : 334ef770907f853c152e1dd77a82ae4cb20d5c66ba4fb220089acd074a60dda9
+sha1    : f6355c7850d7b684da6b890161c02193f43918cc
+md5     : ce2336aa7eb53fc13d09eae288df32fc
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/analizar_caso08.py
+tamano  : 2441 bytes
+mtime   : 2026-11-18 20:40:20.080858
+sha256  : c001c943845742eb7b38cd13546a10be17fee772828008d5509a34b5fa5e26ac
+sha1    : 244390fa931b0aa31fbde046f9e3fa5128dd760e
+md5     : 734a89ba3828704bf30cee58ab5d6e32
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/gen_caso01_synflood.py
+tamano  : 4263 bytes
+mtime   : 2026-11-18 20:40:20.083346
+sha256  : 2464627e5a4861394afeda9c41d45e63468dde5820f78f2046b5010955f30b56
+sha1    : 4507c22e43bff1efe762592d46996d7ecc2e4c5c
+md5     : cbfdfa4ff874449867425c325da95a63
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/gen_caso02_dns_tunnel.py
+tamano  : 2313 bytes
+mtime   : 2026-11-18 20:40:20.084320
+sha256  : f2a045d7570c7d32e9bbad2b51dad4cb7bae5025408c0b1046b3bf8f76e2513d
+sha1    : abb1a51b7603eee4ef187f8905f297e983c5ebe5
+md5     : b3c550bb899b28ffb9fe3c27da0da8c3
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/gen_caso05_rst.py
+tamano  : 3173 bytes
+mtime   : 2026-11-18 20:40:20.086308
+sha256  : 032b6a25a5df5ab05d56329df2b22f1d5a4da1083cf09a173e55a3d149d5a2bb
+sha1    : 0faa8f6c927be460a4afd2f89e97c770389710f1
+md5     : e2d94632b77e3dcbcffdd4698c0efa0b
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/gen_caso06_udp.py
+tamano  : 2620 bytes
+mtime   : 2026-11-18 20:40:20.088260
+sha256  : b7dd59e32139e25cfe105c28e0a656e30c28edede1fe0fd94e51a980b07fd09a
+sha1    : 92dc8745cdafb605f0330477ce9f613bbc15b335
+md5     : 64ebfe8e9d551ea7aee88d7500899181
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/gen_caso07_icmp.py
+tamano  : 2083 bytes
+mtime   : 2026-11-18 20:40:20.090215
+sha256  : b157314deb330342c02810b43689798971f0523fc431fac1f5fdd179949d3231
+sha1    : a8c6c38576c24180acff6efc9049f1a2c023ca0d
+md5     : 270b37c6227a27ab4cc347d192aa5ced
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-anterior/scripts/gen_caso08_portscan.py
+tamano  : 2156 bytes
+mtime   : 2026-11-18 20:40:20.092699
+sha256  : 2aa97e4cc946f588e68209171c2fe00d0818c41ff07c4127eec5a52fd08b50d3
+sha1    : 42a17503ceaa0130882432b0c2e051b8cc819b28
+md5     : 39c1f7c00490b8d1a176054051be278e
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-anomalias-ml.md
+tamano  : 3644 bytes
+mtime   : 2026-11-18 20:14:09.240041
+sha256  : 8bcbdc729c0d0b39f256cef276a22d7fb79bbe3c8d164749eb6dc7510c1afca2
+sha1    : 5d169f2f09fc949203062fb39045b9767aad536a
+md5     : f0fb4911cd920b41080738a94ad91b0f
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-backup-manifest.json
+tamano  : 3082 bytes
+mtime   : 2026-11-18 20:40:46.658664
+sha256  : 8b5894ea68f9c300aac34332fb0c36562f7250cfca707cc984208dcb9f5e11c0
+sha1    : d1609cee90a59a8a54fc1dc49ce0c4dafd26fe18
+md5     : a8e6de15392db06880199506756bc8ca
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-consola.png
+tamano  : 44094 bytes
+mtime   : 2026-11-18 20:13:42.940947
+sha256  : d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f
+sha1    : f0a72002440aa7dd9fc330ce8967ef18f27b20d0
+md5     : 37bbfce9afc131bff1dca5be9bc82cfb
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-dataset.csv
+tamano  : 1470 bytes
+mtime   : 2026-11-18 20:13:15.236133
+sha256  : d9d635ebd81d5c288d462d6f219f7839e1b252c139dde0d2e8a52c3e2b8ef176
+sha1    : 0b118a80645536178b0cf2c72ccd9605475385ac
+md5     : 2dfbff81e633e23b4570e727314602a4
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-matriz-confusion.png
+tamano  : 18912 bytes
+mtime   : 2026-11-18 20:13:15.459559
+sha256  : 76e9384bd105273f06911493cf06ec570730a429d81a185082d6c31ffb4e495f
+sha1    : 7ae8f1e970c8138751c0c5f63d7cb2c53e9f2b72
+md5     : 4e6dafd3ca2158ea2d2ef40f6f2dbde1
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-metricas.txt
+tamano  : 684 bytes
+mtime   : 2026-11-18 20:13:15.367158
+sha256  : cc7b5013f442c2ebcbab16db6b7a965fc048b4777ccc097461dce0e580980f95
+sha1    : 40fb26596381cfeec83f49cc90ff3378ab1886d6
+md5     : 0a109825c585789096944071bc8bcc0f
+----------------------------------------------------------------------
+fin
+======================================================================
+ Evidencia - 2026-11-18 20:55:45.387852
+======================================================================
+archivo : evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-scatter.png
+tamano  : 36531 bytes
+mtime   : 2026-11-18 20:13:15.591647
+sha256  : 64255cfec2e9c6e267d1dc863dfe231567bc2e82cd23f34d58233987589b93ec
+sha1    : 422bf8ecf3763222a8e46ca3bcf2d96a722f628d
+md5     : fd37022dad452f17e9c061b40cab8cfd
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04_ml.py
+tamano  : 7017 bytes
+mtime   : 2026-11-18 20:12:56.491356
+sha256  : 60fbef2b02e01a348c36f7f88a1200caeec574a67e5305e6c4f49a6c2f20f8d7
+sha1    : b0f4fd4812cfe2a2319f49c3b21c6eddb23eaf8c
+md5     : f6c8190ab8cd4b2403deba6d009d961b
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-backup-manifest.json
+tamano  : 2120 bytes
+mtime   : 2026-11-18 20:44:23.799613
+sha256  : 1f39311d3ad448c265838851072978f5143d68cedf4f3f355a9708640f69c32b
+sha1    : a2e8a0669d075e563df980cb90ed4247f95be929
+md5     : e2c40db7c3ef5a5d54ab99771a59e030
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-consola.png
+tamano  : 44094 bytes
+mtime   : 2026-11-18 20:13:42.940947
+sha256  : d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f
+sha1    : f0a72002440aa7dd9fc330ce8967ef18f27b20d0
+md5     : 37bbfce9afc131bff1dca5be9bc82cfb
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-dataset.csv
+tamano  : 1470 bytes
+mtime   : 2026-11-18 20:13:15.236133
+sha256  : d9d635ebd81d5c288d462d6f219f7839e1b252c139dde0d2e8a52c3e2b8ef176
+sha1    : 0b118a80645536178b0cf2c72ccd9605475385ac
+md5     : 2dfbff81e633e23b4570e727314602a4
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-matriz-confusion.png
+tamano  : 18912 bytes
+mtime   : 2026-11-18 20:13:15.459559
+sha256  : 76e9384bd105273f06911493cf06ec570730a429d81a185082d6c31ffb4e495f
+sha1    : 7ae8f1e970c8138751c0c5f63d7cb2c53e9f2b72
+md5     : 4e6dafd3ca2158ea2d2ef40f6f2dbde1
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-metricas.txt
+tamano  : 684 bytes
+mtime   : 2026-11-18 20:13:15.367158
+sha256  : cc7b5013f442c2ebcbab16db6b7a965fc048b4777ccc097461dce0e580980f95
+sha1    : 40fb26596381cfeec83f49cc90ff3378ab1886d6
+md5     : 0a109825c585789096944071bc8bcc0f
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-scatter.png
+tamano  : 36531 bytes
+mtime   : 2026-11-18 20:13:15.591647
+sha256  : 64255cfec2e9c6e267d1dc863dfe231567bc2e82cd23f34d58233987589b93ec
+sha1    : 422bf8ecf3763222a8e46ca3bcf2d96a722f628d
+md5     : fd37022dad452f17e9c061b40cab8cfd
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-backup-manifest.json
+tamano  : 5360 bytes
+mtime   : 2026-11-18 20:45:33.109358
+sha256  : ea0a51a0e692e1ba1da21c585ba6e41f702d39a72344698e6ce5c54ed6ca7070
+sha1    : 7b59022aa6fc53cb3c83581d82c78b83e4762cc6
+md5     : b5269a0fc6fc9d8e61ebe877cad320bf
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-baseline-paquetes.csv
+tamano  : 412924 bytes
+mtime   : 2026-11-18 20:44:23.808042
+sha256  : 46114d0cf062b0ec19e9a637051e3a6bb9e7dc51ad426bf2e67c5340a4857314
+sha1    : 5d372108cca06c78f89567f26e885bf057657529
+md5     : 89400755641693aa9b8bd0c998e96ce3
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-consola.png
+tamano  : 44094 bytes
+mtime   : 2026-11-18 20:13:42.940947
+sha256  : d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f
+sha1    : f0a72002440aa7dd9fc330ce8967ef18f27b20d0
+md5     : 37bbfce9afc131bff1dca5be9bc82cfb
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-dataset.csv
+tamano  : 41642 bytes
+mtime   : 2026-11-18 20:44:23.809018
+sha256  : b184a457141f9694a107c358491fdf677e736011c6bf158a6da09894a31e3052
+sha1    : 1d03078e3ee87063246521456a4c07388329aa9b
+md5     : b4e2b46ec24bc79b9510c0ea0c77d01f
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-manifiesto.json
+tamano  : 4238 bytes
+mtime   : 2026-11-18 20:44:24.268110
+sha256  : 357e90bbbfac2a1df2725f6e3346b142276459f67e9c9fa3fbd0c6af979423cd
+sha1    : f39fa67dadb8a93e7b90f77bf7618a80a635e036
+md5     : 39b1291283b7967e5f59b307dabf2579
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-matriz-confusion.png
+tamano  : 73543 bytes
+mtime   : 2026-11-18 20:44:24.031103
+sha256  : b30ca9f43e25873c944bf145b71411a10985a57412a7ff8a55af247b1b779806
+sha1    : 8b6537224ce484c71db5ddf9568758d10d7233d0
+md5     : 22f596bc103c88d13580012a3c6c0882
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-metricas.json
+tamano  : 3882 bytes
+mtime   : 2026-11-18 20:44:23.809997
+sha256  : 035b4906820c631601d65196981e81a01063c854803ea4764483d02b9ff57b29
+sha1    : 9c070704888b0888fe2c47a8691c5dbed05fea9c
+md5     : f6bc9b5223aeec849e2bb7f9b2006054
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-metricas.txt
+tamano  : 3357 bytes
+mtime   : 2026-11-18 20:44:23.811507
+sha256  : 59a301f976104c9a61fa84de9cdcd6acf319bb76d6cf470dafd070917ac9f47e
+sha1    : 74705f9e0f01d7201b6a27918750537c47a14d45
+md5     : 02f48984dbc51c1f3d63ec1870755318
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-modelo-parametros.json
+tamano  : 3860 bytes
+mtime   : 2026-11-18 20:44:23.809997
+sha256  : d073fd5b172c3fdf106de9c8884d4a7acd1fb49c973f63cb3129c193135ac01d
+sha1    : dc90927104ff5d816135a60492f941706644c226
+md5     : ad835233c4ca1ec551b192faf4a1e76b
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-pantallazos-obsoletos.txt
+tamano  : 262 bytes
+mtime   : 2026-11-18 20:44:23.812037
+sha256  : 68d4a95f6707a05c44c4bbab266e45f479b195e407d937aa9cde92c33abf27ec
+sha1    : 0f4f9cd10508ba397e78f671f277120aacd20cb9
+md5     : 2e62ae1e5c0ef2445cb87cf8752907f9
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-predicciones.csv
+tamano  : 29485 bytes
+mtime   : 2026-11-18 20:44:23.809997
+sha256  : 107b8ef8e5701cab886ac7f4e6ae8596d566d77c2bd1feb6945e8d7f9c06e50c
+sha1    : be7519379e9eca3134769f605e7b0e9be2ed6d8f
+md5     : 3e8c0a9928d988609f0c9545db7b84a0
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-scatter.png
+tamano  : 85438 bytes
+mtime   : 2026-11-18 20:44:24.259703
+sha256  : 47ec1d4f041cea1574bf5a477b1166d4e22b1d91b5908305f22b696e7e2d5f70
+sha1    : 38ab47a7a0d21eb65bfd5b889c44afc1b9a98ed1
+md5     : 696ea89b3471f88cbf404c5b0acea987
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-segmentos.csv
+tamano  : 2162 bytes
+mtime   : 2026-11-18 20:44:23.809018
+sha256  : 933915f6597466389c520f887aeebd1def61c3a492380607dc6863e3c4ac03c4
+sha1    : 1db7f3685c6937efbff35762a3b92d85c1c72586
+md5     : 68f51d619125444a5c44529413f38909
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-sinteticos-paquetes.csv
+tamano  : 820491 bytes
+mtime   : 2026-11-18 20:44:23.808042
+sha256  : d0152c0500df00dd77a1637c81e24c625e3f127cff318ad8c980bb827c89aeec
+sha1    : bd7314dd353fd9dce3e4fc210f271eb6cf4a5edc
+md5     : 86dad64f7ba7129ac603399e41e750e6
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-backup-manifest.json
+tamano  : 5750 bytes
+mtime   : 2026-11-18 20:46:06.131171
+sha256  : e52747529bad0ca4a94f930febccb1d23a21a11fcc34c883b9c8290931b74773
+sha1    : 8c59acc079cf5e2e3b4834ebb9418f10aa63da42
+md5     : 9defd88495b5b487ae13d78888361ba1
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-baseline-paquetes.csv
+tamano  : 466354 bytes
+mtime   : 2026-11-18 20:45:33.116793
+sha256  : 1d5d1ff81a5a661b807d9546fb88b78ad89ce9d7261cc5631c35bb69e63efe65
+sha1    : dff59c65cad0e8682143af5c672dac2c45d8ceab
+md5     : 60d19a90d59d1b3401a0eb7ce761555f
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-consola.png
+tamano  : 44094 bytes
+mtime   : 2026-11-18 20:13:42.940947
+sha256  : d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f
+sha1    : f0a72002440aa7dd9fc330ce8967ef18f27b20d0
+md5     : 37bbfce9afc131bff1dca5be9bc82cfb
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-dataset.csv
+tamano  : 41642 bytes
+mtime   : 2026-11-18 20:45:33.118747
+sha256  : 74d4226fe8d0355b0a5354584a352c030a0a43b21ffa2334a5a694f22fdfe57f
+sha1    : 19cf603ef33a7ffb630f2696611b6f5965dcff9c
+md5     : 3456cbbffa21d644da3bac812fc99047
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-manifiesto.json
+tamano  : 4333 bytes
+mtime   : 2026-11-18 20:45:33.589452
+sha256  : c20ed1a88fb993c0e31bcec496c02a751dc40a75cda33900d10b4d6af811519f
+sha1    : 13306b338aa53cdb1f7c7cec37e29f6c65f99bdd
+md5     : d4263dde870a56f7c3384a8f1bf690b9
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-matriz-confusion.png
+tamano  : 73543 bytes
+mtime   : 2026-11-18 20:45:33.346953
+sha256  : b30ca9f43e25873c944bf145b71411a10985a57412a7ff8a55af247b1b779806
+sha1    : 8b6537224ce484c71db5ddf9568758d10d7233d0
+md5     : 22f596bc103c88d13580012a3c6c0882
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-metricas.json
+tamano  : 3882 bytes
+mtime   : 2026-11-18 20:45:33.119721
+sha256  : 035b4906820c631601d65196981e81a01063c854803ea4764483d02b9ff57b29
+sha1    : 9c070704888b0888fe2c47a8691c5dbed05fea9c
+md5     : f6bc9b5223aeec849e2bb7f9b2006054
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-metricas.txt
+tamano  : 3357 bytes
+mtime   : 2026-11-18 20:45:33.120697
+sha256  : 59a301f976104c9a61fa84de9cdcd6acf319bb76d6cf470dafd070917ac9f47e
+sha1    : 74705f9e0f01d7201b6a27918750537c47a14d45
+md5     : 02f48984dbc51c1f3d63ec1870755318
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-modelo-parametros.json
+tamano  : 3860 bytes
+mtime   : 2026-11-18 20:45:33.119721
+sha256  : d073fd5b172c3fdf106de9c8884d4a7acd1fb49c973f63cb3129c193135ac01d
+sha1    : dc90927104ff5d816135a60492f941706644c226
+md5     : ad835233c4ca1ec551b192faf4a1e76b
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-pantallazos-obsoletos.txt
+tamano  : 262 bytes
+mtime   : 2026-11-18 20:45:33.120697
+sha256  : 68d4a95f6707a05c44c4bbab266e45f479b195e407d937aa9cde92c33abf27ec
+sha1    : 0f4f9cd10508ba397e78f671f277120aacd20cb9
+md5     : 2e62ae1e5c0ef2445cb87cf8752907f9
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-predicciones.csv
+tamano  : 29485 bytes
+mtime   : 2026-11-18 20:45:33.118747
+sha256  : 2bbdceefae6222863083c584f8d453b8cbef68e0d19db83139f88887c54a983c
+sha1    : b93250e469fcab2ff506db6b13a35efa989b45a1
+md5     : f45593cd593c431734f61eb4289e2f0a
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-pruebas.txt
+tamano  : 2433 bytes
+mtime   : 2026-11-18 20:45:33.115817
+sha256  : 748278ab52d9d5021e26796dd7a8395b2facdfcc0b4fcb19cc69f4bf8457793e
+sha1    : d5fa43d1ddc9f315a456e01557ed408da0f3ba17
+md5     : d2197042c1f775df974a754cb5f30de8
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-scatter.png
+tamano  : 85438 bytes
+mtime   : 2026-11-18 20:45:33.579059
+sha256  : 47ec1d4f041cea1574bf5a477b1166d4e22b1d91b5908305f22b696e7e2d5f70
+sha1    : 38ab47a7a0d21eb65bfd5b889c44afc1b9a98ed1
+md5     : 696ea89b3471f88cbf404c5b0acea987
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-segmentos.csv
+tamano  : 2162 bytes
+mtime   : 2026-11-18 20:45:33.118747
+sha256  : 933915f6597466389c520f887aeebd1def61c3a492380607dc6863e3c4ac03c4
+sha1    : 1db7f3685c6937efbff35762a3b92d85c1c72586
+md5     : 68f51d619125444a5c44529413f38909
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-sinteticos-paquetes.csv
+tamano  : 820491 bytes
+mtime   : 2026-11-18 20:45:33.117769
+sha256  : aebe272b6a2a9a63dbdebaa6b37d802377258c8c3583e93034cd78a5d6962161
+sha1    : 41fb4d211e99f0ca997572b879e14bb522a0fe1a
+md5     : 9ac49334235399c80866f5105d144d28
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-siem-anterior/caso09-alerta.txt
+tamano  : 592 bytes
+mtime   : 2026-11-18 20:20:19.289757
+sha256  : 0b8101cf48d5273162b98a4b8bb85d44156b2448e6eeb8a495c0f7be0e8bd9c2
+sha1    : 8bd521b0b163c3c0d97576ea2a32aed7bc888c7a
+md5     : 4f822e50544f509eef8adc2abe007d87
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-siem-anterior/caso09-eventos-normalizados.csv
+tamano  : 8401 bytes
+mtime   : 2026-11-18 20:20:19.287806
+sha256  : 96f9662b1b146bd53c6bd73147fb132bc70cbc1c1961a9f207143e5d2fc48ea4
+sha1    : b96f0db69f9b0bd7c654dade977125243855fff4
+md5     : 760913fa2785eae0092bfbeb60d42341
+----------------------------------------------------------------------
+archivo : evidencia/casos/revision-siem-anterior/caso09-scores.txt
+tamano  : 793 bytes
+mtime   : 2026-11-18 20:20:19.288782
+sha256  : 16ecdc31fdccf38d66723127ed33995aaffc3248edded4305a3ce8b872723f99
+sha1    : ac06aa095ab563e21fa39581215c899325d96908
+md5     : 67951da75655452a082cae235dba6a70
+----------------------------------------------------------------------
+fin
+======================================================================
+ Evidencia - 2026-11-18 20:55:45.531530
+======================================================================
+archivo : evidencia/mostrar-caso04-revisado.bat
+tamano  : 737 bytes
+mtime   : 2026-11-18 20:49:34.832658
+sha256  : d9baa016f798bb9141d50e05cd8195daac11e42acb3ee8146ce7f587db5e7bb3
+sha1    : 54f03c4683f1823f6c84972bd4e62167f7273aba
+md5     : 46e72c6c114e8227f22ea773c17d878f
+----------------------------------------------------------------------
+archivo : evidencia/mostrar-caso04.bat
+tamano  : 241 bytes
+mtime   : 2026-11-18 20:13:10.671347
+sha256  : 0474d85934bf36986df9238cf3aea2f4074168e127293ac902bdd6bb2955c36b
+sha1    : d4aea91fc0af1a8f481f3937adeaad76d822283e
+md5     : b799860b77821152e04e922e9c708b92
+----------------------------------------------------------------------
+archivo : evidencia/mostrar-caso09.bat
+tamano  : 194 bytes
+mtime   : 2026-11-18 20:45:18.340987
+sha256  : 21185be2968f3bb0162270dcf73ac315b03fb7f716a759a86a8cba56aab00d33
+sha1    : 0e48df652f81f20127ba8e08709ed93e0ffa89b0
+md5     : 9ba0b0f3e76344ef62c1a9e9a8ea5ac6
+----------------------------------------------------------------------
+archivo : evidencia/mostrar-caso10.bat
+tamano  : 284 bytes
+mtime   : 2026-11-18 20:45:18.548294
+sha256  : 39f6cac38da75c6de10a1c7b439bb485f870ab8cbcaded8829abf29324a085b5
+sha1    : 3ee57634f0438c7bd9c5f5ecb02e5777039716b6
+md5     : 16b055679bd19169bc94ff8051aca9a0
+----------------------------------------------------------------------
+archivo : evidencia/mostrar-netstat.bat
+tamano  : 162 bytes
+mtime   : 2026-11-18 20:11:23.428272
+sha256  : 7a15e3317bf3cb2805e325e830425fae8d7618470c013c05d16489977492f6fb
+sha1    : 6571f59de6a43d34d5314e7aa3c2ed4b6b572d3c
+md5     : fb81a104178c305493aab9de65629933
+----------------------------------------------------------------------
+archivo : evidencia/mostrar-verificacion.bat
+tamano  : 191 bytes
+mtime   : 2026-11-18 19:42:37.673039
+sha256  : 04b17fd1352641b4e0e16e2279f498566e297d739a5c00b85c5cf83261771275
+sha1    : eef4a012869222cea64550cb8cd708f6b4adb7be
+md5     : 0b1dd62f14b623495f25a02670905dbe
+----------------------------------------------------------------------
+archivo : evidencia/mostrar-w32tm.bat
+tamano  : 82 bytes
+mtime   : 2026-11-18 19:40:55.350684
+sha256  : 6bb837fd6984fc31c7485ffa4d537f4dd850785b997a421f452a5486dbe7d6f3
+sha1    : 2e5a899e2b8da9a3272cf947f39251fda4a5ce3f
+md5     : 6c0af2d25d1ce62f2affe52b2f5d1620
+----------------------------------------------------------------------
+archivo : fichas/caso01-syn-flood.md
+tamano  : 4358 bytes
+mtime   : 2026-11-18 20:54:37.167018
+sha256  : 713f4ae7ce3764271b502bc1bb90b0609dd3245b6098f6c61a5f05a98c0fcd0c
+sha1    : 2d09a7ecf11d89c2aac3f6c3b8e0ed2c5c9ebc7a
+md5     : 04b557398c65aeb3ed8752184da17be6
+----------------------------------------------------------------------
+archivo : fichas/caso02-dns-tunneling.md
+tamano  : 3888 bytes
+mtime   : 2026-11-18 20:54:37.424019
+sha256  : 5dbdedb75e47b3459070d2dcf68729a2d7ecc28f98353117ababc13bae49d74c
+sha1    : 7d37b696142b60a18d21dca48e4f1ccb76451f77
+md5     : 0f92338467326281b123893558e52aa4
+----------------------------------------------------------------------
+archivo : fichas/caso03-servicios-expuestos.md
+tamano  : 4653 bytes
+mtime   : 2026-11-18 20:55:34.302313
+sha256  : 4e882d5f5b99184d9af94efd41f3f4565c94df96a5260ddf87d3ecbdb313af16
+sha1    : 33e3b3da0d78cbc3de36469c3a26e59eda44e9ff
+md5     : 2468aea8e93d0b75487a5637cb0da135
+----------------------------------------------------------------------
+archivo : fichas/caso04-anomalias-ml.md
+tamano  : 16521 bytes
+mtime   : 2026-11-18 20:50:55.947792
+sha256  : 90c412b725dcb657700d3e3f2426b1b20a0f9723a6853b45f57878e82ce9ae2e
+sha1    : 5793d454e93fc7a27018f0b6b78d731a6db64a11
+md5     : de91259e5a010e3c99a2c7e0c091115c
+----------------------------------------------------------------------
+archivo : fichas/caso05-rst-tcp.md
+tamano  : 3825 bytes
+mtime   : 2026-11-18 20:54:37.797321
+sha256  : da5d4297c5783556770e5cd9be9e2530bb09f95c86c02003c7f47912c322cedf
+sha1    : e20c1bf00eaa5d3745ddcf8f7141274ebd22fd56
+md5     : 7ebbff4021320b5c3b76ac7d5b1ecc47
+----------------------------------------------------------------------
+archivo : fichas/caso06-reflexion-udp.md
+tamano  : 4690 bytes
+mtime   : 2026-11-18 20:54:37.974263
+sha256  : 99b699713eb2cde2dd0c8abe314850830af9406cb08e4d491f6954bf18f5e0a7
+sha1    : bc8fa38604df3701c295542c6535f5948eba4a2d
+md5     : 9d233a0b9a3949c234d97bdc288da380
+----------------------------------------------------------------------
+archivo : fichas/caso07-icmp.md
+tamano  : 4040 bytes
+mtime   : 2026-11-18 20:54:38.149699
+sha256  : 46989e43457b0110e1f439de42c19b1b236d41e88bdc8e6a73b418d6a080d047
+sha1    : 6f1a6e54971d49ee1661e609eb452b67bc542f37
+md5     : 6429d677329ab360456aee940afffb3b
+----------------------------------------------------------------------
+archivo : fichas/caso08-escaneo-puertos.md
+tamano  : 3836 bytes
+mtime   : 2026-11-18 20:54:38.323033
+sha256  : 9674bc7b48749a59095415384397f792c788cc230464205e10f0c933951d404c
+sha1    : 7bedcbcb0a91fc0f0e0e0d4e8bfb51322bf64081
+md5     : 2c738333f829a81ecb37a143db704c20
+----------------------------------------------------------------------
+archivo : fichas/caso09-correlacion-siem.md
+tamano  : 4443 bytes
+mtime   : 2026-11-18 20:45:18.745089
+sha256  : 11fbbcaf366cc1c77bedc88de4c29d74f6d105af7c4b769a598188c151c85413
+sha1    : 6a39cb9ce0a491dcd2399c8d31d45fde15e13441
+md5     : f4d893ec4029648645ff69e52ca21118
+----------------------------------------------------------------------
+archivo : fichas/caso10-xmpp-tls.md
+tamano  : 8090 bytes
+mtime   : 2026-11-18 20:49:34.625892
+sha256  : e678eb2b9d775ac77410ab661b5fb5733e1c46d711bf8ee628b1b1634fc263d6
+sha1    : 5786ca955ca3be0d1cb382a6717f30813ffd9998
+md5     : a0047e62bce23bc03f51327db63f2330
+----------------------------------------------------------------------
+archivo : fichas/plantilla_hallazgo.md
+tamano  : 2522 bytes
+mtime   : 2026-11-18 20:48:40.706606
+sha256  : 6535a35f1d9e7792c9dcd3fcf19eff1e0e34332030ee397fe7fe1f73759614d7
+sha1    : ecd5325fb55ae348efb7e2354d778e4326595598
+md5     : 2be583b80a7b4de3e095c40a4f621327
+----------------------------------------------------------------------
+archivo : hash_evidencia.py
+tamano  : 2822 bytes
+mtime   : 2026-11-18 17:08:26.757135
+sha256  : 7f7bf151b64a2a323087fabee9c53c9dc1ce0a4c170a85d6a1793c1b83426815
+sha1    : 3fd6e45aa8d2c02e7ba8cef83e2d0de7e75c1544
+md5     : 271ad7e9a016cfaecd94fd2c220992fa
+----------------------------------------------------------------------
+archivo : informe-laboratorio.md
+tamano  : 25807 bytes
+mtime   : 2026-11-18 20:54:56.562958
+sha256  : 612272cb11e845f2eb02e0aeff401495b94013259b5db7da31f3e0d434c28949
+sha1    : af2036d7ea4158a2352a42f9093fd8b1c506566d
+md5     : 904a6ad6f8e1a790c91b654c48df4218
+----------------------------------------------------------------------
+archivo : scripts/analizar_caso01.py
+tamano  : 7797 bytes
+mtime   : 2026-11-18 20:45:44.876264
+sha256  : 6a3992032a1ca7ad0e6e9cbcc4e233045e37e5b6531938d23cc896a2fc7b33e7
+sha1    : f60dd71a265c71e00b9c1b19ac5539b3c8c5d055
+md5     : f4d82f33ad9487b295c68210e223b838
+----------------------------------------------------------------------
+archivo : scripts/analizar_caso02.py
+tamano  : 4422 bytes
+mtime   : 2026-11-18 20:42:12.457134
+sha256  : de67ac1d7c024e8450d27cf11fb3f61d60c2d28f8f0e5eac6bd3c50941ebb38a
+sha1    : a271ac43a4cd71f66e8cd4dcb857554a20536578
+md5     : 4fdbc7cf3d75229b0c25e1fb992116f6
+----------------------------------------------------------------------
+archivo : scripts/analizar_caso03.py
+tamano  : 2786 bytes
+mtime   : 2026-11-18 20:42:39.156490
+sha256  : ab5ad959efb3119b1f4cc00043e0e7c981659c9f818af5c8500bd788810ae949
+sha1    : 8faebb8dffad2b78b9a819a4df813a6b14f4f744
+md5     : 3b003dba32bd2887a90f4c346f416442
+----------------------------------------------------------------------
+archivo : scripts/analizar_caso05.py
+tamano  : 2314 bytes
+mtime   : 2026-11-18 20:42:58.586424
+sha256  : f23e18b72dc27f066a360561a9d8618bbb385ed6cf7921e13e40d2f9267ecbad
+sha1    : 2c8fdba2ba6fbced31bf999bf7996c27f511055f
+md5     : 7f0fd84c73839a28609c52ab658c78dc
+----------------------------------------------------------------------
+archivo : scripts/analizar_caso06.py
+tamano  : 4255 bytes
+mtime   : 2026-11-18 20:47:51.743342
+sha256  : 540f61f2c4ebaf551b50d68cc46d49332729108c0add81618ac280f539e5bfe6
+sha1    : 336126d85080154e278830efe875caa811bcbbc0
+md5     : 3c94070520de40293072cb9be23bbd37
+----------------------------------------------------------------------
+archivo : scripts/analizar_caso07.py
+tamano  : 3784 bytes
+mtime   : 2026-11-18 20:43:58.205924
+sha256  : 8f677befb7a2fcfd5b28d0a40fd6592ec5c1708e67763a6f2e4a21fb2056a3b7
+sha1    : acceaac590b6e902ae00e0c8c15043d7d54d7600
+md5     : ff1fac88759e0c232d147d554fe933a2
+----------------------------------------------------------------------
+archivo : scripts/analizar_caso08.py
+tamano  : 3254 bytes
+mtime   : 2026-11-18 20:45:34.516782
+sha256  : 10ec32ada0671fd9557d52d8b0d0af45db5475e5208abc8ee53767ab90167b5f
+sha1    : d0643ccd9ddac1e6b6e663c05ef0db4964a65b08
+md5     : f02b5c4d37234c6f9915b31852ff5dd1
+----------------------------------------------------------------------
+archivo : scripts/caso04_ml.py
+tamano  : 41953 bytes
+mtime   : 2026-11-18 20:45:08.521894
+sha256  : a97237575785d4fc29ad0a4dfc35b28dd41e85a9d20b2c6180db5c57248eebc8
+sha1    : 006a5c33e9d95cd378350ed01b26383f8b22ed2c
+md5     : b963d64d6d42c77fbeb0fe2ec4f2fe37
+----------------------------------------------------------------------
+archivo : scripts/caso09_siem.py
+tamano  : 10627 bytes
+mtime   : 2026-11-18 20:44:21.935336
+sha256  : c2fdba403249e63360206ce80f0eac9ffa8a0cc62669eecba539e1df634486f7
+sha1    : 7c8e34a82b2a8fb8923c604c0be4f7778f1dc088
+md5     : de1800597b866c783f80004d0a846a1f
+----------------------------------------------------------------------
+archivo : scripts/caso10_tls.py
+tamano  : 6282 bytes
+mtime   : 2026-11-18 20:43:27.827687
+sha256  : 99ca05dd7ba73656e5b3c7a20362dd262038531a89190014183d62162053fe83
+sha1    : 8a98c64ee379827b32479769cc3c7ce9cd2f8fa1
+md5     : bcc1adf296e79f77e1537b980c43be04
+----------------------------------------------------------------------
+archivo : scripts/cerrar_parte_i.py
+tamano  : 5571 bytes
+mtime   : 2026-11-18 20:52:02.516191
+sha256  : 078d59779a0651fdc23c2a70435d4d6f08e256ecc40f5c5b15a9540ca7346426
+sha1    : 3bd73fbe060af16d9d32aed4c6043ec1708e9353
+md5     : 826c34322a3c28719adbdcf200c95a69
+----------------------------------------------------------------------
+archivo : scripts/gen_caso01_synflood.py
+tamano  : 5133 bytes
+mtime   : 2026-11-18 20:41:24.828351
+sha256  : 7314829a7779c62670a6fcc0ad075ac1aea621864f3c99f56ced5bb6b3217a3f
+sha1    : 9baba153477284883fe5c65008956d70dd60d660
+md5     : b9c159a130559122d8c62fbad70fb78d
+----------------------------------------------------------------------
+archivo : scripts/gen_caso02_dns_tunnel.py
+tamano  : 2227 bytes
+mtime   : 2026-11-18 20:42:22.595905
+sha256  : 98258fa9c42caf28e887b6e4429a2b8c19647dc6222679996d5d50ba417e80c7
+sha1    : 3500a41714d923d8f3d3ff80d919c11ee6812a23
+md5     : c11ab51089a6729e7f0633b6ef75ee03
+----------------------------------------------------------------------
+archivo : scripts/gen_caso05_rst.py
+tamano  : 3350 bytes
+mtime   : 2026-11-18 20:42:47.571645
+sha256  : d9b1ee286ce340e9bc6133d56165d22859dc52d2eef9ee9d9a7629e07ea28a27
+sha1    : d6c1b6e019ce2d267d5acb5ade72a3f79e3d4968
+md5     : 1713acb5e9c48f16c7c2c57a2620f0ca
+----------------------------------------------------------------------
+archivo : scripts/gen_caso06_udp.py
+tamano  : 2248 bytes
+mtime   : 2026-11-18 20:43:14.291720
+sha256  : 337e3483408c73373d0595884a57984fad371511b2aa6715a8aa5b74b99ea52e
+sha1    : 37ecf71265ebc17412f576c2c4b6d24871aae806
+md5     : b1dfd606bff3a1c88fbd032cd8f77d49
+----------------------------------------------------------------------
+archivo : scripts/gen_caso07_icmp.py
+tamano  : 2152 bytes
+mtime   : 2026-11-18 20:43:41.766645
+sha256  : 9878b94850900ad967dcea91a9d1f262157e3d6bc5aed830c333f260d728f8ec
+sha1    : dab09c7cce0a3cac2e2b294e46d5e6cf14d17976
+md5     : 72c17e12884f42b540fed9bc2f8dbf3d
+----------------------------------------------------------------------
+archivo : scripts/gen_caso08_portscan.py
+tamano  : 2278 bytes
+mtime   : 2026-11-18 20:44:02.650847
+sha256  : f95a764455027c821d0c1fcc24728949fe1e2f4668877863a0e0202bd49b686d
+sha1    : 48c885628f4aef2c75e046a86e171e1458312947
+md5     : 4030d3ddff9514f5431cfb31ee0d8abe
+----------------------------------------------------------------------
+archivo : scripts/pcapgen.py
+tamano  : 3557 bytes
+mtime   : 2026-11-18 20:03:01.458343
+sha256  : 04a2dc0e5a77b7a0240eefbac99ad5e84e4a3fdb6f4963de4d84a13f3fc79454
+sha1    : 1b6a49a2cd406182c6802744ac4c95f06ad2f0bb
+md5     : ba68273279684df13244370da2d05e18
+----------------------------------------------------------------------
+archivo : scripts/test_caso09_siem.py
+tamano  : 1920 bytes
+mtime   : 2026-11-18 20:44:06.275598
+sha256  : a36bd4dea2a8e282e6e38384ff220a4784e44b10f20629c6ce69bbb4d8e99267
+sha1    : 840476e1f7fa933e6932d2bc8b5956c72a52159d
+md5     : 5ae9adda94b66ad76b2ee6be4d062e8b
+----------------------------------------------------------------------
+archivo : scripts/test_casos_parte1.py
+tamano  : 11189 bytes
+mtime   : 2026-11-18 20:50:39.805492
+sha256  : f136c92747ab63c6ddffc59fb1411a3aeb4a96c041f89afa2567e9341f59c322
+sha1    : 49f24547e00c8d43d99213d8454211c994db38ae
+md5     : 0b9980b713d39048c643dffa2d883f00
+----------------------------------------------------------------------
+fin

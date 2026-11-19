@@ -1,0 +1,24 @@
+########## CAPTURA DE EVIDENCIA - HOST (analista) ##########
+## IP host-only (192.168.50.0/24)
+
+InterfaceAlias IPAddress     PrefixLength
+-------------- ---------     ------------
+Ethernet 2     192.168.50.10           24
+
+
+
+## DNS resolution web.lab.local
+Servidor:  UnKnown
+Address:  192.168.50.53
+
+Nombre:  web.lab.local
+Address:  192.168.50.20
+
+## Firewall rule ICMP lab
+
+DisplayName                        Enabled Direction Action
+-----------                        ------- --------- ------
+Lab-ICMPv4-Echo-In-192.168.50.0-24    True   Inbound  Allow
+
+
+

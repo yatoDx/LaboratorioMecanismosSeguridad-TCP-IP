@@ -1,0 +1,36 @@
+\begin{titlepage}
+\fontfamily{ptm}\selectfont\centering
+\vspace*{-0.6cm}
+{\bfseries\large INFORME TÉCNICO — GUÍA–TALLER No.~2\par}
+\vspace{0.25cm}
+{\bfseries\normalsize Mecanismos de seguridad para redes IEEE 802.3\\ con servidores TCP/IP\par}
+\vspace{0.6cm}
+\includegraphics[width=7.4cm]{fig/logo-ud-portada.png}\par
+\vfill
+{\bfseries\itshape\large Juan Esteban Buitrago Chavez - 20211020005\par}
+\vfill
+{\bfseries\large Docente: OCTAVIO JOSE SALCEDO PARRA\par}
+\vfill
+{\bfseries\large Facultad de Ingeniería, Universidad Distrital Francisco José de Caldas\par}
+\vspace{0.45cm}
+{\bfseries\large 020-81 - MECANISMOS DE SEGURIDAD INFORMÁTICA\par}
+\vspace{0.45cm}
+{\bfseries\large Noviembre de 2026\par}
+\vspace{0.8cm}
+{\small Repositorio: \url{https://github.com/yatoDx/Laboratorio-seguridad-tcpip}\par}
+\end{titlepage}
+
+\chapter*{Resumen}
+\thispagestyle{plain}
+Este informe desarrolla la Guía–Taller No.~2 de mecanismos de seguridad para redes IEEE~802.3 con servicios TCP/IP. Primero se monta y verifica un laboratorio aislado de cuatro máquinas virtuales Ubuntu Server 24.04.5 LTS (gateway con NTP y firewall nftables, servidor web nginx, DNS dnsmasq y mensajería XMPP Prosody) y un equipo analista Windows con Wireshark, todos en la red 192.168.50.0/24 y con relojes sincronizados.
+
+La Parte~I analiza diez casos críticos: inundación TCP SYN, túnel DNS, exposición de servicios, detección de anomalías con aprendizaje automático, resets TCP, reflexión UDP, ICMP atípico, escaneo de puertos, correlación de alertas al estilo SIEM y seguridad de XMPP sobre TLS. Cada caso tiene su ficha de nueve campos, su evidencia con huella SHA-256, una regla de detección o mitigación y preguntas de análisis. Para este informe se re-ejecutaron los analizadores sobre las mismas capturas y produjeron salidas idénticas byte a byte a las registradas, y el paquete de entrega verifica 242 archivos por copia contra su manifiesto.
+
+La Parte~II implementa un sistema de localización basado en consentimiento: una aplicación web (PWA) con API REST en FastAPI, registro por número telefónico con código de verificación, mapa Leaflet/OpenStreetMap, historial, estadísticas y geocercas. El diseño parte del riesgo de que un localizador se use para acechar: el uso compartido nace apagado, cada observador necesita aprobación expresa con vencimiento, el titular puede revocar al instante y ve quién consultó. La API pasa 61 pruebas automáticas y el flujo completo se probó en Chrome con dos personas.
+
+Los resultados muestran que un indicador aislado no confirma un ataque, que medir sobre la evidencia corrige supuestos (por ejemplo, que 25 SYN no son 25 puertos distintos) y que el aprendizaje automático sirve para priorizar la revisión humana, no para decidir bloqueos.
+
+\vspace{0.6cm}
+\noindent\textbf{Index Terms}---seguridad de redes, IEEE 802.3, TCP/IP, Wireshark, análisis de PCAP, nftables, detección de anomalías, aprendizaje automático, SIEM, TLS, XMPP, privacidad, consentimiento.
+\par\vspace{0.8cm}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\small\textbf{Nota:} Este es un trabajo académico desarrollado en equipo personal. Todo ocurrió dentro de un entorno controlado. Cada prueba, paquete y alerta formó parte de un ejercicio académico realizado con equipos propios y máquinas virtuales, utilizando direcciones privadas y tráfico de laboratorio. El trabajo se desarrolló con fines de aprendizaje, sin intervenir sistemas externos ni afectar redes institucionales o de terceros.}}

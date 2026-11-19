@@ -1,0 +1,14 @@
+[
+  {
+    "command": "date -Iseconds; prosodyctl check certs",
+    "exit_code": 2,
+    "stdout": "2026-11-18T20:42:40-05:00\nChecking certificates...\nChecking certificate for localhost\ncertmanager         info\tNo certificate present in SSL/TLS configuration for localhost. SNI will be required.\n  No 'certificate' found for localhost\n\nFor more information about certificates please see https://prosody.im/doc/certificates\n\nProblems found, see above.\n",
+    "stderr": ""
+  },
+  {
+    "command": "timeout 10 openssl s_client -starttls xmpp -xmpphost localhost -connect 192.168.50.30:5222 -servername localhost -showcerts </dev/null",
+    "exit_code": 1,
+    "stdout": "CONNECTED(00000003)\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 357 bytes and written 476 bytes\nVerification: OK\n---\nNew, (NONE), Cipher is (NONE)\nSecure Renegotiation IS NOT supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nEarly data was not sent\nVerify return code: 0 (ok)\n---\n",
+    "stderr": "4027829102770000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../ssl/record/rec_layer_s3.c:1599:SSL alert number 40\n"
+  }
+]

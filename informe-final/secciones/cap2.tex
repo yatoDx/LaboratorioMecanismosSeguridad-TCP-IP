@@ -1,0 +1,32 @@
+\chapter{Marco de referencia}\label{cap:marco}
+
+\section{Red IEEE 802.3 y pila TCP/IP}
+IEEE~802.3 define Ethernet en las capas física y de enlace: tramas con direcciones MAC, un campo de tipo y una carga útil de hasta 1500 bytes en la MTU estándar \cite{ieee8023}. Sobre ella, IPv4 entrega datagramas entre direcciones lógicas, y TCP \cite{rfc9293} ofrece flujos fiables orientados a conexión mediante el saludo de tres vías (SYN, SYN-ACK, ACK), números de secuencia y banderas de control como RST y FIN. UDP \cite{rfc768} ofrece datagramas sin conexión, lo que lo hace rápido pero también fácil de suplantar. ICMP \cite{rfc792} transporta mensajes de control y diagnóstico, como \emph{echo request/reply}. DNS \cite{rfc1035} traduce nombres a direcciones, normalmente sobre UDP/53.
+
+Un dato importante para ubicar controles: en una red conmutada, dos equipos de la misma subred se comunican directamente por la capa de enlace. Un router o firewall solo ve ese tráfico si está en su ruta; en este laboratorio el gateway no reenvía paquetes (\cod{ip\_forward = 0}) y, por tanto, no filtra el tráfico entre las VMs.
+
+\section{Amenazas y anomalías de red}
+\begin{itemize}
+\item \textbf{Inundación SYN}: el atacante envía muchos SYN sin completar el saludo para agotar la tabla de conexiones semiabiertas del servidor \cite{rfc4987}.
+\item \textbf{Túnel DNS}: se codifican datos en etiquetas de nombres consultados; deja rastros como etiquetas largas, de alta entropía y gran volumen hacia un mismo dominio.
+\item \textbf{Exposición de servicios}: servicios innecesarios o heredados en escucha amplían la superficie de ataque.
+\item \textbf{Resets TCP}: un RST con tupla y secuencia válidas puede cortar una sesión; también hay RST legítimos (puertos cerrados, cierres abruptos).
+\item \textbf{Reflexión y amplificación UDP}: el atacante suplanta la IP de la víctima en solicitudes pequeñas a servicios que responden con mucho más tráfico \cite{rossow2014}; la defensa de fondo es el filtrado de origen \cite{bcp38}.
+\item \textbf{ICMP atípico}: ráfagas de echo o cargas grandes pueden indicar reconocimiento o canales encubiertos, pero también diagnósticos legítimos.
+\item \textbf{Escaneo de puertos}: un origen sondea muchos puertos distintos de un destino en poco tiempo; la señal es la cardinalidad de puertos, no el conteo de paquetes.
+\end{itemize}
+
+\section{Controles preventivos y detectivos}
+Los controles preventivos reducen la superficie (cerrar servicios, filtrar con nftables, limitar tasa con \emph{token bucket}, activar SYN cookies, exigir TLS). Los detectivos observan y alertan (IDS, análisis de PCAP, correlación de logs). nftables, el marco de filtrado del kernel Linux, permite tablas independientes con su propio \emph{hook} y política, y la expresión \cod{limit rate over N/second burst M packets} selecciona solo el tráfico que excede el cubo de fichas \cite{nftables}. La guía NIST SP~800-61 \cite{nist80061} enmarca el ciclo de manejo de incidentes (preparación, detección y análisis, contención, recuperación) y SP~800-86 \cite{nist80086} la recolección de evidencia con integridad, base del control con SHA-256 usado aquí.
+
+\section{Aprendizaje automático para detección de anomalías}
+La detección no supervisada aprende qué es ``normal'' y marca lo que se aparta. El \emph{z-score} mide cuántas desviaciones típicas se aleja cada atributo de la media de entrenamiento. Isolation Forest \cite{liu2008} aísla observaciones con particiones aleatorias: las anómalas requieren menos cortes. El riesgo metodológico principal es la fuga de información (\emph{leakage}): evaluar con ventanas usadas en el entrenamiento o vecinas en el tiempo infla las métricas. Por eso se separan entrenamiento y prueba en el tiempo, con una ventana de embargo entre ambos, y se informan las métricas solo sobre prueba.
+
+\section{Correlación de eventos (SIEM)}
+Un SIEM recoge logs de varias fuentes, los normaliza a un esquema común, los agrupa por entidad y ventana de tiempo y aplica reglas que suman indicadores. Su valor es reunir señales débiles de servicios distintos para un mismo origen; su riesgo, atribuir causalidad a coincidencias o mezclar datos de prueba con datos reales.
+
+\section{Seguridad de la mensajería y cifrado}
+XMPP \cite{rfc6120} negocia TLS con STARTTLS sobre el puerto 5222. TLS~1.3 \cite{rfc8446} cifra la mayor parte del saludo y solo admite suites AEAD. Cifrar no basta: el cliente debe validar la cadena de confianza, el nombre del servidor (SAN) y la vigencia del certificado. TLS cliente-servidor protege el transporte, no equivale a cifrado de extremo a extremo de los mensajes.
+
+\section{Privacidad y marco legal}
+En Colombia, la Ley 1581 de 2012 \cite{ley1581} regula el tratamiento de datos personales con los principios de libertad (consentimiento previo, expreso e informado), finalidad, acceso restringido y seguridad, y reconoce al titular el derecho a conocer, actualizar y suprimir sus datos. La ubicación de una persona es un dato personal que exige especial cuidado por lo que revela de su vida (rutinas, domicilio, compañías). La Ley 1273 de 2009 \cite{ley1273} tipifica, entre otros, el acceso abusivo a sistemas informáticos y la interceptación de datos. Por eso el laboratorio se limita a equipos propios y la Parte~II se diseña para que nadie pueda ser localizado sin su permiso.

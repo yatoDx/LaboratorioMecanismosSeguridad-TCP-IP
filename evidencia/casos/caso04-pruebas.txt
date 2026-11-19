@@ -1,0 +1,26 @@
+CASO-04 · pruebas unitarias offline
+Script SHA256: a97237575785d4fc29ad0a4dfc35b28dd41e85a9d20b2c6180db5c57248eebc8
+test_bidirectional_duration_and_retransmissions (__main__.MethodologyTests.test_bidirectional_duration_and_retransmissions) ... ok
+test_dns_suffix_and_background_labels (__main__.MethodologyTests.test_dns_suffix_and_background_labels) ... ok
+test_equal_windows_boundaries_empty_and_tail (__main__.MethodologyTests.test_equal_windows_boundaries_empty_and_tail) ... ok
+test_fit_sees_only_train_features_and_rejects_leakage (__main__.MethodologyTests.test_fit_sees_only_train_features_and_rejects_leakage) ... ok
+test_insufficient_or_anomalous_training_rejected (__main__.MethodologyTests.test_insufficient_or_anomalous_training_rejected) ... ok
+test_malformed_extraction_fails (__main__.MethodologyTests.test_malformed_extraction_fails) ... ok
+test_parse_boolean_dns_flags_across_tshark_versions (__main__.MethodologyTests.test_parse_boolean_dns_flags_across_tshark_versions) ... ok
+test_reject_bad_window (__main__.MethodologyTests.test_reject_bad_window) ... ok
+test_requests_responses_and_zero_denominator (__main__.MethodologyTests.test_requests_responses_and_zero_denominator) ... ok
+test_single_class_metrics_are_not_fake_zeros (__main__.MethodologyTests.test_single_class_metrics_are_not_fake_zeros) ... ok
+test_subprocess_empty_output (__main__.MethodologyTests.test_subprocess_empty_output) ... ok
+test_subprocess_missing_binary (__main__.MethodologyTests.test_subprocess_missing_binary) ... ok
+test_subprocess_nonzero (__main__.MethodologyTests.test_subprocess_nonzero) ... ok
+test_subprocess_readonly_arguments_and_checks (__main__.MethodologyTests.test_subprocess_readonly_arguments_and_checks) ... ok
+test_subprocess_timeout (__main__.MethodologyTests.test_subprocess_timeout) ... ok
+test_syn_labels_require_origin_flags_and_segment (__main__.MethodologyTests.test_syn_labels_require_origin_flags_and_segment) ... ok
+test_synthetic_reproducible_and_only_test_parents (__main__.MethodologyTests.test_synthetic_reproducible_and_only_test_parents) ... ok
+test_temporal_split_disjoint_and_embargo (__main__.MethodologyTests.test_temporal_split_disjoint_and_embargo) ... ok
+test_test_extremes_do_not_change_fitted_statistics (__main__.MethodologyTests.test_test_extremes_do_not_change_fitted_statistics) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.755s
+
+OK

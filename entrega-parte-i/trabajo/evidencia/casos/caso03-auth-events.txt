@@ -1,0 +1,56 @@
+########## gateway (192.168.50.1) — eventos de autenticación ##########
+Nov 18 19:55:01 gateway CRON[1837]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Nov 18 19:55:01 gateway CRON[1837]: pam_unix(cron:session): session closed for user root
+Nov 18 20:05:01 gateway CRON[1855]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Nov 18 20:05:01 gateway CRON[1855]: pam_unix(cron:session): session closed for user root
+Nov 18 20:10:08 gateway sshd[1860]: Accepted password for lab from 192.168.50.10 port 49877 ssh2
+Nov 18 20:10:08 gateway sshd[1860]: pam_unix(sshd:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:08 gateway sudo[1923]: pam_unix(sudo:session): session opened for user root(uid=0) by lab(uid=1000)
+Nov 18 20:10:08 gateway sudo[1923]: pam_unix(sudo:session): session closed for user root
+Nov 18 20:10:08 gateway sshd[1860]: pam_unix(sshd:session): session closed for user lab
+Nov 18 20:10:20 gateway sshd[1927]: Accepted password for lab from 192.168.50.10 port 53582 ssh2
+Nov 18 20:10:20 gateway sshd[1927]: pam_unix(sshd:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:21 gateway sudo[1977]: pam_unix(sudo:session): session opened for user root(uid=0) by lab(uid=1000)
+
+########## web (192.168.50.20) — eventos de autenticación ##########
+Nov 18 20:05:01 web CRON[1518]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Nov 18 20:05:01 web CRON[1518]: pam_unix(cron:session): session closed for user root
+Nov 18 20:10:09 web sshd[1523]: Accepted password for lab from 192.168.50.10 port 49878 ssh2
+Nov 18 20:10:09 web sshd[1523]: pam_unix(sshd:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:09 web (systemd)[1531]: pam_unix(systemd-user:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:10 web sudo[1601]: pam_unix(sudo:session): session opened for user root(uid=0) by lab(uid=1000)
+Nov 18 20:10:10 web sudo[1601]: pam_unix(sudo:session): session closed for user root
+Nov 18 20:10:10 web sshd[1523]: pam_unix(sshd:session): session closed for user lab
+Nov 18 20:10:21 web sshd[1611]: Accepted password for lab from 192.168.50.10 port 58607 ssh2
+Nov 18 20:10:21 web sshd[1611]: pam_unix(sshd:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:21 web (systemd)[1616]: pam_unix(systemd-user:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:22 web sudo[1677]: pam_unix(sudo:session): session opened for user root(uid=0) by lab(uid=1000)
+
+########## dns (192.168.50.53) — eventos de autenticación ##########
+Nov 18 20:08:54 dns sudo[2083]: pam_unix(sudo:session): session closed for user root
+Nov 18 20:08:54 dns sshd[2033]: pam_unix(sshd:session): session closed for user lab
+Nov 18 20:10:10 dns sshd[2095]: Accepted password for lab from 192.168.50.10 port 49883 ssh2
+Nov 18 20:10:10 dns sshd[2095]: pam_unix(sshd:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:10 dns (systemd)[2100]: pam_unix(systemd-user:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:11 dns sudo[2170]: pam_unix(sudo:session): session opened for user root(uid=0) by lab(uid=1000)
+Nov 18 20:10:11 dns sudo[2170]: pam_unix(sudo:session): session closed for user root
+Nov 18 20:10:11 dns sshd[2095]: pam_unix(sshd:session): session closed for user lab
+Nov 18 20:10:22 dns sshd[2180]: Accepted password for lab from 192.168.50.10 port 58608 ssh2
+Nov 18 20:10:22 dns sshd[2180]: pam_unix(sshd:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:23 dns (systemd)[2185]: pam_unix(systemd-user:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:23 dns sudo[2245]: pam_unix(sudo:session): session opened for user root(uid=0) by lab(uid=1000)
+
+########## xmpp (192.168.50.30) — eventos de autenticación ##########
+Nov 18 20:05:01 xmpp CRON[1490]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Nov 18 20:05:01 xmpp CRON[1490]: pam_unix(cron:session): session closed for user root
+Nov 18 20:10:12 xmpp sshd[1495]: Accepted password for lab from 192.168.50.10 port 57887 ssh2
+Nov 18 20:10:12 xmpp sshd[1495]: pam_unix(sshd:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:12 xmpp (systemd)[1502]: pam_unix(systemd-user:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:13 xmpp sudo[1574]: pam_unix(sudo:session): session opened for user root(uid=0) by lab(uid=1000)
+Nov 18 20:10:13 xmpp sudo[1574]: pam_unix(sudo:session): session closed for user root
+Nov 18 20:10:13 xmpp sshd[1495]: pam_unix(sshd:session): session closed for user lab
+Nov 18 20:10:24 xmpp sshd[1584]: Accepted password for lab from 192.168.50.10 port 58609 ssh2
+Nov 18 20:10:24 xmpp sshd[1584]: pam_unix(sshd:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:24 xmpp (systemd)[1589]: pam_unix(systemd-user:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:24 xmpp sudo[1649]: pam_unix(sudo:session): session opened for user root(uid=0) by lab(uid=1000)
+

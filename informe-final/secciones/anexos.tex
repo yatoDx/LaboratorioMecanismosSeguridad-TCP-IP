@@ -1,0 +1,71 @@
+\chapter{Índice de evidencias e integridad}
+Huellas SHA-256 de las capturas, calculadas sobre la rama \cod{main} (commit \cod{bdd8fd6}). Los archivos binarios no dependen de los saltos de línea; para los de texto la referencia es el manifiesto \cod{entrega-parte-i/manifiesto-sha256.json} (SHA-256 \cod{a20e963a47a0ba57\-aff35b1d71616e77\-dfbb8e5032fbae7e\-6f90c897d66af66c}), que cubre 242 archivos por copia y registra las cuatro enmiendas de saltos de línea.
+
+{\small\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{@{}p{5cm}p{5.6cm}p{3cm}@{}}
+\caption{Capturas de la entrega y su huella SHA-256.}\\\toprule
+\textbf{Archivo} & \textbf{Contenido} & \textbf{SHA-256}\\\midrule\endfirsthead
+\toprule\textbf{Archivo} & \textbf{Contenido} & \textbf{SHA-256}\\\midrule\endhead
+{\ttfamily\scriptsize baseline-normal.pcapng} & Línea base real original (1.639 paquetes) & \cod{\scriptsize 301ea4766c642919\newline 734e3649b1de4c04\newline 9bb4bebeb8ff9b41\newline 25306322b3b076ff}\\
+{\ttfamily\scriptsize baseline-normal-limpia.pcapng} & Línea base filtrada al laboratorio (720) & \cod{\scriptsize 6fbe5c7939dfcc5c\newline f254f1bb88d9081e\newline de6ee287e0f91933\newline dbdf602bb66b4427}\\
+{\ttfamily\scriptsize caso01-synflood-ratelimit.pcap} & Caso 1, modelo token bucket & \cod{\scriptsize 89875054c5728a4f\newline 5f84e352588a2ca6\newline c1a5e0c17f12c0d5\newline eac753164897865c}\\
+{\ttfamily\scriptsize caso01-synflood.pcap} & Caso 1, ráfaga SYN & \cod{\scriptsize cdb0035700ebd5db\newline 641e0908a15331ce\newline ae72148ed3604daa\newline 27f9b7496518de27}\\
+{\ttfamily\scriptsize caso02-dns-tunneling.pcap} & Caso 2, consultas DNS & \cod{\scriptsize 4432598be91337ab\newline 04e6749604bfa9a2\newline f16266ae3b264bd3\newline 66d825c185da4988}\\
+{\ttfamily\scriptsize caso05-rst.pcap} & Caso 5, RST & \cod{\scriptsize abea3dec5ae31d8f\newline 2f9fa49c6188a8ed\newline 1b0b1bdcedeb1420\newline bfdc422736fb621a}\\
+{\ttfamily\scriptsize caso06-reflexion-udp.pcap} & Caso 6, reflexión UDP & \cod{\scriptsize 512bd19bacdcad6d\newline eb19956e7456fd6d\newline 0041713156f14fb2\newline 983d664325822862}\\
+{\ttfamily\scriptsize caso07-icmp.pcap} & Caso 7, ICMP & \cod{\scriptsize 1a2fb2b2291ea1cd\newline 7a87b370ca33053b\newline 0693b8526c6c77d0\newline 890a9dbab13a41ac}\\
+{\ttfamily\scriptsize caso08-portscan.pcap} & Caso 8, escaneo & \cod{\scriptsize 322d148fe355df3f\newline 13d16b9749cc34e0\newline 58f8a35b2468a010\newline f5eb305a70e7f313}\\
+{\ttfamily\scriptsize caso10-xmpp-tls.pcapng} & Caso 10, XMPP/TLS (real) & \cod{\scriptsize 2206664fd9c48ebd\newline 25af51d6407fc2e3\newline 497defde81a66b2f\newline 0e5163214a6e51fa}\\
+\bottomrule
+\end{longtable}}
+
+\begin{table}[H]\centering\small\caption{Organización de la evidencia en el repositorio.}
+\begin{tabularx}{\linewidth}{@{}p{4.8cm}X@{}}\toprule
+\textbf{Ruta} & \textbf{Contenido}\\\midrule
+{\ttfamily\scriptsize evidencia/} & Verificaciones del montaje, pantallazos, líneas base, \cod{evidencia.log}\\
+{\ttfamily\scriptsize evidencia/casos/} & PCAP, análisis, gráficas, logs y capturas de los diez casos; versiones anteriores en \cod{revision-anterior/}\\
+{\ttfamily\scriptsize evidencia/casos-linea-base-limpia/} & Casos 1, 4 y 7 repetidos con la línea base limpia (complementaria)\\
+\cod{entrega-parte-i/original}, \cod{trabajo} & Copias idénticas de 242 archivos y manifiesto SHA-256\\
+{\ttfamily\scriptsize fichas/} & Las diez fichas en Markdown y la plantilla\\
+{\ttfamily\scriptsize scripts/} & Generadores, analizadores, pipeline, cierre, reparación y dictamen\\
+{\ttfamily\scriptsize parte2/} & Código, pruebas, documentación y capturas de la Parte II\\
+\bottomrule\end{tabularx}\end{table}
+
+\chapter{Reproducción}
+Desde la raíz del repositorio, con Python 3, \cod{tshark} y las dependencias de \cod{parte2/requirements.txt}:
+\begin{lstlisting}
+# integridad del paquete de la Parte I
+python3 scripts/cerrar_parte_i.py --verificar
+# todas las pruebas (Parte I: 34; Parte II: 61)
+./ejecutar_pruebas.sh
+# autopruebas del Caso 4 (19)
+python3 scripts/caso04_ml.py --self-test
+# re-ejecutar un análisis (no transmite tráfico; solo lee PCAP)
+python3 scripts/analizar_caso01.py
+# Parte II en modo demostración
+cd parte2 && LOC_DEV_SHOW_CODE=1 uvicorn app.main:create_app --factory --port 8000
+# recorrido completo en Chrome con capturas
+python3 tests/e2e_navegador.py
+\end{lstlisting}
+Los scripts que acceden a las VMs leen el usuario y la contraseña de las variables \cod{LAB\_USER} y \cod{LAB\_PASS}; la contraseña no está en el código actual (versiones anteriores del historial de Git sí la contienen y corresponden a un usuario desechable de la red aislada).
+
+\chapter{Problemas encontrados y soluciones}
+\begin{longtable}{@{}p{5cm}p{9.2cm}@{}}
+\caption{Problemas encontrados durante el trabajo y cómo se resolvieron.}\\\toprule
+\textbf{Problema} & \textbf{Solución}\\\midrule\endfirsthead
+\toprule\textbf{Problema} & \textbf{Solución}\\\midrule\endhead
+Las VMs necesitaban paquetes pero el laboratorio debía quedar aislado & NAT solo durante la instalación; después \cod{--nic1 none}, netplan limpio y snapshots \cod{lab-base-aislado-v2}\\
+La evidencia de NTP de los clientes no aparecía con \cod{timedatectl} & Las VMs usan chrony (heredado de la plantilla); se documentó con \cod{chronyc sources} y \cod{tracking}\\
+Claves SSH de host repetidas en las VMs clonadas & Se regeneraron para que cada VM tenga huella propia\\
+La línea base contenía tráfico ajeno del anfitrión & Versión limpia filtrada a 192.168.50.0/24 y repetición de los casos 1, 4 y 7\\
+Primera versión del Caso 4 con ventanas desiguales y evaluación sobre datos de entrenamiento & Rehecha con ventanas de 10~s, separación temporal, embargo y métricas solo sobre prueba\\
+Prosody sin certificado; la recarga no activó el nuevo VirtualHost & Certificado con SAN correcto y reinicio del servicio; el registro conserva la orden original\\
+Pseudofirmas de IDS incorrectas (\cod{byte\_test} sobre nombres DNS, \cod{ack:0} como RST forjado) & Retiradas; detección en Python con límites declarados\\
+Reglas con \cod{policy drop} general que podían romper servicios & Tablas independientes con política \emph{accept} que solo actúan sobre el exceso, ubicadas en el host protegido\\
+El manifiesto no verificaba en un clon por la conversión CRLF/LF de Git & \cod{.gitattributes}, restauración de CRLF y registro de cuatro enmiendas; verificación correcta en clon limpio\\
+Contraseña del laboratorio escrita en \cod{vmctl.py} & Lectura desde \cod{LAB\_PASS}\\
+\cod{pytest} en la raíz chocaba con las copias de \cod{entrega-parte-i} & \cod{pytest.ini} y \cod{ejecutar\_pruebas.sh}\\
+Marcador duplicado en el mapa de la Parte II & Contador de secuencia que descarta respuestas viejas\\
+Wireshark instalado pero fuera del PATH & El verificador lo busca en su carpeta de instalación\\
+\bottomrule
+\end{longtable}

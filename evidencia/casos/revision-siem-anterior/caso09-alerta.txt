@@ -1,0 +1,11 @@
+CASO 9 — ALERTA ENRIQUECIDA
+========================================
+ALERTA [host=dns]: puntaje=31 — factores: DNS_REFUSED x31 (+31)
+  Origen principal: 192.168.50.100
+  Acción sugerida: revisar intentos de acceso y bloquear origen.
+ALERTA [host=gateway]: puntaje=39 — factores: SUDO x9 (+9); AUTH_FAIL x6 (+30)
+  Origen principal: 192.168.50.100
+  Acción sugerida: revisar intentos de acceso y bloquear origen.
+ALERTA [host=web]: puntaje=9 — factores: HTTP_5xx x3 (+9)
+  Origen principal: 192.168.50.100
+  Acción sugerida: revisar intentos de acceso y bloquear origen.

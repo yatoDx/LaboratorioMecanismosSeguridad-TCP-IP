@@ -1,0 +1,39 @@
+﻿=== Configuracion NTP del host (analista) ===
+2026-11-18 19:33:14
+
+-- 1. w32tm /config (peer 192.168.50.1) --
+Error: No se ha iniciado el servicio. (0x80070426)
+
+-- 2. Arrancar servicio w32time --
+El servicio de Hora de Windows está iniciándose.
+El servicio de Hora de Windows se ha iniciado correctamente.
+
+
+-- 3. Forzar resincronizacion --
+Enviando comando de resincronización al equipo local
+El equipo no se sincronizó porque no tenía información hora disponible.
+
+-- 4. w32tm /query /status --
+Indicador de salto: 0(ninguna advertencia)
+Capa: 4 (referencia secundaria - sincronizada mediante (S)NTP)
+Precisión: -23 (119.209ns por tick)
+Demora de raíz: 0.0000000s
+Dispersión de raíz: 10.0000000s
+Id. de referencia: 0xC0A83201 (IP de origen:  192.168.50.1)
+Última sincronización de hora correcta: 18/11/2026 7:33:10 p. m.
+Origen: 192.168.50.1 
+Intervalo de sondeo: 10 (1024s)
+
+
+-- 5. w32tm /query /peers --
+Nº de sistemas del mismo nivel: 1
+
+Sistema del mismo nivel: 192.168.50.1
+Estado: Activo
+Tiempo restante: 1020.9908386s
+Modo: 3 (Cliente)
+Capa: 3 (referencia secundaria - sincronizada mediante (S)NTP)
+Sistema del mismo nivelIntervalo de sondeo: 10 (1024s)
+HostIntervalo de sondeo: 10 (1024s)
+
+=== fin ===

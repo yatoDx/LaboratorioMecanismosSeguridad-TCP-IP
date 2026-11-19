@@ -1,0 +1,64 @@
+\chapter{Introducción}
+
+\section{Resumen ejecutivo}
+El laboratorio quedó montado y verificado el 18 de noviembre de 2026. Cuatro máquinas virtuales Ubuntu Server 24.04.5 LTS y el equipo analista Windows comparten la red solo-anfitrión 192.168.50.0/24, sin adaptador NAT ni ruta por defecto, con NTP servido por el gateway, DNS, web, XMPP y un firewall con política de descarte. Sobre esa base se desarrollaron los diez casos de la Parte~I y el sistema de la Parte~II. La Tabla~\ref{tab:resumen1} resume cada caso con su resultado medido y el límite que se declara; la Tabla~\ref{tab:resumen2}, el estado global de la entrega.
+
+{\small
+\renewcommand{\arraystretch}{1.12}
+\begin{longtable}{@{}p{2.6cm}p{6.3cm}p{5.0cm}@{}}
+\caption{Resumen ejecutivo de la Parte I: resultado medido y límite declarado por caso.}\label{tab:resumen1}\\
+\toprule
+\textbf{Caso} & \textbf{Resultado medido} & \textbf{Límite declarado}\\\midrule\endfirsthead
+\toprule\textbf{Caso} & \textbf{Resultado medido} & \textbf{Límite declarado}\\\midrule\endhead
+1. SYN flood & 200 SYN de .100 a .20:80 sin handshake; con un token bucket de 10/s y ráfaga 20 pasan 120 y se descartan 80; regla nftables \cod{limit rate over 10/second} validada con \cod{nft -c} & PCAP sintética; la regla no se probó con tráfico; la línea base real tiene 0 SYN y no permite calibrar umbrales\\
+2. DNS tunneling & 37 consultas: 25 etiquetas hex de 25–52 caracteres ($H$ = 3,229–3,933 bits) frente a 12 legibles ($H$ = 1,922–2,522); la heurística marca 21/25 y 0/12 & Muestra artificial; no se confirma túnel ni exfiltración\\
+3. Servicios expuestos & Inventario real con \cod{ss -tulpn} en las 4 VMs y \cod{netstat} en el host (139/445/5432); 8 \cod{Accepted password}, 0 \cod{Failed password} & Escuchar no prueba exposición remota; procesos del host sin atribuir\\
+4. Anomalías con ML & 29 ventanas de 10 s (17 train, 1 embargo, 11 test) y 22 variantes sintéticas; ambos detectores marcan 22/22; falsos positivos sobre normales: z-score 1/11, IsolationForest 5/11 & Una sola línea base, muestra pequeña, anomalías solo sintéticas\\
+5. RST TCP & 6 RST: 2 en sesiones con handshake y 4 de .100 fuera de flujo (seq 400000–400300, sin flag ACK) & Sintético; no se demostró inyección ni interrupción\\
+6. Reflexión UDP & 20 pares modelo: cociente de tramas 5,667x y de payload 9,750x; prueba real \cod{dig} al resolver devuelve REFUSED & Puerto 40000 didáctico, no NTP; REFUSED solo prueba esa consulta\\
+7. ICMP & 63 paquetes; .100 emite 55 echo con máximo 10 por segundo y 5 de payload 1289~B; línea base real: 152 echo de 32~B, máximo 1/s & Sin túnel; umbrales propuestos, no universales\\
+8. Escaneo & 25 SYN pero 24 puertos únicos (el 80 se sondea en dos destinos); 21 RST y 4 SYN-ACK programados & Respuestas escritas en el generador; no es descubrimiento real\\
+9. Correlación SIEM & 168 eventos reales y 21 sintéticos en 37 ventanas; 0 alertas reales y 1 sintética de 49 puntos con factores explicables & Pipeline propio en Python; dictamen humano pendiente\\
+10. XMPP/TLS & TLS 1.3 con \cod{TLS\_AES\_256\_GCM\_SHA384} y confianza explícita; rechazo con \emph{Unknown CA} y \emph{Bad Certificate} en los controles negativos & Certificado autofirmado; login, federación y localhost sin evaluar\\
+\bottomrule
+\end{longtable}}
+
+\begin{table}[H]\centering\small
+\caption{Estado global de la entrega.}\label{tab:resumen2}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{@{}p{4cm}X@{}}\toprule
+\textbf{Componente} & \textbf{Estado}\\\midrule
+Laboratorio & 4 VMs y analista verificados; NAT retirado; snapshots \cod{lab-base-aislado-v2}\\
+Parte I & 10 fichas; 34 pruebas \cod{pytest} y 19 autopruebas del Caso 4 aprobadas; paquete \cod{entrega-parte-i} con manifiesto SHA-256 de 242 archivos por copia que verifica en un clon limpio\\
+Reproducción para este informe & Analizadores de los casos 1, 2, 5, 6, 7 y 8 re-ejecutados: salidas idénticas byte a byte a las registradas; Caso 4 con métricas idénticas\\
+Línea base limpia & Casos 1, 4 y 7 repetidos sin el tráfico ajeno del anfitrión: el falso positivo del z-score desaparece (capítulo~\ref{cap:discusion})\\
+Parte II & API, interfaz web y 61 pruebas aprobadas; prueba de extremo a extremo en Chrome con 9 capturas\\
+Pendiente & Dictamen humano del Caso 9 (herramienta de registro preparada)\\
+\bottomrule\end{tabularx}\end{table}
+
+\section{Presentación y alcance}
+La guía pide estudiar mecanismos de seguridad sobre una red Ethernet IEEE~802.3 con servicios TCP/IP. El trabajo se limita a equipos propios: las cuatro VMs y el equipo analista, en la red privada 192.168.50.0/24. Todo tráfico de ataque se modela con PCAP sintéticas generadas a archivo, que nunca se transmitieron a las VMs; el análisis sí usa capturas y registros reales del laboratorio. Los scripts, configuraciones, capturas, fichas y el código de la Parte~II están en el repositorio público \url{https://github.com/yatoDx/Laboratorio-seguridad-tcpip} (rama \cod{main}, commit \cod{bdd8fd6}) \cite{repo}.
+
+\section{Objetivos}
+\textbf{Objetivo general.} Analizar amenazas típicas de una red IEEE~802.3 con servicios TCP/IP a partir de evidencia verificable, proponer controles de detección y mitigación, e implementar un sistema de localización que respete el consentimiento de su titular.
+
+\textbf{Objetivos específicos.}
+\begin{enumerate}
+\item Montar un laboratorio aislado, sincronizado y verificable, con control de integridad de la evidencia.
+\item Documentar diez casos críticos con una ficha uniforme y cifras recalculables.
+\item Proponer reglas de detección y mitigación ubicadas en el punto de la red donde de verdad actúan.
+\item Evaluar con método el uso de aprendizaje automático y de correlación de eventos para priorizar alertas.
+\item Construir y probar un prototipo de localización con autenticación, mapa, historial y geocercas, cuyo diseño impida el seguimiento sin permiso.
+\end{enumerate}
+
+\section{Resultados de aprendizaje}
+\begin{itemize}
+\item Distinguir entre un indicador, una hipótesis y un hecho confirmado; declarar qué prueba y qué no prueba cada evidencia.
+\item Leer PCAP con Wireshark y \cod{tshark}, y cuantificar con scripts reproducibles en lugar de estimar.
+\item Ubicar los controles: un gateway que no está en la ruta entre dos equipos de la misma subred no los protege.
+\item Separar entrenamiento y prueba en el tiempo para no inflar métricas de detección.
+\item Diseñar para la privacidad: permiso por defecto denegado, temporal, revocable y auditable.
+\end{itemize}
+
+\section{Estructura del informe}
+El capítulo~\ref{cap:marco} resume el marco de referencia. El capítulo~\ref{cap:metodo} describe el laboratorio, las herramientas, el método de evidencia y el formato de las fichas. El capítulo~\ref{cap:parte1} desarrolla los diez casos y el capítulo~\ref{cap:parte2}, el sistema de localización. El capítulo~\ref{cap:discusion} discute los resultados y el~\ref{cap:conclusiones} cierra con conclusiones y trabajo futuro. Los anexos reúnen el índice de evidencias con sus huellas, los comandos de reproducción y los problemas encontrados durante el trabajo.

@@ -1,0 +1,45 @@
+########## nginx access.log (web) ##########
+192.168.50.10 - - [18/Nov/2026:19:49:26 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:49:44 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:49:59 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:50:14 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:50:29 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:50:45 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:51:00 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:51:15 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:51:30 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:51:45 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:52:00 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:52:15 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:52:30 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:52:45 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:53:00 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:53:15 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:53:30 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:53:45 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:54:00 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+192.168.50.10 - - [18/Nov/2026:19:54:15 -0500] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.9818"
+
+########## nginx error.log (web) ##########
+
+########## prosody.log (xmpp) ##########
+Nov 18 19:52:00 c2s5add0b214cc0	info	Client connected
+Nov 18 19:52:00 c2s5add0b214cc0	info	Client disconnected: connection closed
+Nov 18 19:52:15 c2s5add0b239160	info	Client connected
+Nov 18 19:52:15 c2s5add0b239160	info	Client disconnected: connection closed
+Nov 18 19:52:30 c2s5add0b23bde0	info	Client connected
+Nov 18 19:52:30 c2s5add0b23bde0	info	Client disconnected: connection closed
+Nov 18 19:52:45 c2s5add0b20f3a0	info	Client connected
+Nov 18 19:52:45 c2s5add0b20f3a0	info	Client disconnected: connection closed
+Nov 18 19:53:00 c2s5add0b1f09d0	info	Client connected
+Nov 18 19:53:00 c2s5add0b1f09d0	info	Client disconnected: connection closed
+Nov 18 19:53:15 c2s5add0b238ce0	info	Client connected
+Nov 18 19:53:15 c2s5add0b238ce0	info	Client disconnected: connection closed
+Nov 18 19:53:30 c2s5add0b2316f0	info	Client connected
+Nov 18 19:53:30 c2s5add0b2316f0	info	Client disconnected: connection closed
+Nov 18 19:53:45 c2s5add0b170390	info	Client connected
+Nov 18 19:53:45 c2s5add0b170390	info	Client disconnected: connection closed
+Nov 18 19:54:00 c2s5add0b2242a0	info	Client connected
+Nov 18 19:54:00 c2s5add0b2242a0	info	Client disconnected: connection closed
+Nov 18 19:54:15 c2s5add0b236b20	info	Client connected
+Nov 18 19:54:15 c2s5add0b236b20	info	Client disconnected: connection closed

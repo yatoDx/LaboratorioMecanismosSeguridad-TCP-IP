@@ -1,0 +1,34 @@
+==============================================
+ Verificacion de laboratorio - rol: analista
+
+miércoles, 18 de noviembre de 2026 7:38:27 p. m.
+==============================================
+
+Interfaz host-only detectada: Ethernet 2 (VirtualBox Host-Only Ethernet Adapter)
+[OK]   IP 192.168.50.10 en Ethernet 2
+[OK]   DNS 192.168.50.53 configurado
+
+Conectividad:
+[OK]   gateway (192.168.50.1) responde
+[OK]   web (192.168.50.20) responde
+[OK]   dns (192.168.50.53) responde
+[OK]   xmpp (192.168.50.30) responde
+
+Aislamiento:
+[OK]   192.0.2.1 no responde (aislado)
+
+Servicios (TCP):
+[OK]   HTTP (192.168.50.20:80) abierto
+[OK]   DNS (192.168.50.53:53) abierto
+[OK]   XMPP (192.168.50.30:5222) abierto
+
+Herramientas:
+[?]    Wireshark no detectado en PATH
+[OK]   Python: Python 3.14.7
+
+==============================================
+ Resumen: 11 OK | 0 FALTA | 1 advertencias
+miércoles, 18 de noviembre de 2026 7:39:04 p. m.
+==============================================
+
+

@@ -1,0 +1,169 @@
+host,source,event_type,src_ip,detail
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.20,GET / 200
+web,nginx,HTTP_OK,192.168.50.20,GET / 200
+web,nginx,HTTP_OK,192.168.50.20,GET / 200
+web,nginx,HTTP_OK,192.168.50.20,HEAD / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.20,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+web,nginx,HTTP_OK,192.168.50.10,GET / 200
+dns,dnsmasq,DNS_QUERY,192.168.50.10,presence.roblox.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,users.roblox.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,center.qoder.sh
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,center.qoder.sh
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,openapi.qoder.sh
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,ecsv2.roblox.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,btardsb9ml-default-sea.rum.aliyuncs.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,main.vscode-cdn.net
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,www.googleapis.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,daily-cloudcode-pa.googleapis.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,lh3.googleusercontent.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,web.whatsapp.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,users.roblox.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,openapi.qoder.sh
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,updates.overwolf.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,ecsv2.roblox.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,oauth2.googleapis.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,openapi.qoder.sh
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,btardsb9ml-default-sea.rum.aliyuncs.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,metrics.roblox.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,apis.roblox.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,center.qoder.sh
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,download.qoder.com.cn
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,presence.roblox.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,safebrowsing.googleapis.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,web.whatsapp.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,openapi.qoder.sh
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,ecsv2.roblox.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,btardsb9ml-default-sea.rum.aliyuncs.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+dns,dnsmasq,DNS_QUERY,192.168.50.10,users.roblox.com
+dns,dnsmasq,DNS_REFUSED,,REFUSED
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+xmpp,prosody,XMPP_CONNECT,,Client connected
+xmpp,prosody,XMPP_CONNECT,,Client disconnected: connection closed
+gateway,auth,SUDO,,
+gateway,auth,SUDO,,
+gateway,auth,SUDO,,
+gateway,auth,CRON,,
+gateway,auth,CRON,,
+gateway,auth,CRON,,
+gateway,auth,CRON,,
+gateway,auth,CRON,,
+gateway,auth,CRON,,
+gateway,auth,AUTH_SUCCESS,192.168.50.10,user=lab
+gateway,auth,SUDO,,
+gateway,auth,SUDO,,
+gateway,auth,SUDO,,
+gateway,auth,AUTH_SUCCESS,192.168.50.10,user=lab
+gateway,auth,SUDO,,
+gateway,auth,SUDO,,
+gateway,auth,SUDO,,
+gateway,auth,CRON,,
+gateway,auth,CRON,,
+gateway,auth,CRON,,
+gateway,auth,CRON,,
+gateway,auth,CRON,,
+gateway,auth,CRON,,
+gateway,auth,AUTH_SUCCESS,192.168.50.10,user=lab
+gateway,sistema,SYSTEM,,Nov 18 20:10:08 gateway systemd-logind[550]: Session 23 logged out. Waiting for 
+gateway,sistema,SYSTEM,,Nov 18 20:10:08 gateway systemd[1]: session-23.scope: Deactivated successfully.
+gateway,sistema,SYSTEM,,Nov 18 20:10:08 gateway systemd-logind[550]: Removed session 23.
+gateway,sistema,SYSTEM,,Nov 18 20:10:20 gateway systemd-logind[550]: New session 24 of user lab.
+gateway,sistema,SYSTEM,,Nov 18 20:10:20 gateway systemd[1]: Started session-24.scope - Session 24 of Use
+gateway,sistema,SYSTEM,,Nov 18 20:10:21 gateway systemd-logind[550]: Session 24 logged out. Waiting for 
+gateway,sistema,SYSTEM,,Nov 18 20:10:21 gateway systemd[1]: session-24.scope: Deactivated successfully.
+gateway,sistema,SYSTEM,,Nov 18 20:10:21 gateway systemd-logind[550]: Removed session 24.
+gateway,sistema,SYSTEM,,Nov 18 20:19:44 gateway systemd-logind[550]: New session 27 of user lab.
+gateway,sistema,SYSTEM,,Nov 18 20:19:44 gateway systemd[1]: Started session-27.scope - Session 27 of Use
+gateway,sistema,SYSTEM,,Nov 18 20:19:45 gateway systemd-logind[550]: Session 27 logged out. Waiting for 
+gateway,sistema,SYSTEM,,Nov 18 20:19:45 gateway systemd[1]: session-27.scope: Deactivated successfully.
+gateway,sistema,SYSTEM,,Nov 18 20:19:45 gateway systemd-logind[550]: Removed session 27.
+gateway,sistema,SYSTEM,,Nov 18 20:19:46 gateway systemd-logind[550]: New session 28 of user lab.
+gateway,sistema,SYSTEM,,Nov 18 20:19:46 gateway systemd[1]: Started session-28.scope - Session 28 of Use

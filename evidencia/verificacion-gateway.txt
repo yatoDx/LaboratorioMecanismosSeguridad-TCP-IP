@@ -1,0 +1,29 @@
+ Verificación de laboratorio - rol: gateway
+Wed Nov 18 06:29:22 PM -05 2026
+==============================================
+--    Interfaces de red:
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 metric 100 fe80::a00:27ff:fe83:45fe/64 
+enp0s8           UP             192.168.50.1/24 fe80::a00:27ff:fe97:5953/64 
+[OK]   IP 192.168.50.1 configurada
+
+--    Conectividad (ping, timeout 1s):
+[OK]   gateway (192.168.50.1) responde
+[OK]   analista (192.168.50.10) responde
+[OK]   web (192.168.50.20) responde
+[OK]   dns (192.168.50.53) responde
+[OK]   xmpp (192.168.50.30) responde
+
+--    Aislamiento (192.0.2.1 NO debe responder):
+[OK]   192.0.2.1 no responde (aislado)
+
+--    Chequeos de gateway:
+[OK]   servicio chrony activo
+[OK]   NTP (chrony) escuchando (puerto 123)
+[OK]   nftables activo con reglas
+[OK]   ip_forward=0 (sin reenvío)
+
+==============================================
+ Fin de la verificación
+Wed Nov 18 06:29:22 PM -05 2026
+==============================================

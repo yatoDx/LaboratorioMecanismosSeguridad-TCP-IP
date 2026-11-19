@@ -1,0 +1,23 @@
+scenario_id,parent_window_id,kind,start,end,marker,data_kind
+syn-w018,real:301ea4766c64:w018,syn,182.0,188.0,src=192.168.50.100; TCP SYN=1 ACK=0,synthetic
+dns-w018,real:301ea4766c64:w018,dns,182.0,188.0,dns.qry.name endswith .exfil.lab.local,synthetic
+syn-w019,real:301ea4766c64:w019,syn,192.0,198.0,src=192.168.50.100; TCP SYN=1 ACK=0,synthetic
+dns-w019,real:301ea4766c64:w019,dns,192.0,198.0,dns.qry.name endswith .exfil.lab.local,synthetic
+syn-w020,real:301ea4766c64:w020,syn,202.0,208.0,src=192.168.50.100; TCP SYN=1 ACK=0,synthetic
+dns-w020,real:301ea4766c64:w020,dns,202.0,208.0,dns.qry.name endswith .exfil.lab.local,synthetic
+syn-w021,real:301ea4766c64:w021,syn,212.0,218.0,src=192.168.50.100; TCP SYN=1 ACK=0,synthetic
+dns-w021,real:301ea4766c64:w021,dns,212.0,218.0,dns.qry.name endswith .exfil.lab.local,synthetic
+syn-w022,real:301ea4766c64:w022,syn,222.0,228.0,src=192.168.50.100; TCP SYN=1 ACK=0,synthetic
+dns-w022,real:301ea4766c64:w022,dns,222.0,228.0,dns.qry.name endswith .exfil.lab.local,synthetic
+syn-w023,real:301ea4766c64:w023,syn,232.0,238.0,src=192.168.50.100; TCP SYN=1 ACK=0,synthetic
+dns-w023,real:301ea4766c64:w023,dns,232.0,238.0,dns.qry.name endswith .exfil.lab.local,synthetic
+syn-w024,real:301ea4766c64:w024,syn,242.0,248.0,src=192.168.50.100; TCP SYN=1 ACK=0,synthetic
+dns-w024,real:301ea4766c64:w024,dns,242.0,248.0,dns.qry.name endswith .exfil.lab.local,synthetic
+syn-w025,real:301ea4766c64:w025,syn,252.0,258.0,src=192.168.50.100; TCP SYN=1 ACK=0,synthetic
+dns-w025,real:301ea4766c64:w025,dns,252.0,258.0,dns.qry.name endswith .exfil.lab.local,synthetic
+syn-w026,real:301ea4766c64:w026,syn,262.0,268.0,src=192.168.50.100; TCP SYN=1 ACK=0,synthetic
+dns-w026,real:301ea4766c64:w026,dns,262.0,268.0,dns.qry.name endswith .exfil.lab.local,synthetic
+syn-w027,real:301ea4766c64:w027,syn,272.0,278.0,src=192.168.50.100; TCP SYN=1 ACK=0,synthetic
+dns-w027,real:301ea4766c64:w027,dns,272.0,278.0,dns.qry.name endswith .exfil.lab.local,synthetic
+syn-w028,real:301ea4766c64:w028,syn,282.0,288.0,src=192.168.50.100; TCP SYN=1 ACK=0,synthetic
+dns-w028,real:301ea4766c64:w028,dns,282.0,288.0,dns.qry.name endswith .exfil.lab.local,synthetic

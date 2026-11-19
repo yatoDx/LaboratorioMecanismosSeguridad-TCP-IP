@@ -1,0 +1,19 @@
+# Caso 8 — Regla de detección de escaneo de puertos (nftables + log)
+
+# 1) Registrar (log) los intentos de conexión a puertos NO abiertos:
+#    un escaneo genera muchos SYN a puertos cerrados.
+table inet filter {
+    chain input {
+        type filter hook input priority 0; policy drop;
+
+        # log de SYN hacia puertos cerrados (los abiertos se aceptan aparte)
+        tcp flags & (syn | ack) == syn log prefix "scan-syn: " limit rate 5/second
+    }
+}
+
+# 2) Detección por cardinalidad (requiere correlación, p. ej. el SIEM del caso 9):
+#    alertar si un origen toca > N puertos distintos en una ventana corta.
+
+# alert tcp any any -> any any (flags:S,12;
+#   threshold: type threshold, track by_src, count 20, seconds 10;
+#   sid:1000009; rev:1; msg:"Posible escaneo de puertos (SYN)";)

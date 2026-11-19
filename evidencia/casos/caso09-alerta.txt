@@ -1,0 +1,54 @@
+[
+  {
+    "evidence_kind": "sintetica",
+    "subject": "192.168.50.100",
+    "window_utc": "2026-11-19T01:30:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "gateway",
+      "web"
+    ],
+    "sources": [
+      "auth",
+      "nftables",
+      "nginx"
+    ],
+    "counts": {
+      "AUTH_FAIL": 6,
+      "HTTP_5XX": 3,
+      "NFT_SYN": 12
+    },
+    "distinct_dst_ports": 12,
+    "score": 49,
+    "factors": {
+      "fallos_autenticacion": 30,
+      "errores_http_5xx": 9,
+      "diez_puertos_distintos": 10
+    },
+    "alert": true,
+    "evidence_refs": [
+      "caso09-escenario-sintetico.jsonl:1",
+      "caso09-escenario-sintetico.jsonl:2",
+      "caso09-escenario-sintetico.jsonl:3",
+      "caso09-escenario-sintetico.jsonl:4",
+      "caso09-escenario-sintetico.jsonl:5",
+      "caso09-escenario-sintetico.jsonl:6",
+      "caso09-escenario-sintetico.jsonl:7",
+      "caso09-escenario-sintetico.jsonl:8",
+      "caso09-escenario-sintetico.jsonl:9",
+      "caso09-escenario-sintetico.jsonl:10",
+      "caso09-escenario-sintetico.jsonl:11",
+      "caso09-escenario-sintetico.jsonl:12",
+      "caso09-escenario-sintetico.jsonl:13",
+      "caso09-escenario-sintetico.jsonl:14",
+      "caso09-escenario-sintetico.jsonl:15",
+      "caso09-escenario-sintetico.jsonl:16",
+      "caso09-escenario-sintetico.jsonl:17",
+      "caso09-escenario-sintetico.jsonl:18",
+      "caso09-escenario-sintetico.jsonl:19",
+      "caso09-escenario-sintetico.jsonl:20",
+      "caso09-escenario-sintetico.jsonl:21"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  }
+]

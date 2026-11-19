@@ -1,0 +1,57 @@
+"C:\Program Files\Git\usr\bin\openssl.exe" s_client -starttls xmpp -xmpphost xmpp.lab.local -connect 192.168.50.30:5222 -servername xmpp.lab.local -showcerts -CAfile C:\Users\yatoG\Documents\Qoder\2026-11-18\70141794\lab\evidencia\casos\caso10-certificado.pem -verify_hostname xmpp.lab.local -verify_return_error
+CONNECTED(00000004)
+---
+Certificate chain
+ 0 s:CN=xmpp.lab.local, O=Taller TCPIP laboratorio
+   i:CN=xmpp.lab.local, O=Taller TCPIP laboratorio
+   a:PKEY: RSA, 2048 (bit); sigalg: sha256WithRSAEncryption
+   v:NotBefore: Nov 19 01:42:40 2026 GMT; NotAfter: Dec 19 01:42:40 2026 GMT
+-----BEGIN CERTIFICATE-----
+MIIDizCCAnOgAwIBAgIULxLCdXv+2O4K6M2WLp/Fk+pbJ7AwDQYJKoZIhvcNAQEL
+BQAwPDEXMBUGA1UEAwwOeG1wcC5sYWIubG9jYWwxITAfBgNVBAoMGFRhbGxlciBU
+Q1BJUCBsYWJvcmF0b3JpbzAeFw0yNjExMTkwMTQyNDBaFw0yNjEyMTkwMTQyNDBa
+MDwxFzAVBgNVBAMMDnhtcHAubGFiLmxvY2FsMSEwHwYDVQQKDBhUYWxsZXIgVENQ
+SVAgbGFib3JhdG9yaW8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCI
+GaK9ey5+1O50OheCkv0BBN6+OF9xb2nTjVfmnv01WUAWMs6O0Cj6a38uZ+zRNl03
+YKmwPQ7wZdXUdU++DpI1+ZAV4kBLrl3WFplYo4azTI9rFTtEfbyZo7hmucyYKZ9H
+HPZBA7MjCEtcLPANVygzhmcusMdH6WgYP1/esTP33B64QZ1l3mYK2/pq5FD2pAM8
+MsFLUP8iXwcyeY6m+gvBdTx1oLjQLpu8HeCSaQL8TDmEZFm0l4FRS2GYWaHCD3iK
+TMYy1aF/JIk46QDMJLAL9htzWiMvIVpmrt4rHeCxEx8wMDz7EAiS3KFtvXDTVU14
+ZdBAlfTCaNX34Ew0maDNAgMBAAGjgYQwgYEwHQYDVR0OBBYEFGTuk7nY3vQlV4RJ
+jyP8mcJ55RtjMB8GA1UdIwQYMBaAFGTuk7nY3vQlV4RJjyP8mcJ55RtjMA8GA1Ud
+EwEB/wQFMAMBAf8wGQYDVR0RBBIwEIIOeG1wcC5sYWIubG9jYWwwEwYDVR0lBAww
+CgYIKwYBBQUHAwEwDQYJKoZIhvcNAQELBQADggEBAAHSGGbiRH5cM91/XKd+pj3M
+2bZQsfEb/3/IkVsdDdgiT0o92lUKpv08gpwhd4S5C36Vyz6PCVaQu8IkeekE+itQ
+AKifjEfDXcXmcMdZzXnYvDTf6w2i3Zg+1aZ/e+fjPJDBwN7V9wUNEXiX3ghYvuPe
+2uGfZqDfE57fD2BUQTPgjVegQ0gJSInhW/3IOaWMyz64glVnUPAfovcpW9kF7aqz
+P/EKZziabAPEsfMS+bkiygQuofyVHVD/qV6BuJbJ+RR71LNHJp3XdyK/PpzvG7m2
+5jWLQrGB+N5IlYxLmxYXdnVT0CqfYTGq87Ox0AXia0A2ePl4WrTHtW0r3BeH78I=
+-----END CERTIFICATE-----
+---
+Server certificate
+subject=CN=xmpp.lab.local, O=Taller TCPIP laboratorio
+issuer=CN=xmpp.lab.local, O=Taller TCPIP laboratorio
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: rsa_pss_rsae_sha256
+Peer Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1822 bytes and written 1797 bytes
+Verification: OK
+Verified peername: xmpp.lab.local
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Protocol: TLSv1.3
+Server public key is 2048 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+Connecting to 192.168.50.30
+depth=0 CN=xmpp.lab.local, O=Taller TCPIP laboratorio
+verify return:1
+DONE

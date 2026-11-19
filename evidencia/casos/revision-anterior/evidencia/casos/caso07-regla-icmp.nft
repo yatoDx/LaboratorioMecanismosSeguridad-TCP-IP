@@ -1,0 +1,21 @@
+# Caso 7 — Regla de mitigación de ICMP flood / tunneling (nftables)
+
+# En el gateway (192.168.50.1):
+table inet filter {
+    chain input {
+        type filter hook input priority 0; policy drop;
+
+        # Ping normal limitado a 5/s (ráfaga 10): mitiga ICMP flood
+        icmp type echo-request limit rate 5/second burst 10 packets counter accept
+    }
+}
+
+# Detección de túneles ICMP (payload grande): en un IDS/regla de alerta.
+# Un echo-request legítimo rara vez supera ~64 bytes de payload.
+
+# alert icmp any any -> any any (msg:"Posible túnel ICMP (payload grande)";
+#   itype:8; dsize:>200; sid:1000007; rev:1;)
+
+# alert icmp any any -> any any (msg:"ICMP flood";
+#   itype:8; threshold: type both, track by_src, count 20, seconds 1;
+#   sid:1000008; rev:1;)

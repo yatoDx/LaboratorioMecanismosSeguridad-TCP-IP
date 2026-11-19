@@ -1,0 +1,37 @@
+Nov 18 20:08:27 dns systemd[1]: Stopping dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server...
+Nov 18 20:08:27 dns resolvconf[1736]: Dropped protocol specifier '.dnsmasq' from 'lo.dnsmasq'. Using 'lo' (ifindex=1).
+Nov 18 20:08:27 dns resolvconf[1736]: Failed to revert interface configuration: Link lo is loopback device.
+Nov 18 20:08:27 dns dnsmasq[569]: exiting on receipt of SIGTERM
+Nov 18 20:08:27 dns systemd[1]: dnsmasq.service: Deactivated successfully.
+Nov 18 20:08:27 dns systemd[1]: Stopped dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server.
+Nov 18 20:08:27 dns systemd[1]: Starting dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server...
+Nov 18 20:08:27 dns dnsmasq[1751]: started, version 2.91 cachesize 150
+Nov 18 20:08:27 dns dnsmasq[1751]: compile time options: IPv6 GNU-getopt DBus no-UBus i18n IDN2 DHCP DHCPv6 no-Lua TFTP conntrack ipset nftset auth DNSSEC loop-detect inotify dumpfile
+Nov 18 20:08:27 dns dnsmasq[1751]: warning: ignoring resolv-file flag because no-resolv is set
+Nov 18 20:08:27 dns dnsmasq[1751]: warning: no upstream servers configured
+Nov 18 20:08:27 dns dnsmasq[1751]: read /etc/hosts - 8 names
+Nov 18 20:08:27 dns resolvconf[1759]: Dropped protocol specifier '.dnsmasq' from 'lo.dnsmasq'. Using 'lo' (ifindex=1).
+Nov 18 20:08:27 dns resolvconf[1759]: Failed to set DNS configuration: Link lo is loopback device.
+Nov 18 20:08:27 dns systemd[1]: Started dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server.
+Nov 18 20:08:29 dns dnsmasq[1751]: query[A] metrics.roblox.com from 192.168.50.10
+Nov 18 20:08:29 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:08:29 dns dnsmasq[1751]: query[A] apis.roblox.com from 192.168.50.10
+Nov 18 20:08:29 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:08:30 dns dnsmasq[1751]: query[A] ncs.roblox.com from 192.168.50.10
+Nov 18 20:08:30 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:08:35 dns dnsmasq[1751]: query[A] center.qoder.sh from 192.168.50.10
+Nov 18 20:08:35 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:08:36 dns dnsmasq[1751]: query[A] download.qoder.com.cn from 192.168.50.10
+Nov 18 20:08:36 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:08:41 dns dnsmasq[1751]: query[A] presence.roblox.com from 192.168.50.10
+Nov 18 20:08:41 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:08:41 dns dnsmasq[1751]: query[A] users.roblox.com from 192.168.50.10
+Nov 18 20:08:41 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:08:41 dns dnsmasq[1751]: query[A] web.lab.local from 192.168.50.53
+Nov 18 20:08:41 dns dnsmasq[1751]: config web.lab.local is 192.168.50.20
+Nov 18 20:08:41 dns dnsmasq[1751]: query[A] xmpp.lab.local from 192.168.50.53
+Nov 18 20:08:41 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:08:41 dns dnsmasq[1751]: query[A] 5fe878f78e2978aa2447c462ddaed16dc0cf0b9cd7f78df0cac5.exfil.lab.local from 192.168.50.53
+Nov 18 20:08:41 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)
+Nov 18 20:08:49 dns dnsmasq[1751]: query[A] ecsv2.roblox.com from 192.168.50.10
+Nov 18 20:08:49 dns dnsmasq[1751]: config error is REFUSED (EDE: not ready)

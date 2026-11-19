@@ -1,0 +1,53 @@
+########## gateway (192.168.50.1) ##########
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                               
+udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=402,fd=16))            
+udp   UNCONN 0      0      127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=402,fd=14))            
+udp   UNCONN 0      0            0.0.0.0:123       0.0.0.0:*    users:(("chronyd",pid=600,fd=7))                     
+udp   UNCONN 0      0          127.0.0.1:323       0.0.0.0:*    users:(("chronyd",pid=600,fd=5))                     
+udp   UNCONN 0      0              [::1]:323          [::]:*    users:(("chronyd",pid=600,fd=6))                     
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=402,fd=15))            
+tcp   LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=402,fd=17))            
+tcp   LISTEN 0      4096         0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=644,fd=3),("systemd",pid=1,fd=79))
+tcp   LISTEN 0      4096            [::]:22           [::]:*    users:(("sshd",pid=644,fd=4),("systemd",pid=1,fd=80))
+
+########## web (192.168.50.20) ##########
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                               
+udp   UNCONN 0      0          127.0.0.1:323       0.0.0.0:*    users:(("chronyd",pid=596,fd=5))                     
+udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=390,fd=16))            
+udp   UNCONN 0      0      127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=390,fd=14))            
+udp   UNCONN 0      0              [::1]:323          [::]:*    users:(("chronyd",pid=596,fd=6))                     
+tcp   LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=390,fd=17))            
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=390,fd=15))            
+tcp   LISTEN 0      4096         0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=632,fd=3),("systemd",pid=1,fd=70))
+tcp   LISTEN 0      511          0.0.0.0:80        0.0.0.0:*    users:(("nginx",pid=645,fd=5),("nginx",pid=643,fd=5))
+tcp   LISTEN 0      4096            [::]:22           [::]:*    users:(("sshd",pid=632,fd=4),("systemd",pid=1,fd=71))
+tcp   LISTEN 0      511             [::]:80           [::]:*    users:(("nginx",pid=645,fd=6),("nginx",pid=643,fd=6))
+
+########## dns (192.168.50.53) ##########
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                               
+udp   UNCONN 0      0      192.168.50.53:53        0.0.0.0:*    users:(("dnsmasq",pid=1751,fd=4))                    
+udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=396,fd=16))            
+udp   UNCONN 0      0      127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=396,fd=14))            
+udp   UNCONN 0      0          127.0.0.1:323       0.0.0.0:*    users:(("chronyd",pid=612,fd=5))                     
+udp   UNCONN 0      0              [::1]:323          [::]:*    users:(("chronyd",pid=612,fd=6))                     
+tcp   LISTEN 0      32     192.168.50.53:53        0.0.0.0:*    users:(("dnsmasq",pid=1751,fd=5))                    
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=396,fd=15))            
+tcp   LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=396,fd=17))            
+tcp   LISTEN 0      4096         0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=636,fd=3),("systemd",pid=1,fd=75))
+tcp   LISTEN 0      4096            [::]:22           [::]:*    users:(("sshd",pid=636,fd=4),("systemd",pid=1,fd=76))
+
+########## xmpp (192.168.50.30) ##########
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                
+udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=381,fd=16))             
+udp   UNCONN 0      0      127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=381,fd=14))             
+udp   UNCONN 0      0          127.0.0.1:323       0.0.0.0:*    users:(("chronyd",pid=597,fd=5))                      
+udp   UNCONN 0      0              [::1]:323          [::]:*    users:(("chronyd",pid=597,fd=6))                      
+tcp   LISTEN 0      128          0.0.0.0:5269      0.0.0.0:*    users:(("lua5.4",pid=624,fd=9))                       
+tcp   LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=381,fd=17))             
+tcp   LISTEN 0      128          0.0.0.0:5222      0.0.0.0:*    users:(("lua5.4",pid=624,fd=12))                      
+tcp   LISTEN 0      4096         0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=652,fd=3),("systemd",pid=1,fd=159))
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=381,fd=15))             
+tcp   LISTEN 0      128             [::]:5269         [::]:*    users:(("lua5.4",pid=624,fd=8))                       
+tcp   LISTEN 0      128             [::]:5222         [::]:*    users:(("lua5.4",pid=624,fd=11))                      
+tcp   LISTEN 0      4096            [::]:22           [::]:*    users:(("sshd",pid=652,fd=4),("systemd",pid=1,fd=163))
+

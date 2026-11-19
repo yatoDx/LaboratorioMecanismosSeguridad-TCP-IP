@@ -1,0 +1,31 @@
+{
+  "status": "historical_superseded",
+  "files": [
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-consola.png",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014423Z-8f911ac0\\caso04-consola.png",
+      "sha256": "d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-dataset.csv",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014423Z-8f911ac0\\caso04-dataset.csv",
+      "sha256": "d9d635ebd81d5c288d462d6f219f7839e1b252c139dde0d2e8a52c3e2b8ef176"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-matriz-confusion.png",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014423Z-8f911ac0\\caso04-matriz-confusion.png",
+      "sha256": "76e9384bd105273f06911493cf06ec570730a429d81a185082d6c31ffb4e495f"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-metricas.txt",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014423Z-8f911ac0\\caso04-metricas.txt",
+      "sha256": "cc7b5013f442c2ebcbab16db6b7a965fc048b4777ccc097461dce0e580980f95"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-scatter.png",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014423Z-8f911ac0\\caso04-scatter.png",
+      "sha256": "64255cfec2e9c6e267d1dc863dfe231567bc2e82cd23f34d58233987589b93ec"
+    }
+  ],
+  "reason": "Versión anterior; no usar screenshots históricos como evidencia vigente"
+}

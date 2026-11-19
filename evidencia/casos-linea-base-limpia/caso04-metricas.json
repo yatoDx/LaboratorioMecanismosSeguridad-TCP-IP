@@ -1,0 +1,186 @@
+{
+  "real_normal_only": {
+    "zscore": {
+      "n": 11,
+      "normal": 11,
+      "anomaly": 0,
+      "confusion_matrix": [
+        [
+          11,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "accuracy": 1.0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "false_positive_rate": 0.0,
+      "specificity": 1.0,
+      "warning": "Una sola clase: precision/F1 no informadas; sin evaluación discriminativa completa"
+    },
+    "iforest": {
+      "n": 11,
+      "normal": 11,
+      "anomaly": 0,
+      "confusion_matrix": [
+        [
+          6,
+          5
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "accuracy": 0.5454545454545454,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "false_positive_rate": 0.45454545454545453,
+      "specificity": 0.5454545454545454,
+      "warning": "Una sola clase: precision/F1 no informadas; sin evaluación discriminativa completa"
+    }
+  },
+  "synthetic_syn_only": {
+    "zscore": {
+      "n": 11,
+      "normal": 0,
+      "anomaly": 11,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "accuracy": 1.0,
+      "precision": null,
+      "recall": 1.0,
+      "f1": null,
+      "false_positive_rate": null,
+      "specificity": null,
+      "warning": "Una sola clase: precision/F1 no informadas; sin evaluación discriminativa completa"
+    },
+    "iforest": {
+      "n": 11,
+      "normal": 0,
+      "anomaly": 11,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "accuracy": 1.0,
+      "precision": null,
+      "recall": 1.0,
+      "f1": null,
+      "false_positive_rate": null,
+      "specificity": null,
+      "warning": "Una sola clase: precision/F1 no informadas; sin evaluación discriminativa completa"
+    }
+  },
+  "synthetic_dns_only": {
+    "zscore": {
+      "n": 11,
+      "normal": 0,
+      "anomaly": 11,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "accuracy": 1.0,
+      "precision": null,
+      "recall": 1.0,
+      "f1": null,
+      "false_positive_rate": null,
+      "specificity": null,
+      "warning": "Una sola clase: precision/F1 no informadas; sin evaluación discriminativa completa"
+    },
+    "iforest": {
+      "n": 11,
+      "normal": 0,
+      "anomaly": 11,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "accuracy": 1.0,
+      "precision": null,
+      "recall": 1.0,
+      "f1": null,
+      "false_positive_rate": null,
+      "specificity": null,
+      "warning": "Una sola clase: precision/F1 no informadas; sin evaluación discriminativa completa"
+    }
+  },
+  "mixed_didactic_NOT_independent": {
+    "zscore": {
+      "n": 33,
+      "normal": 11,
+      "anomaly": 22,
+      "confusion_matrix": [
+        [
+          11,
+          0
+        ],
+        [
+          0,
+          22
+        ]
+      ],
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0,
+      "specificity": 1.0,
+      "warning": null
+    },
+    "iforest": {
+      "n": 33,
+      "normal": 11,
+      "anomaly": 22,
+      "confusion_matrix": [
+        [
+          6,
+          5
+        ],
+        [
+          0,
+          22
+        ]
+      ],
+      "accuracy": 0.8484848484848485,
+      "precision": 0.8148148148148148,
+      "recall": 1.0,
+      "f1": 0.8979591836734694,
+      "false_positive_rate": 0.45454545454545453,
+      "specificity": 0.5454545454545454,
+      "warning": null
+    }
+  }
+}

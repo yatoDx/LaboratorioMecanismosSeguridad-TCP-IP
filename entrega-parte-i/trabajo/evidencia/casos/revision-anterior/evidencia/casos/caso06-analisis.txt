@@ -1,0 +1,13 @@
+CASO 6 — REFLEXIÓN/AMPLIFICACIÓN UDP (análisis)
+============================================================
+
+Total datagramas UDP: 44
+Bytes enviados con origen suplantado (víctima): 1800
+Bytes recibidos por la víctima (respuestas):    10200
+Factor de amplificación: 5.7x
+
+Paquetes/bytes por segundo (ventana 0.5 s):
+  t= 0.0s :   2 pkt     138 bytes
+  t= 0.5s :   2 pkt     180 bytes
+  t= 1.0s :  25 pkt    4350 bytes
+  t= 1.5s :  15 pkt    7650 bytes

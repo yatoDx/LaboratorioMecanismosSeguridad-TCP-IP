@@ -1,0 +1,9 @@
+=== Prueba resolvedor abierto (debe REFUSAR dominios externos) ===
+Servidor:  UnKnown
+Address:  192.168.50.53
+
+
+=== bind-interfaces (solo 192.168.50.53) ===
+UNCONN 0      0      192.168.50.53:53        0.0.0.0:*          
+UNCONN 0      0         127.0.0.54:53        0.0.0.0:*          
+UNCONN 0      0      127.0.0.53%lo:53        0.0.0.0:*          

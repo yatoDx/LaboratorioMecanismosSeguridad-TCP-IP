@@ -1,0 +1,38 @@
+{
+  "nginx-web.log": {
+    "lines": 29,
+    "parsed": 29,
+    "unparsed": 0,
+    "sha256": "67429b62584c0778146d3ff928bc02a54f5a3063126fbed15cc83c35b0639f81"
+  },
+  "dnsmasq-dns.log": {
+    "lines": 60,
+    "parsed": 60,
+    "unparsed": 0,
+    "sha256": "50c22dd659ba8fa0cb72f31daaf77450eff9b152c885800926b7a2592a37e956"
+  },
+  "prosody-xmpp.log": {
+    "lines": 40,
+    "parsed": 40,
+    "unparsed": 0,
+    "sha256": "b16bb328f4d77095ea6f96d5ef5389c46f380a7b0a73d5ad1ce1e7866c019699"
+  },
+  "auth-gateway.log": {
+    "lines": 30,
+    "parsed": 24,
+    "unparsed": 6,
+    "sha256": "182a027801a2ed6881becb53baf7e281bdd777eb703fd48f876594e92465167a"
+  },
+  "sistema-gateway.log": {
+    "lines": 15,
+    "parsed": 15,
+    "unparsed": 0,
+    "sha256": "3ad392b319951f7926549145bff03a232132690b7e6cdf7e0800c076e729bc4c"
+  },
+  "nftables-gateway.log": {
+    "lines": 0,
+    "parsed": 0,
+    "unparsed": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

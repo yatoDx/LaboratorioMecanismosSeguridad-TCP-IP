@@ -1,0 +1,31 @@
+CASO 7 — ICMP ECHO IPv4: TAMAÑO Y FRECUENCIA
+Payload = ip.len - ip.hdr_len - 8 (echo sin fragmentación); frame.len incluye cabeceras, no es payload.
+Solo tipos 0/8, sin fragmentos; otros ICMP e IPv6 excluidos.
+Ventanas 1s desde inicio de cada captura, incluyen silencios; última potencialmente parcial.
+Grandes payloads/frecuencia son señales para revisión, NO prueba de exfiltración o degradación.
+
+SINTÉTICO: caso07-icmp.pcap; duración=7.800000s; echo=63
+  192.168.50.1 -> 192.168.50.10 tipo=0 n=1; payload min/med/max=9/9/9 B; frame min/med/max=51/51/51 B; media captura=0.1282/s; máximo ventana1s=1/s
+  192.168.50.10 -> 192.168.50.1 tipo=8 n=1; payload min/med/max=9/9/9 B; frame min/med/max=51/51/51 B; media captura=0.1282/s; máximo ventana1s=1/s
+  192.168.50.10 -> 192.168.50.20 tipo=8 n=1; payload min/med/max=9/9/9 B; frame min/med/max=51/51/51 B; media captura=0.1282/s; máximo ventana1s=1/s
+  192.168.50.10 -> 192.168.50.30 tipo=8 n=1; payload min/med/max=9/9/9 B; frame min/med/max=51/51/51 B; media captura=0.1282/s; máximo ventana1s=1/s
+  192.168.50.10 -> 192.168.50.53 tipo=8 n=1; payload min/med/max=9/9/9 B; frame min/med/max=51/51/51 B; media captura=0.1282/s; máximo ventana1s=1/s
+  192.168.50.100 -> 192.168.50.20 tipo=8 n=55; payload min/med/max=64/64/1289 B; frame min/med/max=106/106/1331 B; media captura=7.0513/s; máximo ventana1s=10/s
+  192.168.50.20 -> 192.168.50.10 tipo=0 n=1; payload min/med/max=9/9/9 B; frame min/med/max=51/51/51 B; media captura=0.1282/s; máximo ventana1s=1/s
+  192.168.50.30 -> 192.168.50.10 tipo=0 n=1; payload min/med/max=9/9/9 B; frame min/med/max=51/51/51 B; media captura=0.1282/s; máximo ventana1s=1/s
+  192.168.50.53 -> 192.168.50.10 tipo=0 n=1; payload min/med/max=9/9/9 B; frame min/med/max=51/51/51 B; media captura=0.1282/s; máximo ventana1s=1/s
+  Requests payload>200B=5 (umbral propuesto, no validado)
+  Requests a .20 por ventanas 1s (índice=inicio): [1, 0, 10, 10, 10, 10, 10, 5]
+
+BASELINE REAL: baseline-normal.pcapng; duración=296.670161s; echo=152
+  192.168.50.1 -> 192.168.50.10 tipo=0 n=19; payload min/med/max=32/32/32 B; frame min/med/max=74/74/74 B; media captura=0.0640/s; máximo ventana1s=1/s
+  192.168.50.10 -> 192.168.50.1 tipo=8 n=19; payload min/med/max=32/32/32 B; frame min/med/max=74/74/74 B; media captura=0.0640/s; máximo ventana1s=1/s
+  192.168.50.10 -> 192.168.50.20 tipo=8 n=19; payload min/med/max=32/32/32 B; frame min/med/max=74/74/74 B; media captura=0.0640/s; máximo ventana1s=1/s
+  192.168.50.10 -> 192.168.50.30 tipo=8 n=19; payload min/med/max=32/32/32 B; frame min/med/max=74/74/74 B; media captura=0.0640/s; máximo ventana1s=1/s
+  192.168.50.10 -> 192.168.50.53 tipo=8 n=19; payload min/med/max=32/32/32 B; frame min/med/max=74/74/74 B; media captura=0.0640/s; máximo ventana1s=1/s
+  192.168.50.20 -> 192.168.50.10 tipo=0 n=19; payload min/med/max=32/32/32 B; frame min/med/max=74/74/74 B; media captura=0.0640/s; máximo ventana1s=1/s
+  192.168.50.30 -> 192.168.50.10 tipo=0 n=19; payload min/med/max=32/32/32 B; frame min/med/max=74/74/74 B; media captura=0.0640/s; máximo ventana1s=1/s
+  192.168.50.53 -> 192.168.50.10 tipo=0 n=19; payload min/med/max=32/32/32 B; frame min/med/max=74/74/74 B; media captura=0.0640/s; máximo ventana1s=1/s
+  Requests payload>200B=0 (umbral propuesto, no validado)
+  Requests a .20 por ventanas 1s (índice=inicio): [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Baseline acotado a esta captura: no valida umbrales universales de ataque.

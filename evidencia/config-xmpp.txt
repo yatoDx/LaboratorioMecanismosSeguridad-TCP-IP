@@ -1,0 +1,62 @@
+## hostname
+ Static hostname: xmpp
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: 8829c5869350469e8ce61944def7c331
+         Boot ID: a7e34932f5654687a64e7cbb1a241ec5
+  Virtualization: oracle
+Operating System: Ubuntu 24.04.5 LTS
+          Kernel: Linux 6.8.0-149-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+Firmware Version: VirtualBox
+   Firmware Date: Fri 2006-12-01
+    Firmware Age: 19y 11month 2w 4d
+
+## ip -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 metric 100 fd17:625c:f037:2:a00:27ff:fe52:16a6/64 fe80::a00:27ff:fe52:16a6/64 
+enp0s8           UP             192.168.50.30/24 fe80::a00:27ff:fea2:d68c/64 
+
+## ip route
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+192.168.50.0/24 dev enp0s8 proto kernel scope link src 192.168.50.30 
+
+## timedatectl
+               Local time: Wed 2026-11-18 18:29:53 -05
+           Universal time: Wed 2026-11-18 23:29:53 UTC
+                 RTC time: Wed 2026-11-18 23:29:53
+                Time zone: America/Bogota (-05, -0500)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+## netplan /etc/netplan/01-lab.yaml
+network:
+  version: 2
+  ethernets:
+    enp0s3:
+      dhcp4: true
+      dhcp4-overrides:
+        use-routes: false
+    enp0s8:
+      addresses: [192.168.50.30/24]
+
+## prosody status
+● prosody.service - Prosody XMPP Server
+     Loaded: loaded (/usr/lib/systemd/system/prosody.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-11-18 17:58:27 -05; 31min ago
+       Docs: https://prosody.im/doc
+   Main PID: 2099 (lua5.4)
+      Tasks: 1 (limit: 1055)
+     Memory: 8.1M (peak: 8.3M)
+        CPU: 98ms
+     CGroup: /system.slice/prosody.service
+             └─2099 lua5.4 /usr/bin/prosody -F
+
+## c2s listening
+tcp   LISTEN 0      128             0.0.0.0:5222      0.0.0.0:*          
+tcp   LISTEN 0      128                [::]:5222         [::]:*          
+
+########## FIN CAPTURA xmpp ##########

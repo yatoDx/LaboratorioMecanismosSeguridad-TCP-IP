@@ -1,0 +1,15 @@
+CASO 5 — RST SINTÉTICOS, ANÁLISIS OFFLINE
+Total RST=6; con handshake previo=2; fuera de flujo=4
+Seq y ack siguientes son RAW; tcp.seq mostrado por Wireshark puede ser relativo.
+t=0.500000s 192.168.50.20:80 -> 192.168.50.10:31000 stream=0 seq_raw=90041 ack_raw=1040 ACK_flag=False; tupla con handshake observado
+t=1.900001s 192.168.50.10:32000 -> 192.168.50.30:5222 stream=1 seq_raw=2031 ack_raw=70001 ACK_flag=False; tupla con handshake observado
+t=2.900001s 192.168.50.100:41000 -> 192.168.50.20:80 stream=2 seq_raw=400000 ack_raw=0 ACK_flag=False; fuera de flujo observado
+t=2.950000s 192.168.50.100:41001 -> 192.168.50.20:80 stream=3 seq_raw=400100 ack_raw=0 ACK_flag=False; fuera de flujo observado
+t=3.000000s 192.168.50.100:41002 -> 192.168.50.20:80 stream=4 seq_raw=400200 ack_raw=0 ACK_flag=False; fuera de flujo observado
+t=3.050000s 192.168.50.100:41003 -> 192.168.50.20:80 stream=5 seq_raw=400300 ack_raw=0 ACK_flag=False; fuera de flujo observado
+Los cuatro RST de .100 no tienen la 4-tupla .10:31000 <-> .20:80: no son inyección efectiva.
+RST sin ACK puede ser legítimo; el campo ack no es significativo sin ese flag.
+Tupla y secuencia coherentes no prueban entrega/aceptación, falsificación o identidad real.
+LOG REAL separado: caso05-logs-correlacion.txt contiene fragmentos nginx/prosody históricos.
+No se correlacionan temporalmente ni por sesión con este PCAP generado; su ausencia no prueba inyección.
+Sin prueba de interrupción de sesiones reales ni eficacia de firewall.

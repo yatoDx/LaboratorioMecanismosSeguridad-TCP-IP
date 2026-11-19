@@ -1,0 +1,17 @@
+CASO 6 — SIMULACIÓN UDP GENÉRICA, NO ATAQUE/AMPLIFICADOR NTP REAL
+Total UDP=42; pares modelo en puerto 40000=20; DNS excluido de cocientes.
+Tramas capturadas (sin FCS/padding): petición=1800 B; respuesta=10200 B; cociente=5.667x
+Payload UDP: petición=960 B; respuesta=9360 B; cociente=9.750x
+El guion asigna origen .20/MAC .100; no es evidencia real de spoofing ni entrega.
+Ventanas nominales 0.5s [inicio,fin); última parcialmente observada. Tasas=conteo/0.5.
+  [0.0,0.5)s: n=2; bytes=162; paquetes/s=4.0; bytes/s=324.0
+  [0.5,1.0)s: n=0; bytes=0; paquetes/s=0.0; bytes/s=0.0
+  [1.0,1.5)s: n=25; bytes=4350; paquetes/s=50.0; bytes/s=8700.0
+  [1.5,2.0)s: n=15; bytes=7650; paquetes/s=30.0; bytes/s=15300.0
+EVIDENCIA REAL: caso06-openresolver.txt conservado sin cambios, incompleto: no retuvo stderr/REFUSED.
+El bind privado .53 no demuestra ACL de clientes, recursión deshabilitada ni ausencia de resolver abierto.
+El REFUSED de caso02-dnsmasq-log.txt pertenece a otras consultas/instante; no repara esta prueba.
+Prueba nueva separada: caso06-openresolver-revision.txt (stdout, stderr y código de salida).
+2026-11-18 20:47:31 -05: dig desde .53 a .53, example.com A, REFUSED/EDE14; stderr vacío, exit0.
+Solo demuestra rechazo de esa consulta/origen/instante; no ausencia universal de resolver abierto.
+No se verificaron reflectores ni eficacia anti-spoofing; sin cambios de VM.

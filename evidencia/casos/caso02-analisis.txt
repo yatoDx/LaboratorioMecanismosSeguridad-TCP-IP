@@ -1,0 +1,17 @@
+CASO 2 — HEURÍSTICA OFFLINE, NO EXFILTRACIÓN CONFIRMADA
+Regla propuesta, no validada: longitud etiqueta más larga >30 O Shannon(etiqueta)>3.5.
+Un qname normalizado no es wire format DNS; no usar byte_test en dns.query como longitud.
+PCAP SINTÉTICO: 37 consultas; sospechosas=21
+Agrupación por origen + últimas 3 etiquetas (no 2LD/eTLD+1):
+  192.168.50.10 / dns.lab.local: n=3; longitud=5..5; H_etiqueta=1.922..1.922; sospechosas=0; máximo consultas/1s=1
+  192.168.50.10 / exfil.lab.local: n=25; longitud=25..52; H_etiqueta=3.229..3.933; sospechosas=21; máximo consultas/1s=5
+  192.168.50.10 / gateway.lab.local: n=3; longitud=7..7; H_etiqueta=2.522..2.522; sospechosas=0; máximo consultas/1s=1
+  192.168.50.10 / web.lab.local: n=3; longitud=5..5; H_etiqueta=1.922..1.922; sospechosas=0; máximo consultas/1s=1
+  192.168.50.10 / xmpp.lab.local: n=3; longitud=5..5; H_etiqueta=1.922..1.922; sospechosas=0; máximo consultas/1s=1
+
+LOG REAL independiente: caso02-dnsmasq-log.txt (fragmento histórico, no alterado).
+Consultas reales al sufijo demostrativo: 1
+  origen=192.168.50.53; etiqueta=5fe878f78e2978aa2447c462ddaed16dc0cf0b9cd7f78df0cac5; longitud=52; H_etiqueta=3.724; nombre=5fe878f78e2978aa2447c462ddaed16dc0cf0b9cd7f78df0cac5.exfil.lab.local; mismo nombre en PCAP=True
+El log registra una consulta demostrativa desde DNS .53; el PCAP usa .10.
+No hay correlación real de transacciones/tiempos con los 25 nombres sintéticos.
+REFUSED en el fragmento real no confirma exfiltración ni una prueba de mitigación.

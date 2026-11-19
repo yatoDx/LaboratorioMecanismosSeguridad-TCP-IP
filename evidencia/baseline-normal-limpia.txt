@@ -1,0 +1,22 @@
+Línea base filtrada (corrección de entrega, 2026-11-18)
+
+Origen    : evidencia/baseline-normal.pcapng (sin modificar)
+            SHA-256 301ea4766c642919734e3649b1de4c049bb4bebeb8ff9b4125306322b3b076ff
+Resultado : evidencia/baseline-normal-limpia.pcapng
+            SHA-256 6fbe5c7939dfcc5cf254f1bb88d9081ede6ee287e0f91933dbdf602bb66b4427
+            720 paquetes, 293,26 s, 96156 bytes
+Herramienta: tshark 4.2.2 (Linux), con:
+  tshark -r evidencia/baseline-normal.pcapng -F pcapng -w evidencia/baseline-normal-limpia.pcapng -Y 'ip.src==192.168.50.0/24 && ip.dst==192.168.50.0/24 && !(udp.port in {137,138,5353,5355}) && !(dns && !(dns.qry.name matches "(lab\\.local|in-addr\\.arpa)$"))'
+
+Se conservan solo paquetes IPv4 con origen y destino en 192.168.50.0/24, sin
+NetBIOS (137/138), mDNS (5353) ni LLMNR (5355), y sin consultas DNS a nombres
+ajenos al laboratorio. Quedan 180 TCP (HTTP y XMPP), 384 DNS (web.lab.local,
+xmpp.lab.local y resolución inversa del segmento), 4 NTP y 152 ICMP echo.
+
+Se retiraron 919 paquetes: 90 DNS del equipo anfitrión (45 consultas y sus
+respuestas, a 25 dominios externos), 360 mDNS, 160 LLMNR, 120 NBNS de .10 hacia
+.30 y sus 120 ICMP de puerto inalcanzable, 64 ARP, 1 LLDP y 4 ICMPv6.
+
+Límite: los casos 1, 4 y 7 se ejecutaron sobre la captura original; no se
+repitieron con esta copia. La captura original se mantiene porque el Caso 4
+verifica su hash y su retirada rompería la reproducibilidad.

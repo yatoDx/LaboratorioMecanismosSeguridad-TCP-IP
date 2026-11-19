@@ -1,0 +1,13 @@
+# Entornos y binarios
+__pycache__/
+*.pyc
+*.exe
+
+# Archivos temporales de sistema
+.DS_Store
+Thumbs.db
+
+
+# Parte II
+parte2/*.db
+.pytest_cache/

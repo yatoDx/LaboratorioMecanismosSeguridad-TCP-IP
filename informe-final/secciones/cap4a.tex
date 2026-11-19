@@ -1,0 +1,240 @@
+%======================================================================
+\section{Caso 1 — TCP SYN flood: agotamiento de conexiones}
+Un atacante que envía muchos SYN sin completar el saludo obliga al servidor a reservar estado para conexiones que nunca terminan. El caso modela una ráfaga contra el servidor web y el efecto de un limitador de tasa, y la compara con el tráfico HTTP real de la línea base.
+
+\begin{ficha}{Ficha del Caso 1 — SYN flood.}
+Identificador & CASO-01\\
+Título & Ráfaga SYN sin handshake completo, modelada offline\\
+Fecha y analista & 2026-11-18; análisis offline en el laboratorio autorizado\\
+Categoría & Denegación de servicio TCP; simulación, no incidente\\
+Descripción & 200 SYN de 192.168.50.100 a 192.168.50.20:80 en 10~s, más 3 conexiones HTTP completas. Un segundo PCAP modela un token bucket de 10/s con ráfaga 20 inicialmente lleno: pasan 120 SYN y se descartan 80, repartidos en toda la ráfaga\\
+Severidad & Alta potencial (indisponibilidad del servicio); no se midieron recursos ni impacto real\\
+Evidencias & \cod{caso01-synflood.pcap}, \cod{caso01-synflood-ratelimit.pcap}, \cod{caso01-analisis.txt}, \cod{caso01-syn-rate.png} (sintéticas); \cod{baseline-normal.pcapng} (real); \cod{caso01-regla.nft} (propuesta)\\
+Observables & Sin filtro: SYN = 203, SYN-ACK = 203, ACK = 15, FIN = 6 (427 TCP). Con bucket: 123, 123, 15, 6 (267). 3 handshakes completos en ambos; 200 y 120 intentos sin completar. Pico de 20 SYN por ventana de 1~s\\
+Estado & Patrón sintético confirmado; ataque real y eficacia de la mitigación no probados\\
+\end{ficha}
+
+\subsection{Procedimiento y evidencia}
+\cod{gen\_caso01\_synflood.py} escribe ambas capturas y \cod{analizar\_caso01.py} las lee con \cod{tshark}. El analizador clasifica cada segmento en categorías excluyentes (RST, SYN-ACK, SYN, FIN, ACK restante) porque contar paquetes con bandera ACK mezclaría los SYN-ACK y los datos con el tercer paso del saludo. El handshake se correlaciona por \emph{stream}, 4-tupla, secuencia y reconocimiento \emph{raw}, orden temporal y un plazo de 10~s, descartando retransmisiones. Las tasas se calculan en ventanas de 1~s desde el inicio de la captura, incluidos los silencios.
+
+\fig[0.98]{term-c01-tshark.png}{Primeros SYN del origen 192.168.50.100 hacia .20:80 en la captura sintética: puertos de origen consecutivos y ningún ACK posterior.}
+\fig[0.98]{term-c01.png}{Salida de \texttt{analizar\_caso01.py}: categorías, handshakes correlacionados y comparación con la línea base real (0 SYN en 296,67~s).}
+\fig{caso01-wireshark-final.png}{La captura sintética abierta en Wireshark por el grupo: ráfaga de SYN desde .100 y los SYN-ACK del servidor modelado.}
+\fig[0.8]{caso01-syn-rate.png}{Arriba, SYN por ventana de 1~s en el modelo sin filtro y con token bucket: con ráfaga 20 el limitador deja pasar 20 en la primera ventana, así que 10/s no es un techo estricto por ventana aislada. Abajo, la línea base real de HTTP en .20: ningún SYN.}
+
+La línea base real filtrada a HTTP de .20 tiene 57 segmentos TCP, 0 SYN y 0 handshakes: la captura empezó con sesiones ya abiertas. Eso no significa que no haya HTTP normal ni permite fijar un umbral de ``establecimientos normales''. La media de toda la captura sintética (9,67 SYN/s en 21~s) tampoco es la tasa de la ráfaga; hay que mirar las ventanas.
+
+\subsection{Regla de detección y mitigación}
+Tabla independiente para el host web .20, con política \emph{accept}, que solo descarta el exceso de SYN HTTP:
+\begin{lstlisting}
+table inet caso01_syn {
+  chain input {
+    type filter hook input priority 0; policy accept;
+    ip daddr 192.168.50.20 tcp dport 80 tcp flags & (syn | ack) == syn \
+      limit rate over 10/second burst 20 packets counter drop
+  }
+}
+\end{lstlisting}
+La palabra \cod{over} es esencial: sin ella la regla descartaría el tráfico \emph{dentro} del límite. El cubo es agregado, no por origen, de modo que un atacante también consumiría la cuota de los clientes legítimos. Debe instalarse en .20: el gateway no ve el tráfico directo entre peers de la subred.
+
+\subsection{Mitigación}
+\begin{itemize}
+\item Activar SYN cookies en el servidor (\cod{net.ipv4.tcp\_syncookies = 1}) para no reservar estado hasta recibir el ACK.
+\item Limitar la tasa de SYN por origen con conjuntos dinámicos de nftables (\cod{meter}) cuando haya un punto de filtrado en la ruta.
+\item Ajustar el \emph{backlog} y los reintentos de SYN-ACK; en producción, apoyarse en el proveedor o en un balanceador con protección DoS.
+\end{itemize}
+
+\subsection{Preguntas de análisis}
+\textbf{¿Basta contar paquetes con ACK para saber cuántas conexiones se completaron?} No. SYN-ACK y segmentos de datos también llevan ACK; hay que correlacionar el saludo por tupla y secuencia.\\
+\textbf{¿Qué demuestra la segunda captura?} El comportamiento del modelo de token bucket, no que nftables filtró tráfico real ni que el servicio siguió disponible.\\
+\textbf{¿Se puede inferir un umbral de ataque de esta línea base?} No: no contiene inicios de conexión HTTP.
+
+%======================================================================
+\section{Caso 2 — DNS tunneling: salida encubierta por UDP/53}
+Un túnel DNS codifica datos en las etiquetas de los nombres consultados. El caso evalúa una heurística sencilla —longitud y entropía de Shannon de la etiqueta más larga— sobre consultas legítimas y artificiales.
+
+\begin{ficha}{Ficha del Caso 2 — DNS tunneling.}
+Identificador & CASO-02\\
+Título & Longitud y entropía de la etiqueta DNS más larga\\
+Fecha y analista & 2026-11-18; análisis offline\\
+Categoría & Detección exploratoria de canal encubierto; datos sintéticos\\
+Descripción & 37 consultas de .10 a .53: 12 nombres legibles del laboratorio y 25 con etiquetas hexadecimales aleatorias bajo \cod{exfil.lab.local}. No contienen datos robados\\
+Severidad & Alta potencial (exfiltración); sin impacto comprobado\\
+Evidencias & \cod{caso02-dns-tunneling.pcap}, \cod{caso02-analisis.txt}, \cod{caso02-dns-entropy.png} (sintéticas); \cod{caso02-dnsmasq-log.txt} (fragmento real)\\
+Observables & Etiquetas hex de 25–52 caracteres con $H$ = 3,229–3,933 bits/símbolo; legibles de 5–7 caracteres con $H$ = 1,922–2,522; máximo 5 consultas hex por segundo\\
+Estado & Heurística evaluada en muestra artificial; túnel y exfiltración no confirmados\\
+\end{ficha}
+
+\subsection{Procedimiento y evidencia}
+El analizador filtra consultas (\cod{dns.flags.response == 0}), normaliza el nombre a minúsculas, toma la etiqueta más larga y calcula su longitud y su entropía
+\[ H = -\sum_{c} p(c)\,\log_2 p(c), \]
+donde $p(c)$ es la frecuencia relativa de cada carácter. En hexadecimal $H$ no puede pasar de 4 bits. La regla propuesta es \emph{longitud $>$ 30 o $H >$ 3,5}.
+
+\fig[0.98]{term-c02-tshark.png}{Consultas del PCAP: nombres legibles del laboratorio seguidos de la tanda de etiquetas hexadecimales bajo \texttt{exfil.lab.local}.}
+\fig[0.98]{term-c02.png}{Salida de \texttt{analizar\_caso02.py}: agrupación por origen y sufijo, 21 de 25 nombres artificiales marcados y 0 de 12 legibles, y la consulta real del log de dnsmasq.}
+\fig{caso02-wireshark-final.png}{Las consultas sintéticas en Wireshark.}
+\fig[0.75]{caso02-dns-entropy.png}{Longitud frente a entropía de la etiqueta más larga: los nombres legibles quedan abajo a la izquierda; cuatro artificiales cortos no superan ningún umbral.}
+
+La regla marca 21 de 25 nombres artificiales y ninguno legible: no separa perfectamente. Los cuatro que no marca son etiquetas cortas cuya entropía queda bajo 3,5; no por eso son benignos. El log real de dnsmasq conserva una consulta demostrativa (etiqueta de 52 caracteres, $H$ = 3,724) hecha desde .53, no desde .10: coincide en el nombre pero no hay correspondencia de tiempos ni transacciones con la tanda sintética, y la respuesta fue REFUSED. No prueba ningún canal.
+
+\subsection{Reglas de detección y mitigación}
+La detección se implementa en Python, no como firma de IDS: se retiró una pseudofirma con \cod{byte\_test} sobre \cod{dns.query} porque ese búfer contiene el nombre ya normalizado, sin los octetos de longitud del formato de red. Para un IDS se propone, como señal de revisión y no de bloqueo:
+\begin{itemize}
+\item contar por cliente y dominio base las consultas con etiqueta $>$ 30 caracteres o $H >$ 3,5 en ventanas de 60~s, y alertar por volumen sostenido;
+\item vigilar respuestas TXT o NULL grandes y frecuentes hacia un mismo dominio.
+\end{itemize}
+
+\subsection{Mitigación}
+\begin{itemize}
+\item Forzar que los clientes solo usen el resolver interno (.53) y bloquear DNS saliente directo en el punto de salida.
+\item Activar el registro de consultas en el resolver y revisar dominios con muchas etiquetas únicas.
+\item Usar listas de bloqueo o RPZ para dominios conocidos de túnel; no bloquear solo por entropía sin validar falsos positivos.
+\end{itemize}
+
+\subsection{Preguntas de análisis}
+\textbf{¿Qué mide la entropía?} La diversidad de símbolos de la etiqueta, no la intención: un CDN o un identificador aleatorio legítimo también la eleva.\\
+\textbf{¿Qué confirma el log real?} Una consulta demostrativa desde .53, no la ejecución del escenario sintético ni una exfiltración.\\
+\textbf{¿Puede reutilizarse el umbral?} Como señal exploratoria, hasta calibrarlo con tráfico real.
+
+%======================================================================
+\section{Caso 3 — Exposición de servicios HTTP, FTP y heredados}
+Cada servicio en escucha es una puerta posible. El caso levanta el inventario real de sockets de las cuatro VMs y del anfitrión y valora su riesgo.
+
+\begin{ficha}{Ficha del Caso 3 — Servicios expuestos.}
+Identificador & CASO-03\\
+Título & Inventario de sockets en escucha; accesibilidad efectiva pendiente\\
+Fecha y analista & 2026-11-18; laboratorio autorizado\\
+Categoría & Endurecimiento e inventario; no intrusión\\
+Descripción & \cod{ss -tulpn} observa SSH en las cuatro VMs, HTTP en web, DNS en .53, NTP en el gateway y XMPP 5222/5269 en .30. \cod{netstat} del anfitrión observa además 139, 445 y 5432. No hay FTP ni Telnet en ninguna VM\\
+Severidad & Media provisional, según necesidad y alcance real de cada servicio\\
+Evidencias & \cod{caso03-ss-tulpn.txt}, \cod{caso03-netstat-host.txt}, \cod{caso03-auth-events.txt}, \cod{caso03-netstat-consola.png} (reales); \cod{caso03-riesgo.png} (valoración)\\
+Observables & Sockets de la Tabla~\ref{tab:inventario}; en los fragmentos de autenticación, 8 \cod{Accepted password} y 0 \cod{Failed password}\\
+Estado & Inventario observado; necesidad y accesibilidad remota no verificadas; sin evidencia de intrusión\\
+\end{ficha}
+
+\begin{table}[H]\centering\small\caption{Inventario observado de servicios en escucha.}\label{tab:inventario}
+\begin{tabularx}{\linewidth}{@{}p{2.4cm}p{5.2cm}X@{}}\toprule
+\textbf{Equipo} & \textbf{Escucha observada} & \textbf{Atribución y alcance}\\\midrule
+gateway .1 & TCP 22 IPv4/IPv6; UDP 123 IPv4 & sshd, chronyd\\
+web .20 & TCP 22 y 80 IPv4/IPv6 & sshd, nginx\\
+dns .53 & TCP/UDP 53 en .53; TCP 22 & dnsmasq, sshd\\
+xmpp .30 & TCP 22, 5222, 5269 IPv4/IPv6 & sshd, Prosody (lua5.4)\\
+VMs & 53 y 323 en loopback & resolvedor y chrony locales; sin acceso remoto\\
+anfitrión & TCP 139 en tres interfaces; 445 en todas & PID 4 (sistema); proceso no atribuido\\
+anfitrión & TCP 5432 en todas & PID 6404; proceso no atribuido\\
+\bottomrule\end{tabularx}\end{table}
+
+\subsection{Procedimiento y evidencia}
+\fig[0.98]{term-c03.png}{Salida de \texttt{analizar\_caso03.py}: sockets del anfitrión con su PID y conteo de eventos de autenticación.}
+\fig{caso03-netstat-consola.png}{Consola del analista con el inventario original (el rótulo heredado ``Conexiones establecidas'' no filtra por estado: incluye LISTENING y TIME\_WAIT).}
+\fig[0.8]{caso03-riesgo.png}{Valoración cualitativa propuesta de impacto y probabilidad por servicio; no es un riesgo medido.}
+
+Que un puerto escuche no prueba que sea alcanzable desde otro equipo: intervienen la ruta, el firewall local y las ACL del servicio. Tampoco se identifica un producto solo por el número de puerto: 445 suele ser SMB y 5432 PostgreSQL, pero el PID registrado no se correlacionó con su proceso en el instante de la captura. Cero \cod{Failed password} en un fragmento no demuestra ausencia de intentos fallidos en todo el periodo.
+
+\subsection{Plan de endurecimiento}
+\begin{itemize}
+\item Restringir SSH en cada VM a orígenes autorizados (incluido IPv6) y exigir llaves en lugar de contraseña.
+\item Evaluar si hace falta federación XMPP (5269); si no, cerrarla en .30, no en el gateway.
+\item Auditar en el anfitrión qué proceso ocupa 139/445/5432 y si debe escuchar en todas las interfaces.
+\item Revisar que dnsmasq no responda recursión a orígenes no autorizados (ver Caso~6) y considerar TLS para HTTP según los datos que transporte.
+\item Verificar el alcance con pruebas benignas autorizadas antes de cerrar servicios.
+\end{itemize}
+
+\subsection{Preguntas de análisis}
+\textbf{¿Escuchar implica exposición remota?} No: depende de la ruta, el firewall y las ACL.\\
+\textbf{¿Dónde se filtra el tráfico entre peers?} En cada equipo, o en un dispositivo que realmente esté en su camino.\\
+\textbf{¿Qué significa no ver \texttt{Failed password}?} Solo que no aparece en estos fragmentos.
+
+%======================================================================
+\section{Caso 4 — Detección de anomalías con IA/ML en tráfico TCP/IP}
+El caso evalúa con método dos detectores no supervisados —z-score e Isolation Forest— entrenados con la línea base real y probados con ventanas normales posteriores y con anomalías sintéticas. Una primera versión con 28 ventanas de duración desigual, etiquetas por PCAP y evaluación sobre los mismos datos de entrenamiento se declaró obsoleta y se rehízo.
+
+\begin{ficha}{Ficha del Caso 4 — Anomalías con ML.}
+Identificador & CASO-04\\
+Título & Evaluación temporal de z-score e Isolation Forest con normales reales y anomalías tabulares sintéticas\\
+Fecha y analista & 2026-11-18 (ejecuciones fechadas en UTC 2026-11-19)\\
+Categoría & Evaluación metodológica de detección no supervisada\\
+Descripción & 29 ventanas completas de 10~s: 17 de entrenamiento, 1 de embargo, 11 de prueba normal; 22 variantes sintéticas (11 SYN y 11 DNS) construidas sobre ventanas de prueba\\
+Severidad & Media metodológica; no es un incidente\\
+Evidencias & \cod{scripts/caso04\_ml.py}; \cod{caso04-dataset.csv}, \cod{caso04-metricas.json}, \cod{caso04-predicciones.csv}, \cod{caso04-manifiesto.json}, gráficas\\
+Observables & Ambos detectores marcan 22/22 sintéticas. Falsos positivos sobre normales: z-score 1/11 (FPR 0,091), Isolation Forest 5/11 (FPR 0,455). 19 autopruebas aprobadas\\
+Estado & Exploratorio: muestra pequeña, una sola captura y ninguna anomalía real de prueba\\
+\end{ficha}
+
+\subsection{Atributos y separación temporal}
+Se extraen 30 atributos por ventana de 10~s: volumen y flujos (paquetes, bytes, flujos, puertos destino), duración de flujos dentro de la ventana, tasas, banderas TCP y sus proporciones, intentos SYN deduplicados, pares petición/respuesta DNS y HTTP, y longitud media de los nombres consultados. Las etiquetas, IP, sufijos y marcas de tiempo quedan fuera de los atributos para que el modelo no ``haga trampa''.
+
+\begin{table}[H]\centering\small\caption{Particiones del Caso 4.}
+\begin{tabularx}{\linewidth}{@{}llX@{}}\toprule
+\textbf{Partición} & \textbf{Ventanas} & \textbf{Uso}\\\midrule
+Entrenamiento & 0–16 (17), [0,170)~s & Único ajuste de media, desviación y árboles\\
+Embargo & 17 (1), [170,180)~s & Ni entrena ni evalúa: reduce la autocorrelación\\
+Prueba normal & 18–28 (11), [180,290)~s & Falsos positivos sobre normales posteriores\\
+Prueba sintética & 11 SYN + 11 DNS & Sensibilidad; padres solo de prueba\\
+\bottomrule\end{tabularx}\end{table}
+
+Cada variante conserva el fondo completo de una ventana de prueba e inserta registros sintéticos entre los segundos 2 y 8, con semilla 42. Son filas de una tabla, no paquetes transmitidos. El z-score alerta si algún atributo no constante supera $|z| > 3$ con media y desviación del entrenamiento; Isolation Forest usa 200 árboles, \cod{contamination=auto} y umbral nativo.
+
+\subsection{Resultado de los detectores}
+\fig[0.98]{term-c04.png}{Salida de \texttt{caso04\_ml.py}: huella de la línea base, particiones y matrices de confusión solo sobre prueba (filas = etiqueta, columnas = predicción).}
+
+\begin{table}[H]\centering\small\caption{Métricas del Caso 4 sobre prueba.}
+\begin{tabular}{@{}lcccc@{}}\toprule
+\textbf{Conjunto} & \multicolumn{2}{c}{\textbf{z-score}} & \multicolumn{2}{c}{\textbf{Isolation Forest}}\\
+ & Acierto & FPR & Acierto & FPR\\\midrule
+Normales reales (11) & 10/11 & 0,091 & 6/11 & 0,455\\
+SYN sintéticas (11) & 11/11 & — & 11/11 & —\\
+DNS sintéticas (11) & 11/11 & — & 11/11 & —\\
+Mezcla didáctica (33) & F1 0,978 & 0,091 & F1 0,898 & 0,455\\
+\bottomrule\end{tabular}\end{table}
+
+\fig[0.9]{caso04-matriz-confusion.png}{Matrices de confusión de ambos detectores sobre el conjunto mixto de prueba.}
+\fig[0.8]{caso04-scatter.png}{Ventanas en dos atributos: las variantes sintéticas se alejan claramente de las normales, lo que explica la detección perfecta y advierte que la tarea es fácil.}
+\fig{caso04-consola-revisada.png}{Ejecución del experimento revisado en el equipo analista.}
+
+\subsection{Interpretación y uso responsable}
+Detectar 22 de 22 no prueba capacidad real: las anomalías sintéticas son grandes y comparten fondo con su ventana padre, así que no aumentan el tamaño efectivo de la muestra. Lo informativo son los falsos positivos: Isolation Forest marca casi la mitad de las ventanas normales posteriores, lo que en operación saturaría al analista. Al repetir con la línea base limpia, el falso positivo del z-score desaparece (capítulo~\ref{cap:discusion}). Un modelo así sirve para ordenar qué revisar primero, no para bloquear automáticamente.
+
+\subsection{Preguntas de análisis}
+\textbf{¿Por qué separar en el tiempo?} Ventanas vecinas se parecen; mezclarlas entre entrenamiento y prueba infla las métricas.\\
+\textbf{¿Cuál detector es mejor?} Con una captura y 11 normales no hay base para una comparación fuerte; el z-score tuvo menos falsos positivos en este conjunto.\\
+\textbf{¿Qué haría falta?} Varias capturas de días distintos, anomalías reales etiquetadas por humanos y calibración del umbral en un conjunto de validación independiente.
+
+%======================================================================
+\section{Caso 5 — TCP: resets inesperados e indicios de inyección}
+Un RST con la tupla y la secuencia correctas puede cortar una sesión ajena. El caso distingue RST dentro de sesiones observadas de RST sueltos.
+
+\begin{ficha}{Ficha del Caso 5 — Resets TCP.}
+Identificador & CASO-05\\
+Título & RST en sesiones modeladas y cuatro RST fuera de flujo\\
+Fecha y analista & 2026-11-18; análisis offline\\
+Categoría & Análisis TCP; no inyección demostrada\\
+Descripción & 6 RST: uno del servidor .20:80 a .10:31000, uno del cliente .10:32000 a .30:5222 y cuatro de .100:41000–41003 a .20:80 sin sesión previa\\
+Severidad & Media potencial (interrupción de sesiones); ninguna sesión real interrumpida\\
+Evidencias & \cod{caso05-rst.pcap}, \cod{caso05-analisis.txt} (sintéticas); \cod{caso05-logs-correlacion.txt} (fragmentos reales de nginx y Prosody)\\
+Observables & 2 RST con handshake previo y 4 fuera de flujo; secuencias \emph{raw} 400000, 400100, 400200 y 400300; ack = 0 y bandera ACK ausente\\
+Estado & Casos sintéticos; ni ataque ni falsificación confirmados\\
+\end{ficha}
+
+\subsection{Procedimiento y evidencia}
+El analizador filtra \cod{tcp.flags.reset == 1} y para cada RST busca un saludo previo con la misma 4-tupla, usando los números de secuencia \emph{raw} (Wireshark muestra secuencias relativas por defecto).
+
+\fig[0.98]{term-c05.png}{Salida de \texttt{analizar\_caso05.py} y lista de RST con secuencias \emph{raw}: los cuatro de .100 usan tuplas sin sesión previa.}
+\fig{caso05-wireshark-final.png}{Los RST en Wireshark con \texttt{tcp.relative\_sequence\_numbers:FALSE} solo para esa vista.}
+
+Los cuatro RST de .100 no comparten la 4-tupla de ninguna sesión: son RST fuera de flujo, no resets efectivos de una conexión ajena. Un RST sin bandera ACK es legal (por ejemplo, respuesta a un segmento hacia un puerto sin sesión), y con ACK apagado el campo ack no tiene significado: \emph{ack = 0} no prueba suplantación. Los logs reales de nginx y Prosody son de otra hora y no se correlacionan con este PCAP generado.
+
+\subsection{Regla de detección propuesta}
+Se retiró una pseudofirma que equiparaba \cod{ack:0} con RST forjado. Se propone, como señal de revisión, contar RST por origen sin sesión previa en ventanas cortas y enriquecer con el estado de la conexión y la ventana de secuencia aceptable antes de atribuir intención.
+
+\subsection{Mitigación}
+\begin{itemize}
+\item Mantener las pilas TCP actualizadas: RFC 5961 \cite{rfc5961} exige que un RST esté exactamente en la secuencia esperada o responder con un \emph{challenge ACK}.
+\item Cifrar y autenticar las aplicaciones (TLS) para que un corte no permita inyectar datos.
+\item Filtrado de origen en el acceso para dificultar la suplantación.
+\end{itemize}
+
+\subsection{Preguntas de análisis}
+\textbf{¿Son inyección los RST de .100?} No en una sesión observada: usan otras tuplas.\\
+\textbf{¿Basta \emph{ack = 0} para alertar?} No; un RST sin ACK es legítimo en varios contextos.\\
+\textbf{¿Qué haría falta para correlacionar?} Captura y logs de la misma ejecución, con sesiones identificables y evidencia del endpoint.

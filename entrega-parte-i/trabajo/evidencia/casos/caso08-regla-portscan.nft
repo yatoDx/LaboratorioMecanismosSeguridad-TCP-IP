@@ -1,0 +1,12 @@
+# CASO 8 — PROPUESTA NO APLICADA. Observación en hosts .20/.30, NO gateway.
+# No cierra puertos ni aplica policy drop general. Requiere revisar ubicación.
+# 'limit' ANTES de 'log' limita escrituras; se registran SYN de cualquier puerto,
+# no se supone que sean puertos cerrados. Límite agregado, no por origen.
+# El log limitado pierde eventos: cardinalidad se calcula sobre PCAP completo
+# con scripts/analizar_caso08.py, por ventana/origen/destino. Conteo != cardinalidad.
+table inet caso08_observacion {
+    chain input {
+        type filter hook input priority 0; policy accept;
+        ip daddr { 192.168.50.20, 192.168.50.30 } tcp flags & (syn | ack) == syn limit rate 5/second burst 10 packets log prefix "scan-syn: " counter
+    }
+}

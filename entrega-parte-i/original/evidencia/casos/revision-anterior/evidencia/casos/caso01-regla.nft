@@ -1,0 +1,22 @@
+# Caso 1 — Regla de mitigación de SYN flood (nftables)
+# Se aplica en el gateway (192.168.50.1) o en el propio servidor web.
+# Limita a 10 SYN/seg (ráfaga 20) los paquetes SYN hacia el puerto 80.
+
+table inet filter {
+    chain input {
+        type filter hook input priority 0; policy drop;
+
+        iif lo accept
+        ct state established,related accept
+        ip saddr 192.168.50.0/24 icmp type echo-request accept
+        ip saddr 192.168.50.0/24 udp dport 123 accept
+        ip saddr 192.168.50.0/24 tcp dport 22 accept
+
+        # --- Caso 1: límite de tasa para SYN hacia HTTP (mitigación SYN flood) ---
+        ip saddr 192.168.50.0/24 tcp dport 80 \
+            tcp flags & (syn | ack) == syn \
+            limit rate 10/second burst 20 packets \
+            counter drop
+        ip saddr 192.168.50.0/24 tcp dport 80 accept
+    }
+}

@@ -1,0 +1,265 @@
+%======================================================================
+\section{Caso 6 — UDP: reflexión y amplificación DNS, NTP o SSDP}
+En la reflexión, el atacante envía solicitudes pequeñas con la IP de la víctima falsificada a un servicio que responde con mucho más tráfico. El caso modela esa asimetría con datagramas genéricos y comprueba con una consulta real si el resolver del laboratorio responde a recursión.
+
+\begin{ficha}{Ficha del Caso 6 — Reflexión UDP.}
+Identificador & CASO-06\\
+Título & Modelo de reflexión con datagramas genéricos, no un amplificador NTP real\\
+Fecha y analista & 2026-11-18; análisis offline y una consulta real benigna\\
+Categoría & Denegación de servicio reflectiva; simulación\\
+Descripción & 20 pares entre .20:52000–52019 y .200:40000 con payloads de 48 y 468~B; el guion asigna la MAC de .100 a solicitudes con IP .20 (suplantación modelada). Incluye un par DNS válido \cod{web.lab.local} entre .10 y .53\\
+Severidad & Alta potencial; no se midió saturación ni amplificación de un servicio real\\
+Evidencias & \cod{caso06-reflexion-udp.pcap}, \cod{caso06-analisis.txt}, \cod{caso06-udp-rate.png} (sintéticas); \cod{caso06-openresolver-revision.txt} (real); \cod{caso06-openresolver.txt} (real, histórico incompleto)\\
+Observables & 42 datagramas; sin DNS: 1800~B de tramas de solicitud y 10200~B de respuesta (5,667x); payload 960 frente a 9360~B (9,750x). Consulta real: REFUSED\\
+Estado & Asimetría sintética calculada; reflector real no probado\\
+\end{ficha}
+
+\subsection{Procedimiento y evidencia}
+El factor de amplificación se define como
+\[ \text{BAF} = \frac{\text{bytes de respuesta}}{\text{bytes de solicitud}}, \]
+y se informa tanto sobre tramas capturadas (sin FCS ni relleno Ethernet) como sobre payload UDP. Las tasas se normalizan por el ancho nominal de ventana de 0,5~s.
+
+\fig[0.98]{term-c06-tshark.png}{Primeros datagramas del PCAP: el par DNS válido y las solicitudes de 48~B seguidas de respuestas de 468~B en el puerto 40000.}
+\fig[0.98]{term-c06.png}{Salida de \texttt{analizar\_caso06.py}: cocientes de amplificación, tasas por ventana y la prueba real de resolver abierto.}
+\fig{caso06-wireshark-final.png}{El modelo UDP y el DNS válido en Wireshark; el puerto 40000 no se presenta como NTP.}
+\fig[0.75]{caso06-udp-rate.png}{Paquetes y bytes por segundo normalizados por ventana de 0,5~s; la última ventana está observada solo en parte.}
+
+En la ventana [1,0;1,5)~s hay 25 datagramas (50 paquetes/s y 8700~B/s) y en [1,5;2,0)~s, 15 datagramas (30 paquetes/s y 15300~B/s): pocas respuestas grandes pesan más que muchas solicitudes pequeñas. El cociente diseñado no mide la amplificación de ningún servicio real; como referencia, la literatura reporta factores mucho mayores para NTP \emph{monlist}, DNS abierto o SSDP \cite{rossow2014}.
+
+\paragraph{Prueba real de resolver abierto.} Desde .53 se consultó \cod{dig -b 192.168.50.53 @192.168.50.53 example.com A +time=2 +tries=1} (2026-11-18 20:47:31 $-$05): respuesta \textbf{REFUSED} con EDE~14 (\emph{Not Ready}), 46~B, código de salida 0. dnsmasq, configurado con \cod{no-resolv}, no resuelve nombres externos. Solo prueba el rechazo de esa consulta, origen e instante, no la ausencia universal de reflectores. El archivo histórico perdió su stderr y se conserva sin completarlo.
+
+\subsection{Mitigación}
+\begin{itemize}
+\item Desactivar la recursión abierta en resolvers y restringirla por ACL; aplicar \emph{Response Rate Limiting}.
+\item En NTP, deshabilitar comandos de control como \emph{monlist}; en SSDP, no exponer UPnP fuera de la LAN.
+\item Filtrado de origen (BCP~38 \cite{bcp38}) en el acceso para impedir paquetes con IP de origen ajena; en una misma subred hace falta protección en el switch (por ejemplo, \emph{IP source guard}).
+\end{itemize}
+
+\subsection{Preguntas de análisis}
+\textbf{¿El cociente prueba amplificación NTP?} No: son payloads genéricos diseñados.\\
+\textbf{¿Qué prueba REFUSED?} Que esa consulta concreta fue rechazada, nada universal.\\
+\textbf{¿Cómo comparar tasas?} Dividiendo por el ancho de ventana y declarando las ventanas parciales.
+
+%======================================================================
+\section{Caso 7 — ICMP: escaneo, payloads atípicos y posible túnel}
+ICMP sirve para diagnosticar, pero ráfagas de echo o cargas grandes pueden indicar reconocimiento o un canal encubierto. El caso compara un escenario sintético con el ICMP real de la línea base.
+
+\begin{ficha}{Ficha del Caso 7 — ICMP.}
+Identificador & CASO-07\\
+Título & Tamaños y frecuencias de ICMP echo sintético frente a la línea base real\\
+Fecha y analista & 2026-11-18; análisis offline\\
+Categoría & Señales exploratorias de tamaño y frecuencia; no exfiltración\\
+Descripción & 63 paquetes: cuatro pares request/reply de .10 con las VMs, 50 requests de .100 a .20 con 64~B y cinco requests con 1289~B de datos\\
+Severidad & Media-alta potencial; sin degradación ni canal demostrados\\
+Evidencias & \cod{caso07-icmp.pcap}, \cod{caso07-analisis.txt}, \cod{caso07-icmp-freq.png} (sintéticas); \cod{baseline-normal.pcapng} (real); \cod{caso07-regla-icmp.nft} (propuesta)\\
+Observables & .100 emite 55 echo, máximo 10 por ventana de 1~s; payloads 9/64/1289~B (tramas 51/106/1331~B). Línea base: 152 echo de 32~B, máximo 1/s, ninguno $>$ 200~B\\
+Estado & Diferencias observadas en simulación; túnel y umbrales no confirmados\\
+\end{ficha}
+
+\subsection{Procedimiento y evidencia}
+Se leen ambas capturas filtrando echo IPv4 (tipos 0 y 8) sin fragmentar. El payload se calcula como \cod{ip.len - ip.hdr\_len - 8}, no con \cod{frame.len}, que incluye las cabeceras Ethernet, IPv4 e ICMP.
+
+\fig[0.98]{term-c07.png}{Salida de \texttt{analizar\_caso07.py} y paquetes de .100: requests de 64~B cada 0,1~s y cinco de 1289~B de datos (1331~B de trama).}
+\fig{caso07-wireshark-final.png}{El escenario ICMP en Wireshark.}
+\fig[0.8]{caso07-icmp-freq.png}{Echo-request por ventana de 1~s y por origen en el modelo (arriba: .100 sostiene 10/s) y en la línea base real (abajo: .10 hace ping a las cuatro VMs aproximadamente cada 15~s), cada uno con su eje temporal.}
+
+En la línea base real, .10 hace ping a cada VM cada 15~s aproximadamente: 19 requests en 296,67~s (0,064/s) con 32~B, el tamaño por defecto de \cod{ping} en Windows. El modelo alcanza 10/s y cinco cargas de 1289~B, valores que destacan frente a esa referencia; pero un ping con \cod{-l 1300} legítimo produce lo mismo.
+
+\subsection{Regla de detección y mitigación}
+Para el host web .20: descartar solo el exceso de echo-request.
+\begin{lstlisting}
+table inet caso07_echo {
+  chain input {
+    type filter hook input priority 0; policy accept;
+    ip daddr 192.168.50.20 icmp type echo-request \
+      limit rate over 5/second burst 10 packets counter drop
+  }
+}
+\end{lstlisting}
+Como detección, alertar (sin bloquear) cuando un origen supere 5 echo/s sostenidos o envíe payloads mayores a 200~B, umbrales propuestos que requieren calibración.
+
+\subsection{Mitigación}
+\begin{itemize}
+\item Limitar la tasa de echo por host y permitir los tipos ICMP necesarios para la red (\emph{destination unreachable}, \emph{fragmentation needed}); bloquear todo ICMP rompe el descubrimiento de MTU.
+\item Para canales encubiertos, inspeccionar la entropía y la variación del contenido de los payloads, además del tamaño.
+\end{itemize}
+
+\subsection{Preguntas de análisis}
+\textbf{¿1331~B es el payload?} No: son 1289~B de datos más cabeceras.\\
+\textbf{¿Un paquete grande prueba un túnel?} No; hay diagnósticos legítimos con payloads grandes.\\
+\textbf{¿Qué aporta la línea base?} Una referencia medida y acotada, no una regla universal.
+
+%======================================================================
+\section{Caso 8 — Escaneo de puertos y fingerprinting de servicios}
+El reconocimiento suele preceder a un ataque. La señal de un escaneo no es el número de paquetes sino cuántos puertos \emph{distintos} sondea un origen en poco tiempo.
+
+\begin{ficha}{Ficha del Caso 8 — Escaneo de puertos.}
+Identificador & CASO-08\\
+Título & Sondeos SYN sintéticos y lista parcial de respuestas programadas\\
+Fecha y analista & 2026-11-18; análisis offline\\
+Categoría & Reconocimiento TCP; no descubrimiento real\\
+Descripción & .100 envía 25 SYN: 20 a .20 y 5 a .30. Son 24 números de puerto únicos porque el 80 se sondea en ambos destinos\\
+Severidad & Media potencial; sin impacto\\
+Evidencias & \cod{caso08-portscan.pcap}, \cod{caso08-analisis.txt}, \cod{caso08-portscan.png} (sintéticas); \cod{caso08-regla-portscan.nft} (propuesta)\\
+Observables & 25 SYN, 21 RST y 4 SYN-ACK programados (.20:22 y 80; .30:5222 y 5269); ningún handshake completo\\
+Estado & Patrón sintético; exposición real no confirmada\\
+\end{ficha}
+
+\subsection{Procedimiento y evidencia}
+Se filtran SYN iniciales (\cod{tcp.flags.syn == 1 \&\& tcp.flags.ack == 0}) y se calcula, por ventana fija, origen y destino, el número de SYN y la cardinalidad del conjunto de puertos.
+
+\fig[0.98]{term-c08-tshark.png}{Sondeo secuencial de .100 a .20: un SYN por puerto y la respuesta RST o SYN-ACK programada.}
+\fig[0.98]{term-c08.png}{Salida de \texttt{analizar\_caso08.py}: 20 puertos distintos hacia .20 en menos de 0,2~s y 5 hacia .30.}
+\fig{caso08-wireshark-final.png}{El escaneo en Wireshark.}
+\fig[0.75]{caso08-portscan.png}{Puertos destino distintos por origen y destino en la ventana [0,1)~s: 20 hacia .20 y 5 hacia .30.}
+
+La lista de respuestas es parcial y escrita en el generador: no incluye SSH de .30, aunque ese puerto sí escucha según el inventario real del Caso~3. Coincidir parcialmente con el inventario no significa que se descubrió nada.
+
+\subsection{Regla de detección y mitigación}
+Registro limitado de SYN en los endpoints .20 y .30, sin descartar:
+\begin{lstlisting}
+table inet caso08_observacion {
+  chain input {
+    type filter hook input priority 0; policy accept;
+    ip daddr { 192.168.50.20, 192.168.50.30 } tcp flags & (syn | ack) == syn \
+      limit rate 5/second burst 10 packets log prefix "scan-syn: " counter
+  }
+}
+\end{lstlisting}
+El \cod{limit} antes de \cod{log} limita la escritura de registros, así que el log pierde eventos y no sirve para contar cardinalidad; esta se calcula sobre el PCAP completo. Criterio de revisión propuesto: 20 o más puertos distintos por origen y destino en 1~s.
+
+\subsection{Plan de endurecimiento}
+\begin{itemize}
+\item Cerrar lo innecesario y filtrar por origen en cada host (política \emph{drop} con excepciones explícitas).
+\item Ocultar banners de versión en servicios (nginx \cod{server\_tokens off}) para dificultar el \emph{fingerprinting}.
+\item Usar conjuntos dinámicos de nftables para registrar orígenes que tocan muchos puertos distintos.
+\end{itemize}
+
+\subsection{Preguntas de análisis}
+\textbf{¿25 SYN son 25 puertos únicos?} No: el 80 se repite entre destinos, y las retransmisiones inflan el conteo sin aumentar la cardinalidad.\\
+\textbf{¿Un SYN-ACK del PCAP confirma un puerto abierto real?} No, está programado.\\
+\textbf{¿El \texttt{limit} del log detecta escaneos?} No; solo controla el volumen de registros.
+
+%======================================================================
+\section{Caso 9 — Priorización y correlación de alertas con IA y SIEM}\label{sec:caso9}
+Una alerta aislada rara vez basta. El caso construye un pipeline local que normaliza logs reales del laboratorio, los agrupa por origen y minuto, y asigna un puntaje explicable. Como no se instaló Wazuh, el pipeline en Python cumple sus etapas: recolección, normalización, correlación, puntuación y presentación.
+
+\begin{ficha}{Ficha del Caso 9 — Correlación SIEM.}
+Identificador & CASO-09\\
+Título & Correlación de logs con puntaje explicable\\
+Fecha y analista & 2026-11-18; revisión humana pendiente\\
+Categoría & Detección por origen y ventana de 60~s\\
+Descripción & 168 eventos reales normalizados (auth, nginx, Prosody y dnsmasq; el fragmento real de nftables no tenía registros) y 21 registros sintéticos forman 37 ventanas; 0 alertas reales y 1 sintética de 49 puntos\\
+Severidad & Alta para el escenario didáctico; no hay incidente real\\
+Evidencias & \cod{caso09-logs/}, \cod{caso09-eventos-normalizados.csv}, \cod{caso09-escenario-sintetico.jsonl}, \cod{caso09-alertas.json}, \cod{caso09-scores.txt}, \cod{caso09-cobertura.json}\\
+Observables & Origen sintético 192.168.50.100: 6 fallos de autenticación, 3 errores HTTP 5xx y 12 puertos distintos en un minuto, en auth, nginx y nftables\\
+Estado & Pipeline probado automáticamente; dictamen humano pendiente en \cod{caso09-validacion-humana.json}\\
+\end{ficha}
+
+\subsection{Etapas del pipeline}
+\fig{caso09-pipeline.png}{Etapas del pipeline de correlación local.}
+\begin{table}[H]\centering\small\caption{Etapas del pipeline del Caso 9.}
+\begin{tabularx}{\linewidth}{@{}p{2.8cm}X@{}}\toprule
+\textbf{Etapa} & \textbf{Qué hace}\\\midrule
+Recolección & Lee fragmentos exportados de cada VM; guarda archivo, línea y SHA-256 de cada registro\\
+Normalización & Esquema común: tiempo UTC, fuente, host que informa, origen observado, tipo de evento. Los syslog sin año ni zona se interpretan como 2026 y UTC$-$05:00, supuesto declarado\\
+Correlación & Agrupa por procedencia (real o sintética), IP de origen y minuto; si el log no trae origen queda ``no atribuido'', nunca se toma la IP de otra línea\\
+Puntuación & Suma reglas explicables (Tabla~\ref{tab:prio})\\
+Presentación & Alerta con factores, fuentes, hosts y referencias a las líneas originales; recomienda revisar, no bloquea\\
+\bottomrule\end{tabularx}\end{table}
+
+\subsection{Criterios de prioridad}
+\begin{table}[H]\centering\small\caption{Reglas de puntuación (umbral de alerta: 10 puntos por ventana).}\label{tab:prio}
+\begin{tabular}{@{}lll@{}}\toprule
+\textbf{Indicador} & \textbf{Condición} & \textbf{Puntos}\\\midrule
+Fallos de autenticación & $\geq 3$ en la ventana & 5 por evento\\
+Errores HTTP 5xx & $\geq 3$ & 3 por evento\\
+Puertos destino distintos en SYN & $\geq 10$ & 10\\
+Consultas DNS con etiqueta $>$ 30 & $\geq 3$ & 6\\
+\bottomrule\end{tabular}\end{table}
+
+\subsection{Ejemplo de alerta enriquecida}
+\fig[0.98]{term-c09.png}{Re-ejecución del pipeline: 168 eventos reales, 21 sintéticos, 37 ventanas, 0 alertas reales y 1 sintética.}
+\begin{lstlisting}
+{ "evidence_kind": "sintetica", "subject": "192.168.50.100",
+  "window_utc": "2026-11-19T01:30:00+00:00", "window_seconds": 60,
+  "reporting_hosts": ["gateway", "web"], "sources": ["auth", "nftables", "nginx"],
+  "counts": {"AUTH_FAIL": 6, "HTTP_5XX": 3, "NFT_SYN": 12},
+  "distinct_dst_ports": 12, "score": 49,
+  "factors": {"fallos_autenticacion": 30, "errores_http_5xx": 9,
+              "diez_puertos_distintos": 10},
+  "alert": true, "evidence_refs": ["caso09-escenario-sintetico.jsonl:1", ...] }
+\end{lstlisting}
+El puntaje se explica solo: 30 + 9 + 10 = 49. El escenario de las 20:30 locales corresponde a las 01:30 UTC del 19 de noviembre.
+\fig{caso09-consola-final.png}{Ejecución del pipeline en el equipo analista.}
+
+\subsection{Registro de validación humana}
+La ejecución automática no sustituye la revisión. \cod{caso09-validacion-humana.json} sigue en estado \emph{pendiente}. Para completarlo se preparó \cod{scripts/registrar\_dictamen\_caso09.py}, que exige nombre del revisor, dictamen (\emph{confirma}, \emph{confirma con reservas} o \emph{rechaza}), una nota y si algún log se envió a un LLM externo; el script registra la decisión, no la toma.
+
+\subsection{Uso de un LLM en el triage}
+Un LLM puede resumir alertas ya anonimizadas y proponer hipótesis, previa autorización. No debe validar la autenticidad de la evidencia, ejecutar bloqueos ni reemplazar al analista, y no se le deben enviar logs con datos personales o secretos. En este caso no se usó un LLM externo ni se transmitieron logs.
+
+\subsection{Preguntas de análisis}
+\textbf{¿Qué aporta correlacionar?} Reúne señales débiles de servicios distintos para el mismo origen y minuto, sin afirmar causalidad por coincidencia.\\
+\textbf{¿Cómo se evitan atribuciones falsas?} Manteniendo el origen como desconocido cuando falta y separando siempre lo real de lo simulado.\\
+\textbf{¿Equivale a un SIEM de producción?} No: no hay ingestión continua, retención robusta ni control de acceso; es una demostración de normalización y correlación.
+
+%======================================================================
+\section{Caso 10 — Mensajería XMPP: interceptación y errores de TLS}
+Este es el único caso con tráfico real de extremo a extremo. El estado inicial de Prosody no tenía certificado y no completaba TLS; se corrigió de forma acotada y se verificó con pruebas positivas y negativas.
+
+\begin{ficha}{Ficha del Caso 10 — XMPP sobre TLS.}
+Identificador & CASO-10\\
+Título & Negociación TLS, identidad y confianza del servidor XMPP\\
+Fecha y analista & 2026-11-18, analista Windows (marcas UTC del 19 de noviembre)\\
+Categoría & Protección del transporte y validación de certificados\\
+Descripción & Se añadió el VirtualHost \cod{xmpp.lab.local} con certificado autofirmado y STARTTLS obligatorio. Con confianza explícita se negoció TLS 1.3; sin confianza local o con nombre incorrecto, el cliente rechazó la conexión\\
+Severidad & Media para la configuración inicial incompleta; sin explotación observada\\
+Evidencias & \cod{caso10-antes.json}, \cod{caso10-pruebas.json}, \cod{caso10-certificado.pem}, \cod{caso10-pre-tls.txt}, \cod{caso10-prosody-log.txt}, \cod{caso10-xmpp-tls.pcapng}, capturas\\
+Observables & 192.168.50.30:5222, SNI y SAN \cod{xmpp.lab.local}, TLS 1.3 con \cod{TLS\_AES\_256\_GCM\_SHA384}; alertas \emph{Unknown CA} y \emph{Bad Certificate}\\
+Estado & Pruebas hechas; localhost sigue sin certificado; login, federación y renovación sin evaluar\\
+\end{ficha}
+
+\subsection{Cambio aplicado y certificado}
+\begin{lstlisting}
+VirtualHost "xmpp.lab.local"
+    authentication = "internal_hashed"
+    c2s_require_encryption = true
+    allow_unencrypted_plain_auth = false
+    ssl = {
+        certificate = "/etc/prosody/certs/xmpp.lab.local.crt";
+        key = "/etc/prosody/certs/xmpp.lab.local.key";
+    }
+\end{lstlisting}
+Certificado RSA 2048 / SHA-256, \cod{CN=xmpp.lab.local}, SAN \cod{DNS:xmpp.lab.local}, EKU \emph{serverAuth}, válido del 2026-11-19 01:42:40 al 2026-12-19 01:42:40 UTC. Huella SHA-256 del DER: \cod{78:\allowbreak 10:\allowbreak A5:\allowbreak FE:\allowbreak A2:\allowbreak 1E:\allowbreak 44:\allowbreak DD:\allowbreak F4:\allowbreak 06:\allowbreak C9:\allowbreak 2B:\allowbreak 09:\allowbreak 63:\allowbreak 22:\allowbreak 5C:\allowbreak 3E:\allowbreak E9:\allowbreak 59:\allowbreak 93:\allowbreak 6F:\allowbreak 64:\allowbreak 80:\allowbreak B4:\allowbreak 94:\allowbreak 08:\allowbreak AC:\allowbreak F4:\allowbreak A4:\allowbreak 16:\allowbreak 6C:\allowbreak 2B}. La clave privada quedó en la VM (\cod{root:prosody}, modo 640); solo se exportó el certificado público.
+
+\subsection{Lista de verificación TLS}
+\begin{table}[H]\centering\small\caption{Pruebas OpenSSL contra 192.168.50.30:5222 (\texttt{s\_client -starttls xmpp}).}
+\begin{tabularx}{\linewidth}{@{}p{3cm}p{5.6cm}cX@{}}\toprule
+\textbf{Variante} & \textbf{Argumentos adicionales} & \textbf{Salida} & \textbf{Resultado}\\\midrule
+Confianza explícita & \cod{-CAfile caso10-certificado.pem -verify\_hostname xmpp.lab.local -verify\_return\_error} & 0 & \emph{Verified peername}, TLS 1.3\\
+Sin confianza local & \cod{-verify\_hostname xmpp.lab.local -verify\_return\_error} & 1 & Rechazo; alerta \emph{Unknown CA}\\
+Nombre incorrecto & \cod{-CAfile caso10-certificado.pem -verify\_hostname otro.lab.local -verify\_return\_error} & 1 & Rechazo; alerta \emph{Bad Certificate}\\
+\bottomrule\end{tabularx}\end{table}
+
+Antes del cifrado, el servidor anuncia STARTTLS como \cod{<required/>} y no ofrece PLAIN. \cod{prosodyctl check config} pasa; \cod{prosodyctl check certs} devuelve 2 porque localhost no tiene certificado y el de laboratorio vence en un mes.
+
+\subsection{Captura y correlación}
+Captura real de 20~s en el analista, filtrada a \cod{host 192.168.50.30 and tcp port 5222}: 66 tramas.
+\fig[0.98]{term-c10.png}{Resultados guardados de las tres pruebas y handshakes del PCAP real: tres ClientHello con SNI, sus ServerHello y las dos alertas fatales de los controles negativos (tramas 36 y 54).}
+\fig{caso10-wireshark.png}{Wireshark con filtro \texttt{tls}: ClientHello, ServerHello y alertas de certificado.}
+\fig{caso10-consola.png}{Consola del analista con el resumen de las pruebas.}
+En TLS~1.3 la etiqueta \emph{Application Data} también transporta mensajes cifrados del propio saludo: no prueba que se enviaran mensajes de usuario. No se guardaron secretos de sesión ni se descifró contenido.
+
+\subsection{Plan de corrección}
+\begin{itemize}
+\item Emitir el certificado desde una CA interna o pública (ACME) y automatizar su renovación antes del vencimiento.
+\item Dar certificado a localhost o retirar ese VirtualHost para que \cod{check certs} pase.
+\item Exigir TLS también en la federación (\cod{s2s\_require\_encryption}, \cod{s2s\_secure\_auth}) o cerrar 5269 si no se usa.
+\item Probar login real con SCRAM y, para confidencialidad de extremo a extremo, OMEMO en los clientes.
+\end{itemize}
+
+\subsection{Preguntas de análisis}
+\textbf{¿Cifrado equivale a identidad confiable?} No: hay que validar nombre, cadena y vigencia; aquí la confianza fue explícita y local.\\
+\textbf{¿Por qué fallan dos pruebas?} Son controles negativos esperados: demuestran que el cliente rechaza sin confianza y con identidad incorrecta.\\
+\textbf{¿Qué ve Wireshark?} Direcciones, tiempos, SNI y registros TLS; no el contenido cifrado.

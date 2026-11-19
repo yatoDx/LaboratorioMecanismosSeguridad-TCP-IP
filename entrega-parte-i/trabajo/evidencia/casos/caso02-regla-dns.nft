@@ -1,0 +1,12 @@
+# CASO 2 — NOTA DE DETECCIÓN, SIN REGLAS NFT EJECUTABLES.
+# No se propone policy drop general ni forward en gateway: peers .10/.53
+# de la misma subred se comunican directamente, sin atravesar el gateway.
+# dns.query de un IDS es un nombre normalizado, no wire format con octetos
+# de longitud. Se retiró la pseudofirma byte_test que confundía ambos formatos.
+# Heurística offline implementada en scripts/analizar_caso02.py:
+#   etiqueta = primera etiqueta más larga de qname (normalizado a minúsculas)
+#   sospechosa = len(etiqueta) > 30 OR Shannon(etiqueta) > 3.5
+# Son umbrales didácticos NO validados; pueden alertar sobre nombres benignos.
+# Agrupar frecuencia por cliente/sufijo; no confirmar exfiltración solo por H.
+# Una ACL DNS real correspondería al resolver .53/firewall local (UDP y TCP),
+# tras validar orígenes y necesidad. No se modifica ninguna VM.

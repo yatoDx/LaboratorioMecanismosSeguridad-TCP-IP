@@ -1,0 +1,8 @@
+CASO 9 - Correlacion por sujeto y minuto (UTC)
+Eventos reales: 168; sinteticos: 21; ventanas: 37
+Alertas reales: 0; sinteticas: 1
+Reglas: >=3 fallos auth (5/pieza), >=3 HTTP 5xx (3/pieza), >=10 puertos (10), >=3 DNS largas (6).
+Umbral: 10. DNS REFUSED sin origen no se atribuye a otro evento.
+Ano 2026 y zona -05:00 inferidos del laboratorio para logs syslog sin ano/zona.
+No se enviaron datos a un LLM ni se ejecutaron bloqueos.
+sintetica: 192.168.50.100, 2026-11-19T01:30:00+00:00, score=49, {'fallos_autenticacion': 30, 'errores_http_5xx': 9, 'diez_puertos_distintos': 10}

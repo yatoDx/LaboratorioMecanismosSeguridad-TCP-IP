@@ -1,0 +1,55 @@
+## hostname
+ Static hostname: dns
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: f97afb04de6d49189ca42e85e7ca1c40
+         Boot ID: aac80c5fc331402ab1e8d4171dc749a3
+  Virtualization: oracle
+Operating System: Ubuntu 24.04.5 LTS
+          Kernel: Linux 6.8.0-149-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+Firmware Version: VirtualBox
+   Firmware Date: Fri 2006-12-01
+    Firmware Age: 19y 11month 2w 4d
+
+## ip -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 metric 100 fd17:625c:f037:2:a00:27ff:fe1e:4794/64 fe80::a00:27ff:fe1e:4794/64 
+enp0s8           UP             192.168.50.53/24 fe80::a00:27ff:fe63:8daf/64 
+
+## ip route
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+192.168.50.0/24 dev enp0s8 proto kernel scope link src 192.168.50.53 
+
+## timedatectl
+               Local time: Wed 2026-11-18 18:29:53 -05
+           Universal time: Wed 2026-11-18 23:29:53 UTC
+                 RTC time: Wed 2026-11-18 23:29:53
+                Time zone: America/Bogota (-05, -0500)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+## netplan /etc/netplan/01-lab.yaml
+network:
+  version: 2
+  ethernets:
+    enp0s3:
+      dhcp4: true
+      dhcp4-overrides:
+        use-routes: false
+    enp0s8:
+      addresses: [192.168.50.53/24]
+
+## dnsmasq lab.conf
+listen-address=192.168.50.53
+bind-interfaces
+no-resolv
+address=/web.lab.local/192.168.50.20
+
+## dig web.lab.local
+192.168.50.20
+
+########## FIN CAPTURA dns ##########

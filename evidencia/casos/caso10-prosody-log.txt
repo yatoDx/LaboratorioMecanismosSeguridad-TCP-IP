@@ -1,0 +1,55 @@
+Nov 18 19:54:15 c2s5add0b236b20	info	Client disconnected: connection closed
+Nov 18 20:40:42 c2s5add0b217670	info	Client connected
+Nov 18 20:40:42 c2s5add0b217670	info	Client disconnected: no shared cipher
+Nov 18 20:42:40 c2s5add0b209fb0	info	Client connected
+Nov 18 20:42:40 c2s5add0b209fb0	info	Client disconnected: no shared cipher
+Nov 18 20:42:40 mod_posix	info	Received SIGHUP
+Nov 18 20:42:40 startup	info	Reloading configuration file
+Nov 18 20:42:40 certmanager	info	No certificate present in SSL/TLS configuration for localhost. SNI will be required.
+Nov 18 20:42:40 certmanager	info	No certificate present in SSL/TLS configuration for localhost. SNI will be required.
+Nov 18 20:42:40 localhost:tls	info	Certificates reloaded
+Nov 18 20:43:11 c2s5add0b21a330	info	Client connected
+Nov 18 20:43:11 c2s5add0b21a330	info	Client disconnected: connection closed
+Nov 18 20:43:11 c2s5add0b234970	info	Client connected
+Nov 18 20:43:11 c2s5add0b234970	info	Client disconnected: connection closed
+Nov 18 20:43:11 c2s5add0b240540	info	Client connected
+Nov 18 20:43:11 c2s5add0b240540	info	Client disconnected: connection closed
+Nov 18 20:43:20 c2s5add0b23bb50	info	Client connected
+Nov 18 20:43:20 c2s5add0b23bb50	info	Client disconnected: connection closed
+Nov 18 20:43:33 mod_posix	warn	Received SIGTERM
+Nov 18 20:43:33 startup	info	Shutting down: Received SIGTERM
+Nov 18 20:43:33 portmanager	info	Deactivated service 'c2s'
+Nov 18 20:43:33 portmanager	info	Deactivated service 'c2s_direct_tls'
+Nov 18 20:43:33 portmanager	info	Deactivated service 'legacy_ssl'
+Nov 18 20:43:33 portmanager	info	Deactivated service 's2s'
+Nov 18 20:43:33 portmanager	info	Deactivated service 's2s_direct_tls'
+Nov 18 20:43:33 general	info	Shutting down...
+Nov 18 20:43:33 general	info	Shutdown status: Cleaning up
+Nov 18 20:43:33 general	info	Shutdown complete
+Nov 18 20:43:33 startup	info	Hello and welcome to Prosody version 0.12.4
+Nov 18 20:43:33 startup	info	Prosody is using the epoll backend for connection handling
+Nov 18 20:43:33 portmanager	info	Activated service 'c2s' on [::]:5222, [*]:5222
+Nov 18 20:43:33 portmanager	info	Activated service 'c2s_direct_tls' on no ports
+Nov 18 20:43:33 portmanager	info	Activated service 'legacy_ssl' on no ports
+Nov 18 20:43:33 xmpp.lab.local:tls	info	Certificates loaded
+Nov 18 20:43:33 portmanager	info	Activated service 's2s' on [::]:5269, [*]:5269
+Nov 18 20:43:33 portmanager	info	Activated service 's2s_direct_tls' on no ports
+Nov 18 20:43:33 certmanager	info	No certificate present in SSL/TLS configuration for localhost. SNI will be required.
+Nov 18 20:43:33 certmanager	info	No certificate present in SSL/TLS configuration for localhost. SNI will be required.
+Nov 18 20:43:33 localhost:tls	info	Certificates loaded
+Nov 18 20:43:34 c2s561744a16ee0	info	Client connected
+Nov 18 20:43:34 c2s561744a16ee0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+Nov 18 20:43:34 c2s561744a16ee0	info	Client disconnected: closed
+Nov 18 20:43:34 c2s561744a6b7b0	info	Client connected
+Nov 18 20:43:34 c2s561744a6b7b0	info	Client disconnected: tlsv1 alert unknown ca
+Nov 18 20:43:35 c2s561744aa46a0	info	Client connected
+Nov 18 20:43:35 c2s561744aa46a0	info	Client disconnected: sslv3 alert bad certificate
+Nov 18 20:43:54 c2s561744a6dcc0	info	Client connected
+Nov 18 20:43:54 c2s561744a6dcc0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+Nov 18 20:43:54 c2s561744a6dcc0	info	Client disconnected: closed
+Nov 18 20:43:54 c2s561744a9b3b0	info	Client connected
+Nov 18 20:43:54 c2s561744a9b3b0	info	Client disconnected: tlsv1 alert unknown ca
+Nov 18 20:43:55 c2s561744a91620	info	Client connected
+Nov 18 20:43:55 c2s561744a91620	info	Client disconnected: sslv3 alert bad certificate
+Nov 18 20:43:55 c2s561744a86fd0	info	Client connected
+Nov 18 20:43:55 c2s561744a86fd0	info	Client disconnected: connection closed

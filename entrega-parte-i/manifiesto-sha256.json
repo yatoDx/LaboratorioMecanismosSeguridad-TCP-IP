@@ -1,0 +1,1533 @@
+{
+  "fecha_utc": "2026-11-19T01:55:45.647256+00:00",
+  "algoritmo": "SHA-256",
+  "alcance": "Cierre tecnico de Parte I; no certificacion academica ni firma humana",
+  "original": "Copia maestra al cierre, no adquisicion inmutable inicial; sin WORM ni cambio de permisos",
+  "trabajo": "Copia identica para consulta; modificarla hara fallar esta verificacion",
+  "historicos": "Se preservan revisiones y hashes anteriores, incluso inconsistencias C0",
+  "exclusiones": [
+    "vmctl.py: contiene credenciales; permanece solo en el repositorio local",
+    "claves privadas TLS, instalaciones y maquinas virtuales",
+    "Parte II y aprobaciones externas"
+  ],
+  "archivos": [
+    {
+      "ruta": "evidencia/baseline-normal.pcapng",
+      "bytes": 212848,
+      "sha256": "301ea4766c642919734e3649b1de4c049bb4bebeb8ff9b4125306322b3b076ff",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/capturar-consola.ps1",
+      "bytes": 3431,
+      "sha256": "a5779e1b0c22c6a9edf8e38af9104568a6cc6a11c330c933383cc81034b4b269",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/capturar_pcap_wireshark.ps1",
+      "bytes": 2578,
+      "sha256": "4e288dd07bf18f76c059163036aa29153778ff93ebd96455c3626d7a6fbcd2e2",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso01-analisis.txt",
+      "bytes": 12070,
+      "sha256": "8975b42b9d6c70f05ac9ecceb778504e0d9cb77152463b43e9a4fce80c2bb443",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso01-netstat-host.txt",
+      "bytes": 12740,
+      "sha256": "6b2c9e973bedf8e38e587dca7d904d03b0f4ca2892e0c516e5db71cd10cab93f",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso01-regla.nft",
+      "bytes": 701,
+      "sha256": "fc33058b0587f97ca84073b09119251165a5bda2f79552480723337991a58f20",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso01-syn-rate.png",
+      "bytes": 69784,
+      "sha256": "c862e6bb9537ccc2c6bc616e7a9501d9f9fc2507c93a7ecafbf77be27d1795f4",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso01-synflood-ratelimit.pcap",
+      "bytes": 19092,
+      "sha256": "89875054c5728a4f5f84e352588a2ca6c1a5e0c17f12c0d5eac753164897865c",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso01-synflood.pcap",
+      "bytes": 30292,
+      "sha256": "cdb0035700ebd5db641e0908a15331ceae72148ed3604daa27f9b7496518de27",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso01-wireshark-final.png",
+      "bytes": 96038,
+      "sha256": "ec1b3a3b5159c2d256912e050af4af90b471302dc1c48227774c8eea0fc06208",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso01-wireshark.png",
+      "bytes": 93155,
+      "sha256": "2ac9ab43ab4d94deaa51346d3b2d890e496cd32bbbaa5cc300f4e68b907ebe69",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/caso02-analisis.txt",
+      "bytes": 1545,
+      "sha256": "e4ff374a9145bda388fb6e048613597ae3348d58ced9257ff280c96c8ccb4d68",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso02-dns-entropy.png",
+      "bytes": 54675,
+      "sha256": "ecf1fdec39da7af3712bf65bfb19c311db2353f59d2df829f0ee76f0c50a5f45",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso02-dns-tunneling.pcap",
+      "bytes": 4344,
+      "sha256": "4432598be91337ab04e6749604bfa9a2f16266ae3b264bd366d825c185da4988",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso02-dnsmasq-log.txt",
+      "bytes": 3323,
+      "sha256": "87be6c3d6af0bf4ac27dc27a7e475c2954990859e6a29a1774ff292018a505d8",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso02-regla-dns.nft",
+      "bytes": 878,
+      "sha256": "189c35e95e2950ce42850f6f9d13f7689c79dac75ee19d9e76a68b25ca15619e",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso02-wireshark-final.png",
+      "bytes": 104356,
+      "sha256": "94c23f5c832d5406d557fba33dbd12a3d1825b5230ac4122f002cb7ddb6c228a",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso02-wireshark.png",
+      "bytes": 104310,
+      "sha256": "d5971654d6ebd0469d612a77a200d370de36d4108de28052521e0b11569f26b1",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/caso03-auth-events.txt",
+      "bytes": 5175,
+      "sha256": "1c93adec6070366d4210907e83663ee993c54de906994a97429fb1765c79fb30",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso03-netstat-consola.png",
+      "bytes": 65256,
+      "sha256": "d86c544ee76742c48a5836f8d7a8d7d900653eaf93f138eb34052cd7e6e5b39b",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso03-netstat-host.txt",
+      "bytes": 14662,
+      "sha256": "fb0cc64afced9e8c113a35be30d3209bae72947f189f4c39f1f908ede991b44c",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso03-riesgo.png",
+      "bytes": 57215,
+      "sha256": "d914da91970021c089ba066fee38050d93c7849536f078b83f7c5edca2d8d01b",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso03-ss-tulpn.txt",
+      "bytes": 5499,
+      "sha256": "bb9849998a0fc84b59cbf7dc27ca15dda7185bc9be6d468cc8de4f7a891cf3d2",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-baseline-paquetes.csv",
+      "bytes": 466354,
+      "sha256": "1d5d1ff81a5a661b807d9546fb88b78ad89ce9d7261cc5631c35bb69e63efe65",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-consola-revisada.png",
+      "bytes": 72864,
+      "sha256": "ac90964a7c151c1e0bac91cb2610e9aa2944997f3169948931ab3dfa52a55121",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-consola.png",
+      "bytes": 44094,
+      "sha256": "d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-dataset.csv",
+      "bytes": 41642,
+      "sha256": "74d4226fe8d0355b0a5354584a352c030a0a43b21ffa2334a5a694f22fdfe57f",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-manifiesto.json",
+      "bytes": 4333,
+      "sha256": "974cdab84bedfef53355388c2c3413a97f40cc5c2adfbdad053b136055ee9924",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-matriz-confusion.png",
+      "bytes": 73543,
+      "sha256": "b30ca9f43e25873c944bf145b71411a10985a57412a7ff8a55af247b1b779806",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-metricas.json",
+      "bytes": 3882,
+      "sha256": "035b4906820c631601d65196981e81a01063c854803ea4764483d02b9ff57b29",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-metricas.txt",
+      "bytes": 3357,
+      "sha256": "59a301f976104c9a61fa84de9cdcd6acf319bb76d6cf470dafd070917ac9f47e",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-modelo-parametros.json",
+      "bytes": 3860,
+      "sha256": "d073fd5b172c3fdf106de9c8884d4a7acd1fb49c973f63cb3129c193135ac01d",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-pantallazos-obsoletos.txt",
+      "bytes": 262,
+      "sha256": "68d4a95f6707a05c44c4bbab266e45f479b195e407d937aa9cde92c33abf27ec",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-predicciones.csv",
+      "bytes": 29485,
+      "sha256": "2bbdceefae6222863083c584f8d453b8cbef68e0d19db83139f88887c54a983c",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-pruebas.txt",
+      "bytes": 2433,
+      "sha256": "2c0f3f1e03b907ecf38c3b643e89a85e42bdcb6cab2b945490779f4280e782ed",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-reproducibilidad.json",
+      "bytes": 1755,
+      "sha256": "b99f5cc6f7b2bfd447f4e5f9b17e8bf09421918e7d4466faa4a68eb6999fdde7",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-scatter.png",
+      "bytes": 85438,
+      "sha256": "47ec1d4f041cea1574bf5a477b1166d4e22b1d91b5908305f22b696e7e2d5f70",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-segmentos.csv",
+      "bytes": 2162,
+      "sha256": "933915f6597466389c520f887aeebd1def61c3a492380607dc6863e3c4ac03c4",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso04-sinteticos-paquetes.csv",
+      "bytes": 820491,
+      "sha256": "aebe272b6a2a9a63dbdebaa6b37d802377258c8c3583e93034cd78a5d6962161",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso05-analisis.txt",
+      "bytes": 1519,
+      "sha256": "9add441518abe01cd30cb2d6fb86466cc419ca8e81f84f2f250ff40bbad810f8",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso05-logs-correlacion.txt",
+      "bytes": 4632,
+      "sha256": "63c674e4cf1acb111c80c96fe1ce3bd8acc4e2866c8ea3f0eb00437da47c8f8d",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso05-rst.pcap",
+      "bytes": 1183,
+      "sha256": "abea3dec5ae31d8f2f9fa49c6188a8ed1b0b1bdcedeb1420bfdc422736fb621a",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso05-wireshark-final.png",
+      "bytes": 58809,
+      "sha256": "e88ec514fba517fe01974d8b4d2733d01229af6c57eb5dd6da5f427a5224ddda",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso05-wireshark.png",
+      "bytes": 58135,
+      "sha256": "0317669e64e6a474294c14b584fc597a2ead06aba1f967156d0547f03030e62b",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/caso06-analisis.txt",
+      "bytes": 1405,
+      "sha256": "5a8ccc8d362da0c25c6a67c083fe0e7fa85cfb78cf4fe02d174b198997e8c6a2",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso06-openresolver-revision.txt",
+      "bytes": 1227,
+      "sha256": "7fbae85e398509d66fddf9dd25d1c7a655d42ae1bfd3a53cc4262e9539d988a7",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso06-openresolver.txt",
+      "bytes": 352,
+      "sha256": "363e434cca5123c292e05d41945c6ccd1db8775d5793b2ea811c1accd1aaf955",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso06-reflexion-udp.pcap",
+      "bytes": 12858,
+      "sha256": "512bd19bacdcad6deb19956e7456fd6d0041713156f14fb2983d664325822862",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso06-udp-rate.png",
+      "bytes": 41610,
+      "sha256": "1a10b610106fd8a048bb5f592077099bf8a6fdd541f975d9c1ed649aceed809e",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso06-wireshark-final.png",
+      "bytes": 81942,
+      "sha256": "b13a437c582fea8d9816f848b3de528b5cc221773ed8b10e1b6ee59c8412a25b",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso06-wireshark.png",
+      "bytes": 82561,
+      "sha256": "1b032d88c1216773335d03314e950e72c5e2120902a965cc17e23aadeacf9554",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/caso07-analisis.txt",
+      "bytes": 4376,
+      "sha256": "97a7413b7f84ac5117c1dc91ac37c2b4c732fab9de3125aa56844df8cb4ed892",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso07-icmp-freq.png",
+      "bytes": 55288,
+      "sha256": "d98190e6a734078800e40627c7034db13f272162f1d9075076e138064b7f5305",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso07-icmp.pcap",
+      "bytes": 13395,
+      "sha256": "1a2fb2b2291ea1cd7a87b370ca33053b0693b8526c6c77d0890a9dbab13a41ac",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso07-regla-icmp.nft",
+      "bytes": 650,
+      "sha256": "305ba6280781009af669c3403515974f9c8ecda22935466c735362bd8d6c5d83",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso07-wireshark-final.png",
+      "bytes": 105995,
+      "sha256": "092519cd79ec267e2d1dda12f385a408e86fd1fb155105920a6b5e26f8ffc121",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso07-wireshark.png",
+      "bytes": 105995,
+      "sha256": "092519cd79ec267e2d1dda12f385a408e86fd1fb155105920a6b5e26f8ffc121",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/caso08-analisis.txt",
+      "bytes": 1634,
+      "sha256": "fb7daea7d2b8d0f6526aaed490f566f4a90aea0f66e0700fc917c2a98271bb81",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso08-portscan.pcap",
+      "bytes": 3524,
+      "sha256": "322d148fe355df3f13d16b9749cc34e058f8a35b2468a010f5eb305a70e7f313",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso08-portscan.png",
+      "bytes": 35088,
+      "sha256": "456afe0d5019e5098b532b9aa4cdfb104d6db4ea7809d8eabf763ffff3ae7cee",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso08-regla-portscan.nft",
+      "bytes": 746,
+      "sha256": "2ddcd843e23365499ffbc462d096adf96edba6a49cdde492872e384e0cfebea4",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso08-wireshark-final.png",
+      "bytes": 95928,
+      "sha256": "1f7575cc09044252b0c42345d2bfb1c0dbdb107b5878d1992af558f9a6298ab9",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso08-wireshark.png",
+      "bytes": 94218,
+      "sha256": "4ad1304262bbbdc017e289a11cfb7a28404f0889a823935e9324ee81e0b9dec5",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-alerta.txt",
+      "bytes": 1660,
+      "sha256": "b803d514940cf4b41521f8d52436a52ed149424d473563fad00b961ad2281fd1",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-alertas.json",
+      "bytes": 1660,
+      "sha256": "b803d514940cf4b41521f8d52436a52ed149424d473563fad00b961ad2281fd1",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-caracteristicas.json",
+      "bytes": 24669,
+      "sha256": "a7b88aed4b132082b0e8ee6d0f543c64a2b94fa7944e1cf809b6c886a8f6f89a",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-cobertura.json",
+      "bytes": 1026,
+      "sha256": "e55858387b84364d48ac78e9b5c59d95c16952eb20ee818dcf3c3dcee0bac4e6",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-consola-final.png",
+      "bytes": 42524,
+      "sha256": "3d5797c0b86e2286183e725894879a3363df61a720db9825e2c8acbe7841ed81",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-escenario-sintetico.json",
+      "bytes": 4514,
+      "sha256": "6813878efa358f4df5bb61667402ed32e00b0429af1e9157deda9d1d915c7591",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-escenario-sintetico.jsonl",
+      "bytes": 3900,
+      "sha256": "708cf45c777a68dfe96234c53cefe7808718d24bfc2244a7d3469669fcf51341",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-eventos-normalizados.csv",
+      "bytes": 30518,
+      "sha256": "3358d1db1bbacb14a646e1aafd4736f82901326c07b7a48687d6c61796570ada",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-logs/auth-gateway.log",
+      "bytes": 3104,
+      "sha256": "182a027801a2ed6881becb53baf7e281bdd777eb703fd48f876594e92465167a",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-logs/dnsmasq-dns.log",
+      "bytes": 4869,
+      "sha256": "50c22dd659ba8fa0cb72f31daaf77450eff9b152c885800926b7a2592a37e956",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-logs/nftables-gateway.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-logs/nginx-web.log",
+      "bytes": 4243,
+      "sha256": "67429b62584c0778146d3ff928bc02a54f5a3063126fbed15cc83c35b0639f81",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-logs/prosody-xmpp.log",
+      "bytes": 2640,
+      "sha256": "b16bb328f4d77095ea6f96d5ef5389c46f380a7b0a73d5ad1ce1e7866c019699",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-logs/sistema-gateway.log",
+      "bytes": 1227,
+      "sha256": "3ad392b319951f7926549145bff03a232132690b7e6cdf7e0800c076e729bc4c",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-pipeline.png",
+      "bytes": 33382,
+      "sha256": "15a884f040623da4cce83fb42ddaa3c61899ea0bbf305238b039eaa3aa1c60af",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-scores.txt",
+      "bytes": 584,
+      "sha256": "11ceaf57d7917a525ce28a06e3c4a2d6564b61df303a10491762fcf771b686bc",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso09-validacion-humana.json",
+      "bytes": 162,
+      "sha256": "b5f7b21d22954f34b7f2ae7e2f4d928423ee8bba8470b119973c456ae643e708",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-antes.json",
+      "bytes": 1229,
+      "sha256": "5c55bcff8e8c7c90e9367b74b38a79722d5b831747c2a2b56bf9616d9571bbbf",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-aprovisionamiento.json",
+      "bytes": 2557,
+      "sha256": "fe49b5b1318828d52f858cd2990c1ca87a0ca3289829e0905c11bc7b60d9e17c",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-certificado.pem",
+      "bytes": 1310,
+      "sha256": "3b90c614249008a0d7c1803d6b57f34704731aad7d5fb433d3898c2eef3b6fc8",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-certificado.txt",
+      "bytes": 355,
+      "sha256": "216e6b689639fcf7fd4acc05175c60c2e6ce2f4b73156a78321f6927670d801d",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-confianza_explicita.txt",
+      "bytes": 2673,
+      "sha256": "1cbf518aa2d3adf462a2a0165365b314d25ae06ea4dac73a807e9e8830951318",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-consola.png",
+      "bytes": 59685,
+      "sha256": "10ae7297df028dada7c3119b681f0e31ccc682c193ef5032feca0465a9032eea",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-estado-servicio.json",
+      "bytes": 5272,
+      "sha256": "af2ffb31499687cfff9628c717788a2b4690b265f391354a8442726de7573c0f",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-nombre_incorrecto.txt",
+      "bytes": 2630,
+      "sha256": "269e16b009239df01121daf16667da995dec81145949f7147b22ba413a4bffef",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-pre-tls.txt",
+      "bytes": 305,
+      "sha256": "d3a14019293812ff8a6b1c364bc4d0c1731828f10a1ebbb6fc636423561e9dc4",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-prosody-log.txt",
+      "bytes": 3901,
+      "sha256": "a7ce49db5be85f3a9a6fcb5de6dff449268a864af6ae6e5fd4ff732a96485a79",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-pruebas.json",
+      "bytes": 8223,
+      "sha256": "7f4bf8c0efa037c2338c5f446a8ea14c03db343cb85a7ba52766a64e39813729",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-resumen.txt",
+      "bytes": 890,
+      "sha256": "35d5c41a9ab1b537a378e9315e8958812b0c4cb990e0e6799064132054e8e327",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-sin_confianza_local.txt",
+      "bytes": 2546,
+      "sha256": "82bbebd8627002e7495f07f24052220e581d548a2731b48e3e04b55ae77d0166",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-wireshark.png",
+      "bytes": 123020,
+      "sha256": "c445eae88ba31cb887fa4a849e7274cbefc19fa4af230f597d9cc3a3d3e123e2",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/caso10-xmpp-tls.pcapng",
+      "bytes": 17980,
+      "sha256": "2206664fd9c48ebd25af51d6407fc2e3497defde81a66b2f0e5163214a6e51fa",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/pruebas-cierre-parte-i.txt",
+      "bytes": 6599,
+      "sha256": "4f981d79bc9af83c8155dbfc41e1b252d9844c49671cfb3d4e6f32032c0d3712",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso01-analisis.txt",
+      "bytes": 1448,
+      "sha256": "8e92619014f742505779028fbaf48b3e10fbb7bdf0f9b1b844a1f21c2ec2e278",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso01-netstat-host.txt",
+      "bytes": 12740,
+      "sha256": "6b2c9e973bedf8e38e587dca7d904d03b0f4ca2892e0c516e5db71cd10cab93f",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso01-regla.nft",
+      "bytes": 850,
+      "sha256": "35f7b3b6d110886d41899a8b7b99ff81863a6a2130ec335e5f877437d9761141",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso01-syn-rate.png",
+      "bytes": 49704,
+      "sha256": "4cd54bb35c8d4fc9849a091c3a33abb634ff8df419eac23eb1b6cd07062fd00a",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso01-synflood-ratelimit.pcap",
+      "bytes": 16292,
+      "sha256": "9758f64706243d2b1ada0a8cf13f67d3a892251e2fb2d15f41a33c243f0db309",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso01-synflood.pcap",
+      "bytes": 30292,
+      "sha256": "40327727fc5cffc29661f47da0c6ebfeb3187b2a7b95dff662f9db4ff9e8a6ca",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso01-wireshark.png",
+      "bytes": 93155,
+      "sha256": "2ac9ab43ab4d94deaa51346d3b2d890e496cd32bbbaa5cc300f4e68b907ebe69",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso02-analisis.txt",
+      "bytes": 1167,
+      "sha256": "def7d9c6b8beafbf68edd396eee32189d256bcaccb66f4d16d05d9491dfe7009",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso02-dns-entropy.png",
+      "bytes": 54108,
+      "sha256": "3024f39ed7c0bebe75860905f0147de20c594721119e53dd0e88b65d11bb9e47",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso02-dns-tunneling.pcap",
+      "bytes": 4344,
+      "sha256": "d034c28bc859e2cf8fa5432701c7b421ff7019c9f5e08df7251c5238f90b42a1",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso02-dnsmasq-log.txt",
+      "bytes": 3323,
+      "sha256": "87be6c3d6af0bf4ac27dc27a7e475c2954990859e6a29a1774ff292018a505d8",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso02-regla-dns.nft",
+      "bytes": 1176,
+      "sha256": "bab86c7938e9b61cd12257624dc7acf61c398f107a3699f8486512301539944e",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso02-wireshark.png",
+      "bytes": 104310,
+      "sha256": "d5971654d6ebd0469d612a77a200d370de36d4108de28052521e0b11569f26b1",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso03-auth-events.txt",
+      "bytes": 5175,
+      "sha256": "1c93adec6070366d4210907e83663ee993c54de906994a97429fb1765c79fb30",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso03-netstat-consola.png",
+      "bytes": 65256,
+      "sha256": "d86c544ee76742c48a5836f8d7a8d7d900653eaf93f138eb34052cd7e6e5b39b",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso03-netstat-host.txt",
+      "bytes": 14662,
+      "sha256": "fb0cc64afced9e8c113a35be30d3209bae72947f189f4c39f1f908ede991b44c",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso03-riesgo.png",
+      "bytes": 46030,
+      "sha256": "42c1d49d1f9b99b33e86fa805acd1587c96523d7584ec94a37923c143ed77fcf",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso03-ss-tulpn.txt",
+      "bytes": 5499,
+      "sha256": "bb9849998a0fc84b59cbf7dc27ca15dda7185bc9be6d468cc8de4f7a891cf3d2",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso05-analisis.txt",
+      "bytes": 920,
+      "sha256": "2d75c507e53851a900a0dfe44793381dffc3ee4c8b13d827dc0133f1e14f930f",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso05-logs-correlacion.txt",
+      "bytes": 4632,
+      "sha256": "63c674e4cf1acb111c80c96fe1ce3bd8acc4e2866c8ea3f0eb00437da47c8f8d",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso05-rst.pcap",
+      "bytes": 1183,
+      "sha256": "004f2f53c0344438473461b4933cfd0f8086a88e1426959d89da1e4f3081de42",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso05-wireshark.png",
+      "bytes": 58135,
+      "sha256": "0317669e64e6a474294c14b584fc597a2ead06aba1f967156d0547f03030e62b",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso06-analisis.txt",
+      "bytes": 474,
+      "sha256": "be140815d12d715d8e2802f6fcb2d54447305c9f46516b05ffb7d6a123c06737",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso06-openresolver.txt",
+      "bytes": 352,
+      "sha256": "363e434cca5123c292e05d41945c6ccd1db8775d5793b2ea811c1accd1aaf955",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso06-reflexion-udp.pcap",
+      "bytes": 13046,
+      "sha256": "2aedcd38bf3e4f2d2f99a1e6b0838022e42fd04d9f340d0579648944556ac5bf",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso06-udp-rate.png",
+      "bytes": 35368,
+      "sha256": "27160ec795a8bafd01af6bc739b4c8ec69b60fcb541f270f0d7771d8818ec201",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso06-wireshark.png",
+      "bytes": 82561,
+      "sha256": "1b032d88c1216773335d03314e950e72c5e2120902a965cc17e23aadeacf9554",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso07-analisis.txt",
+      "bytes": 830,
+      "sha256": "ac346e03dfb7a358a1376d9bbd81a512b91e949cd1506cefbd67ac78e0ea2a19",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso07-icmp-freq.png",
+      "bytes": 36835,
+      "sha256": "31881b353eb0ed04b7a437eb3846735f5f11d371e06e995735342182c1fd365e",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso07-icmp.pcap",
+      "bytes": 13395,
+      "sha256": "5ff9a70661c20b83eea18e067d75ec2bc2961422704d96da5ff7ef5bfb9bc92d",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso07-regla-icmp.nft",
+      "bytes": 772,
+      "sha256": "044977ff95249d2ebe549735dd2268c63131bff7f7e7f42a701a06b13ede3d10",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso07-wireshark.png",
+      "bytes": 105995,
+      "sha256": "092519cd79ec267e2d1dda12f385a408e86fd1fb155105920a6b5e26f8ffc121",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso08-analisis.txt",
+      "bytes": 446,
+      "sha256": "b6be5952a0ec7fb0f4b18590af5b5a62b73053230adfacf529ac36ae6e3b3400",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso08-portscan.pcap",
+      "bytes": 3524,
+      "sha256": "7b28cedaaa45c243deea400c493c7f7a0f1d7e71f140f4fb0c784e96ce8e4e15",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso08-portscan.png",
+      "bytes": 22055,
+      "sha256": "48d0ae348fc5521d08265dfbc67cb7bcd0ac2b195aaf968bc7ee637c3f6f581a",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso08-regla-portscan.nft",
+      "bytes": 798,
+      "sha256": "c7ddc669a6dd5426ff83d9461e8ac9f48913c9d2c069c69a5e0ff88eb4dc96e2",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso08-wireshark.png",
+      "bytes": 94218,
+      "sha256": "4ad1304262bbbdc017e289a11cfb7a28404f0889a823935e9324ee81e0b9dec5",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/fichas/caso01-syn-flood.md",
+      "bytes": 3580,
+      "sha256": "463ff2e25ffe77446722e4270c71f480277e822c9b8942728ca2e6e42c527ac6",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/fichas/caso02-dns-tunneling.md",
+      "bytes": 3558,
+      "sha256": "370d4f1a67e458731fc04212673bb455b2de3fd2bf2c47df7584ff7c4313fc2a",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/fichas/caso03-servicios-expuestos.md",
+      "bytes": 4049,
+      "sha256": "f7617cafd930fb6ba0dc257206a153aeaa9a11ca4938e3814e9408932f09a2f9",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/fichas/caso05-rst-tcp.md",
+      "bytes": 3433,
+      "sha256": "919e15b1e058d558c7fff86fc587a09c2f216e4a27b9297945aa554cadd1c275",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/fichas/caso06-reflexion-udp.md",
+      "bytes": 3881,
+      "sha256": "43b3c2f1ca0122b8c98a8bd88b9fad8a7a03e05a2f2dd9e536f4777976605a74",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/fichas/caso07-icmp.md",
+      "bytes": 2758,
+      "sha256": "0dcd32d94778e6f9e994499e82c7d20a975c8569eacaa89a8417b81d0377f130",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/fichas/caso08-escaneo-puertos.md",
+      "bytes": 3078,
+      "sha256": "ff084e6d9942006a0daeef56b20cacb0cdddb4f4e24da1658b80935d593c516a",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/fichas/plantilla_hallazgo.md",
+      "bytes": 1664,
+      "sha256": "4042f1f63d3885977be1c73d9e30fbfc79df54eb7a26f833476191f6dcdb5be0",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/analizar_caso01.py",
+      "bytes": 3831,
+      "sha256": "507acab4d185d3c147cf34c1cb7cb3ef7d66104587cd07821be95e6e2f2ef4bd",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/analizar_caso02.py",
+      "bytes": 4260,
+      "sha256": "b16d352c948ff7c24cf8380ed4a33291c9d7c67c1734f80c84b6009fc1e29cd7",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/analizar_caso03.py",
+      "bytes": 1970,
+      "sha256": "4dbf7dfb4a0e5b39554e47293b74aa8161f9c604634751faed1e1f13acae23d9",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/analizar_caso05.py",
+      "bytes": 1649,
+      "sha256": "c76e9d4f1af7433e5c003345ea170f4f8c775c2b41ed03206c034cfbbd2d21be",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/analizar_caso06.py",
+      "bytes": 2680,
+      "sha256": "224c04032862a50b698389c1928a903feae674929f46960e567d84aed447e70a",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/analizar_caso07.py",
+      "bytes": 2368,
+      "sha256": "334ef770907f853c152e1dd77a82ae4cb20d5c66ba4fb220089acd074a60dda9",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/analizar_caso08.py",
+      "bytes": 2441,
+      "sha256": "c001c943845742eb7b38cd13546a10be17fee772828008d5509a34b5fa5e26ac",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/gen_caso01_synflood.py",
+      "bytes": 4263,
+      "sha256": "2464627e5a4861394afeda9c41d45e63468dde5820f78f2046b5010955f30b56",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/gen_caso02_dns_tunnel.py",
+      "bytes": 2313,
+      "sha256": "f2a045d7570c7d32e9bbad2b51dad4cb7bae5025408c0b1046b3bf8f76e2513d",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/gen_caso05_rst.py",
+      "bytes": 3173,
+      "sha256": "032b6a25a5df5ab05d56329df2b22f1d5a4da1083cf09a173e55a3d149d5a2bb",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/gen_caso06_udp.py",
+      "bytes": 2620,
+      "sha256": "b7dd59e32139e25cfe105c28e0a656e30c28edede1fe0fd94e51a980b07fd09a",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/gen_caso07_icmp.py",
+      "bytes": 2083,
+      "sha256": "b157314deb330342c02810b43689798971f0523fc431fac1f5fdd179949d3231",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/scripts/gen_caso08_portscan.py",
+      "bytes": 2156,
+      "sha256": "2aa97e4cc946f588e68209171c2fe00d0818c41ff07c4127eec5a52fd08b50d3",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-anomalias-ml.md",
+      "bytes": 3644,
+      "sha256": "8bcbdc729c0d0b39f256cef276a22d7fb79bbe3c8d164749eb6dc7510c1afca2",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-backup-manifest.json",
+      "bytes": 3082,
+      "sha256": "8b5894ea68f9c300aac34332fb0c36562f7250cfca707cc984208dcb9f5e11c0",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-consola.png",
+      "bytes": 44094,
+      "sha256": "d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-dataset.csv",
+      "bytes": 1470,
+      "sha256": "d9d635ebd81d5c288d462d6f219f7839e1b252c139dde0d2e8a52c3e2b8ef176",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-matriz-confusion.png",
+      "bytes": 18912,
+      "sha256": "76e9384bd105273f06911493cf06ec570730a429d81a185082d6c31ffb4e495f",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-metricas.txt",
+      "bytes": 684,
+      "sha256": "cc7b5013f442c2ebcbab16db6b7a965fc048b4777ccc097461dce0e580980f95",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04-scatter.png",
+      "bytes": 36531,
+      "sha256": "64255cfec2e9c6e267d1dc863dfe231567bc2e82cd23f34d58233987589b93ec",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014046Z-40a56cb8/caso04_ml.py",
+      "bytes": 7017,
+      "sha256": "60fbef2b02e01a348c36f7f88a1200caeec574a67e5305e6c4f49a6c2f20f8d7",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-backup-manifest.json",
+      "bytes": 2120,
+      "sha256": "1f39311d3ad448c265838851072978f5143d68cedf4f3f355a9708640f69c32b",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-consola.png",
+      "bytes": 44094,
+      "sha256": "d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-dataset.csv",
+      "bytes": 1470,
+      "sha256": "d9d635ebd81d5c288d462d6f219f7839e1b252c139dde0d2e8a52c3e2b8ef176",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-matriz-confusion.png",
+      "bytes": 18912,
+      "sha256": "76e9384bd105273f06911493cf06ec570730a429d81a185082d6c31ffb4e495f",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-metricas.txt",
+      "bytes": 684,
+      "sha256": "cc7b5013f442c2ebcbab16db6b7a965fc048b4777ccc097461dce0e580980f95",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014423Z-8f911ac0/caso04-scatter.png",
+      "bytes": 36531,
+      "sha256": "64255cfec2e9c6e267d1dc863dfe231567bc2e82cd23f34d58233987589b93ec",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-backup-manifest.json",
+      "bytes": 5360,
+      "sha256": "ea0a51a0e692e1ba1da21c585ba6e41f702d39a72344698e6ce5c54ed6ca7070",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-baseline-paquetes.csv",
+      "bytes": 412924,
+      "sha256": "46114d0cf062b0ec19e9a637051e3a6bb9e7dc51ad426bf2e67c5340a4857314",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-consola.png",
+      "bytes": 44094,
+      "sha256": "d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-dataset.csv",
+      "bytes": 41642,
+      "sha256": "b184a457141f9694a107c358491fdf677e736011c6bf158a6da09894a31e3052",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-manifiesto.json",
+      "bytes": 4238,
+      "sha256": "357e90bbbfac2a1df2725f6e3346b142276459f67e9c9fa3fbd0c6af979423cd",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-matriz-confusion.png",
+      "bytes": 73543,
+      "sha256": "b30ca9f43e25873c944bf145b71411a10985a57412a7ff8a55af247b1b779806",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-metricas.json",
+      "bytes": 3882,
+      "sha256": "035b4906820c631601d65196981e81a01063c854803ea4764483d02b9ff57b29",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-metricas.txt",
+      "bytes": 3357,
+      "sha256": "59a301f976104c9a61fa84de9cdcd6acf319bb76d6cf470dafd070917ac9f47e",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-modelo-parametros.json",
+      "bytes": 3860,
+      "sha256": "d073fd5b172c3fdf106de9c8884d4a7acd1fb49c973f63cb3129c193135ac01d",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-pantallazos-obsoletos.txt",
+      "bytes": 262,
+      "sha256": "68d4a95f6707a05c44c4bbab266e45f479b195e407d937aa9cde92c33abf27ec",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-predicciones.csv",
+      "bytes": 29485,
+      "sha256": "107b8ef8e5701cab886ac7f4e6ae8596d566d77c2bd1feb6945e8d7f9c06e50c",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-scatter.png",
+      "bytes": 85438,
+      "sha256": "47ec1d4f041cea1574bf5a477b1166d4e22b1d91b5908305f22b696e7e2d5f70",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-segmentos.csv",
+      "bytes": 2162,
+      "sha256": "933915f6597466389c520f887aeebd1def61c3a492380607dc6863e3c4ac03c4",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014533Z-64c4f197/caso04-sinteticos-paquetes.csv",
+      "bytes": 820491,
+      "sha256": "d0152c0500df00dd77a1637c81e24c625e3f127cff318ad8c980bb827c89aeec",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-backup-manifest.json",
+      "bytes": 5750,
+      "sha256": "e52747529bad0ca4a94f930febccb1d23a21a11fcc34c883b9c8290931b74773",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-baseline-paquetes.csv",
+      "bytes": 466354,
+      "sha256": "1d5d1ff81a5a661b807d9546fb88b78ad89ce9d7261cc5631c35bb69e63efe65",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-consola.png",
+      "bytes": 44094,
+      "sha256": "d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-dataset.csv",
+      "bytes": 41642,
+      "sha256": "74d4226fe8d0355b0a5354584a352c030a0a43b21ffa2334a5a694f22fdfe57f",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-manifiesto.json",
+      "bytes": 4333,
+      "sha256": "c20ed1a88fb993c0e31bcec496c02a751dc40a75cda33900d10b4d6af811519f",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-matriz-confusion.png",
+      "bytes": 73543,
+      "sha256": "b30ca9f43e25873c944bf145b71411a10985a57412a7ff8a55af247b1b779806",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-metricas.json",
+      "bytes": 3882,
+      "sha256": "035b4906820c631601d65196981e81a01063c854803ea4764483d02b9ff57b29",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-metricas.txt",
+      "bytes": 3357,
+      "sha256": "59a301f976104c9a61fa84de9cdcd6acf319bb76d6cf470dafd070917ac9f47e",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-modelo-parametros.json",
+      "bytes": 3860,
+      "sha256": "d073fd5b172c3fdf106de9c8884d4a7acd1fb49c973f63cb3129c193135ac01d",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-pantallazos-obsoletos.txt",
+      "bytes": 262,
+      "sha256": "68d4a95f6707a05c44c4bbab266e45f479b195e407d937aa9cde92c33abf27ec",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-predicciones.csv",
+      "bytes": 29485,
+      "sha256": "2bbdceefae6222863083c584f8d453b8cbef68e0d19db83139f88887c54a983c",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-pruebas.txt",
+      "bytes": 2433,
+      "sha256": "748278ab52d9d5021e26796dd7a8395b2facdfcc0b4fcb19cc69f4bf8457793e",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-scatter.png",
+      "bytes": 85438,
+      "sha256": "47ec1d4f041cea1574bf5a477b1166d4e22b1d91b5908305f22b696e7e2d5f70",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-segmentos.csv",
+      "bytes": 2162,
+      "sha256": "933915f6597466389c520f887aeebd1def61c3a492380607dc6863e3c4ac03c4",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-ml-anterior/20261119T014606Z-e6d6e132/caso04-sinteticos-paquetes.csv",
+      "bytes": 820491,
+      "sha256": "aebe272b6a2a9a63dbdebaa6b37d802377258c8c3583e93034cd78a5d6962161",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-siem-anterior/caso09-alerta.txt",
+      "bytes": 592,
+      "sha256": "0b8101cf48d5273162b98a4b8bb85d44156b2448e6eeb8a495c0f7be0e8bd9c2",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-siem-anterior/caso09-eventos-normalizados.csv",
+      "bytes": 8401,
+      "sha256": "96f9662b1b146bd53c6bd73147fb132bc70cbc1c1961a9f207143e5d2fc48ea4",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/casos/revision-siem-anterior/caso09-scores.txt",
+      "bytes": 793,
+      "sha256": "16ecdc31fdccf38d66723127ed33995aaffc3248edded4305a3ce8b872723f99",
+      "estado": "historico_no_vigente"
+    },
+    {
+      "ruta": "evidencia/mostrar-caso04-revisado.bat",
+      "bytes": 737,
+      "sha256": "d9baa016f798bb9141d50e05cd8195daac11e42acb3ee8146ce7f587db5e7bb3",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/mostrar-caso04.bat",
+      "bytes": 241,
+      "sha256": "0474d85934bf36986df9238cf3aea2f4074168e127293ac902bdd6bb2955c36b",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/mostrar-caso09.bat",
+      "bytes": 194,
+      "sha256": "21185be2968f3bb0162270dcf73ac315b03fb7f716a759a86a8cba56aab00d33",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/mostrar-caso10.bat",
+      "bytes": 284,
+      "sha256": "39f6cac38da75c6de10a1c7b439bb485f870ab8cbcaded8829abf29324a085b5",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/mostrar-netstat.bat",
+      "bytes": 162,
+      "sha256": "7a15e3317bf3cb2805e325e830425fae8d7618470c013c05d16489977492f6fb",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/mostrar-verificacion.bat",
+      "bytes": 191,
+      "sha256": "04b17fd1352641b4e0e16e2279f498566e297d739a5c00b85c5cf83261771275",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "evidencia/mostrar-w32tm.bat",
+      "bytes": 82,
+      "sha256": "6bb837fd6984fc31c7485ffa4d537f4dd850785b997a421f452a5486dbe7d6f3",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "fichas/caso01-syn-flood.md",
+      "bytes": 4358,
+      "sha256": "713f4ae7ce3764271b502bc1bb90b0609dd3245b6098f6c61a5f05a98c0fcd0c",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "fichas/caso02-dns-tunneling.md",
+      "bytes": 3888,
+      "sha256": "5dbdedb75e47b3459070d2dcf68729a2d7ecc28f98353117ababc13bae49d74c",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "fichas/caso03-servicios-expuestos.md",
+      "bytes": 4653,
+      "sha256": "4e882d5f5b99184d9af94efd41f3f4565c94df96a5260ddf87d3ecbdb313af16",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "fichas/caso04-anomalias-ml.md",
+      "bytes": 16521,
+      "sha256": "90c412b725dcb657700d3e3f2426b1b20a0f9723a6853b45f57878e82ce9ae2e",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "fichas/caso05-rst-tcp.md",
+      "bytes": 3825,
+      "sha256": "da5d4297c5783556770e5cd9be9e2530bb09f95c86c02003c7f47912c322cedf",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "fichas/caso06-reflexion-udp.md",
+      "bytes": 4690,
+      "sha256": "99b699713eb2cde2dd0c8abe314850830af9406cb08e4d491f6954bf18f5e0a7",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "fichas/caso07-icmp.md",
+      "bytes": 4040,
+      "sha256": "46989e43457b0110e1f439de42c19b1b236d41e88bdc8e6a73b418d6a080d047",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "fichas/caso08-escaneo-puertos.md",
+      "bytes": 3836,
+      "sha256": "9674bc7b48749a59095415384397f792c788cc230464205e10f0c933951d404c",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "fichas/caso09-correlacion-siem.md",
+      "bytes": 4443,
+      "sha256": "11fbbcaf366cc1c77bedc88de4c29d74f6d105af7c4b769a598188c151c85413",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "fichas/caso10-xmpp-tls.md",
+      "bytes": 8090,
+      "sha256": "e678eb2b9d775ac77410ab661b5fb5733e1c46d711bf8ee628b1b1634fc263d6",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "fichas/plantilla_hallazgo.md",
+      "bytes": 2522,
+      "sha256": "6535a35f1d9e7792c9dcd3fcf19eff1e0e34332030ee397fe7fe1f73759614d7",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "hash_evidencia.py",
+      "bytes": 2822,
+      "sha256": "7f7bf151b64a2a323087fabee9c53c9dc1ce0a4c170a85d6a1793c1b83426815",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "informe-laboratorio.md",
+      "bytes": 25807,
+      "sha256": "612272cb11e845f2eb02e0aeff401495b94013259b5db7da31f3e0d434c28949",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/analizar_caso01.py",
+      "bytes": 7797,
+      "sha256": "6a3992032a1ca7ad0e6e9cbcc4e233045e37e5b6531938d23cc896a2fc7b33e7",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/analizar_caso02.py",
+      "bytes": 4422,
+      "sha256": "de67ac1d7c024e8450d27cf11fb3f61d60c2d28f8f0e5eac6bd3c50941ebb38a",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/analizar_caso03.py",
+      "bytes": 2786,
+      "sha256": "ab5ad959efb3119b1f4cc00043e0e7c981659c9f818af5c8500bd788810ae949",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/analizar_caso05.py",
+      "bytes": 2314,
+      "sha256": "f23e18b72dc27f066a360561a9d8618bbb385ed6cf7921e13e40d2f9267ecbad",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/analizar_caso06.py",
+      "bytes": 4255,
+      "sha256": "540f61f2c4ebaf551b50d68cc46d49332729108c0add81618ac280f539e5bfe6",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/analizar_caso07.py",
+      "bytes": 3784,
+      "sha256": "8f677befb7a2fcfd5b28d0a40fd6592ec5c1708e67763a6f2e4a21fb2056a3b7",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/analizar_caso08.py",
+      "bytes": 3254,
+      "sha256": "10ec32ada0671fd9557d52d8b0d0af45db5475e5208abc8ee53767ab90167b5f",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/caso04_ml.py",
+      "bytes": 41953,
+      "sha256": "a97237575785d4fc29ad0a4dfc35b28dd41e85a9d20b2c6180db5c57248eebc8",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/caso09_siem.py",
+      "bytes": 10627,
+      "sha256": "c2fdba403249e63360206ce80f0eac9ffa8a0cc62669eecba539e1df634486f7",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/caso10_tls.py",
+      "bytes": 6282,
+      "sha256": "99ca05dd7ba73656e5b3c7a20362dd262038531a89190014183d62162053fe83",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/cerrar_parte_i.py",
+      "bytes": 5571,
+      "sha256": "078d59779a0651fdc23c2a70435d4d6f08e256ecc40f5c5b15a9540ca7346426",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/gen_caso01_synflood.py",
+      "bytes": 5133,
+      "sha256": "7314829a7779c62670a6fcc0ad075ac1aea621864f3c99f56ced5bb6b3217a3f",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/gen_caso02_dns_tunnel.py",
+      "bytes": 2227,
+      "sha256": "98258fa9c42caf28e887b6e4429a2b8c19647dc6222679996d5d50ba417e80c7",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/gen_caso05_rst.py",
+      "bytes": 3350,
+      "sha256": "d9b1ee286ce340e9bc6133d56165d22859dc52d2eef9ee9d9a7629e07ea28a27",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/gen_caso06_udp.py",
+      "bytes": 2248,
+      "sha256": "337e3483408c73373d0595884a57984fad371511b2aa6715a8aa5b74b99ea52e",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/gen_caso07_icmp.py",
+      "bytes": 2152,
+      "sha256": "9878b94850900ad967dcea91a9d1f262157e3d6bc5aed830c333f260d728f8ec",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/gen_caso08_portscan.py",
+      "bytes": 2278,
+      "sha256": "f95a764455027c821d0c1fcc24728949fe1e2f4668877863a0e0202bd49b686d",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/pcapgen.py",
+      "bytes": 3557,
+      "sha256": "04a2dc0e5a77b7a0240eefbac99ad5e84e4a3fdb6f4963de4d84a13f3fc79454",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/test_caso09_siem.py",
+      "bytes": 1920,
+      "sha256": "a36bd4dea2a8e282e6e38384ff220a4784e44b10f20629c6ce69bbb4d8e99267",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "scripts/test_casos_parte1.py",
+      "bytes": 11189,
+      "sha256": "f136c92747ab63c6ddffc59fb1411a3aeb4a96c041f89afa2567e9341f59c322",
+      "estado": "vigente_o_contexto; consultar_ficha"
+    },
+    {
+      "ruta": "registro-hashes-cierre.log",
+      "bytes": 89613,
+      "sha256": "7978b19173a4466315ffa5fba0911563b72a11b8020134801c72d27c6823590d",
+      "estado": "registro_de_integridad"
+    },
+    {
+      "ruta": "evidencia.log",
+      "bytes": 116912,
+      "sha256": "c3bc367a48d81178b1ef11db4c0503557892df890e96094d50cce256d7d9e500",
+      "estado": "registro_de_integridad"
+    }
+  ],
+  "enmiendas": [
+    {
+      "ruta": "evidencia/casos/caso03-auth-events.txt",
+      "sha256_registrado_al_cierre": "674228747ed41dd5254e5bfdf7eb203784261122f8276a451ba9ad23d4db3432",
+      "bytes_registrados": 5223,
+      "sha256_actual": "1c93adec6070366d4210907e83663ee993c54de906994a97429fb1765c79fb30",
+      "bytes_actuales": 5175,
+      "motivo": "Saltos de línea mixtos (CRLF/LF) alterados por Git en Windows; no reproducibles desde el repositorio"
+    },
+    {
+      "ruta": "evidencia/casos/caso03-ss-tulpn.txt",
+      "sha256_registrado_al_cierre": "ab267d3d56beef4794c9c6a2044cf08607557e02ea6b2977fb88a56f7bb9b59a",
+      "bytes_registrados": 5544,
+      "sha256_actual": "bb9849998a0fc84b59cbf7dc27ca15dda7185bc9be6d468cc8de4f7a891cf3d2",
+      "bytes_actuales": 5499,
+      "motivo": "Saltos de línea mixtos (CRLF/LF) alterados por Git en Windows; no reproducibles desde el repositorio"
+    },
+    {
+      "ruta": "evidencia/casos/caso05-logs-correlacion.txt",
+      "sha256_registrado_al_cierre": "4e97654b2af87356985c874d24c2c22e19236c8f303ddcb332ddeebfb8a46a6b",
+      "bytes_registrados": 4672,
+      "sha256_actual": "63c674e4cf1acb111c80c96fe1ce3bd8acc4e2866c8ea3f0eb00437da47c8f8d",
+      "bytes_actuales": 4632,
+      "motivo": "Saltos de línea mixtos (CRLF/LF) alterados por Git en Windows; no reproducibles desde el repositorio"
+    },
+    {
+      "ruta": "evidencia/casos/caso06-openresolver.txt",
+      "sha256_registrado_al_cierre": "6ed815d78c3cd2c65c0cbb60d24b8bcc9db0a49bf63d79b11201f450a5d22f8c",
+      "bytes_registrados": 358,
+      "sha256_actual": "363e434cca5123c292e05d41945c6ccd1db8775d5793b2ea811c1accd1aaf955",
+      "bytes_actuales": 352,
+      "motivo": "Saltos de línea mixtos (CRLF/LF) alterados por Git en Windows; no reproducibles desde el repositorio"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso03-auth-events.txt",
+      "sha256_registrado_al_cierre": "674228747ed41dd5254e5bfdf7eb203784261122f8276a451ba9ad23d4db3432",
+      "bytes_registrados": 5223,
+      "sha256_actual": "1c93adec6070366d4210907e83663ee993c54de906994a97429fb1765c79fb30",
+      "bytes_actuales": 5175,
+      "motivo": "Saltos de línea mixtos (CRLF/LF) alterados por Git en Windows; no reproducibles desde el repositorio"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso03-ss-tulpn.txt",
+      "sha256_registrado_al_cierre": "ab267d3d56beef4794c9c6a2044cf08607557e02ea6b2977fb88a56f7bb9b59a",
+      "bytes_registrados": 5544,
+      "sha256_actual": "bb9849998a0fc84b59cbf7dc27ca15dda7185bc9be6d468cc8de4f7a891cf3d2",
+      "bytes_actuales": 5499,
+      "motivo": "Saltos de línea mixtos (CRLF/LF) alterados por Git en Windows; no reproducibles desde el repositorio"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso05-logs-correlacion.txt",
+      "sha256_registrado_al_cierre": "4e97654b2af87356985c874d24c2c22e19236c8f303ddcb332ddeebfb8a46a6b",
+      "bytes_registrados": 4672,
+      "sha256_actual": "63c674e4cf1acb111c80c96fe1ce3bd8acc4e2866c8ea3f0eb00437da47c8f8d",
+      "bytes_actuales": 4632,
+      "motivo": "Saltos de línea mixtos (CRLF/LF) alterados por Git en Windows; no reproducibles desde el repositorio"
+    },
+    {
+      "ruta": "evidencia/casos/revision-anterior/evidencia/casos/caso06-openresolver.txt",
+      "sha256_registrado_al_cierre": "6ed815d78c3cd2c65c0cbb60d24b8bcc9db0a49bf63d79b11201f450a5d22f8c",
+      "bytes_registrados": 358,
+      "sha256_actual": "363e434cca5123c292e05d41945c6ccd1db8775d5793b2ea811c1accd1aaf955",
+      "bytes_actuales": 352,
+      "motivo": "Saltos de línea mixtos (CRLF/LF) alterados por Git en Windows; no reproducibles desde el repositorio"
+    }
+  ]
+}

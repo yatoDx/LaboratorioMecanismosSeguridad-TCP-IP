@@ -1,0 +1,26 @@
+\chapter{Conclusiones y trabajo futuro}\label{cap:conclusiones}
+
+\section{Conclusiones}
+\begin{enumerate}
+\item Se montó un laboratorio aislado, sincronizado y verificable, y se demostró su aislamiento por configuración (sin NAT ni ruta por defecto) y no solo por un ping sin respuesta.
+\item Los diez casos se documentaron con fichas uniformes y cifras recalculables. Las salidas se reprodujeron byte a byte y el paquete de entrega verifica 242 archivos por copia.
+\item Los controles básicos y bien ubicados —limitar tasa en el host protegido, cerrar servicios innecesarios, exigir y validar TLS, restringir la recursión DNS— reducen más riesgo que cualquier detector sofisticado.
+\item El aprendizaje automático y la correlación priorizan la revisión humana. Sus métricas dependen de la calidad de la línea base y de una separación temporal honesta entre entrenamiento y prueba.
+\item El sistema de localización demuestra que se pueden cumplir los requisitos funcionales sin sacrificar al titular: permiso por defecto denegado, temporal, revocable y auditable, verificado con 61 pruebas y un recorrido completo en navegador.
+\end{enumerate}
+
+\section{Trabajo futuro}
+\begin{itemize}
+\item Instalar Suricata o Zeek en una VM sensor y ejecutar las reglas propuestas sobre réplicas controladas del tráfico, midiendo su efecto real.
+\item Capturar varias líneas base en días distintos para entrenar y validar el Caso~4 con muestras independientes.
+\item Completar el dictamen humano del Caso~9 y extender el pipeline con ingestión continua.
+\item En la Parte II: proveedor real de SMS, HTTPS con certificado válido, PostgreSQL, bot de Telegram en el que el usuario inicia el chat y comparte su ubicación, y una app nativa para envíos en segundo plano.
+\item Emitir certificados desde una CA interna con renovación automática para XMPP y web.
+\end{itemize}
+
+\section{Recomendaciones}
+\begin{itemize}
+\item Conservar siempre la evidencia original con su huella y trabajar sobre copias; fijar en Git que la evidencia se guarde byte a byte desde el primer commit.
+\item Capturar la línea base con el anfitrión en silencio o filtrar desde el inicio el tráfico ajeno al laboratorio.
+\item Declarar en cada hallazgo qué se probó y qué no; un ``no confirmado'' honesto vale más que una conclusión exagerada.
+\end{itemize}

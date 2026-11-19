@@ -1,0 +1,1 @@
+<?xml version='1.0'?><stream:stream version='1.0' xmlns:stream='http://etherx.jabber.org/streams' from='xmpp.lab.local' xmlns='jabber:client' xml:lang='en' id='f94a14a4-d871-464c-aad3-cb0b8b333ef7'><stream:features><starttls xmlns='urn:ietf:params:xml:ns:xmpp-tls'><required/></starttls></stream:features>

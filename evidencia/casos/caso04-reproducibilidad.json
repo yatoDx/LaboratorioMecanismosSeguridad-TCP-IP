@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "consecutive_runs_identical_sha256": {
+    "caso04-baseline-paquetes.csv": "1d5d1ff81a5a661b807d9546fb88b78ad89ce9d7261cc5631c35bb69e63efe65",
+    "caso04-sinteticos-paquetes.csv": "aebe272b6a2a9a63dbdebaa6b37d802377258c8c3583e93034cd78a5d6962161",
+    "caso04-segmentos.csv": "933915f6597466389c520f887aeebd1def61c3a492380607dc6863e3c4ac03c4",
+    "caso04-dataset.csv": "74d4226fe8d0355b0a5354584a352c030a0a43b21ffa2334a5a694f22fdfe57f",
+    "caso04-predicciones.csv": "2bbdceefae6222863083c584f8d453b8cbef68e0d19db83139f88887c54a983c",
+    "caso04-modelo-parametros.json": "d073fd5b172c3fdf106de9c8884d4a7acd1fb49c973f63cb3129c193135ac01d",
+    "caso04-metricas.json": "035b4906820c631601d65196981e81a01063c854803ea4764483d02b9ff57b29",
+    "caso04-matriz-confusion.png": "b30ca9f43e25873c944bf145b71411a10985a57412a7ff8a55af247b1b779806",
+    "caso04-scatter.png": "47ec1d4f041cea1574bf5a477b1166d4e22b1d91b5908305f22b696e7e2d5f70"
+  },
+  "manifest_hashes_valid": true,
+  "baseline_unchanged": true,
+  "old_screenshot_unchanged": true,
+  "dataset_rows": 51,
+  "test_rows": 33,
+  "train_test_parent_overlap": 0,
+  "train_test_frame_overlap": 0,
+  "synthetic_parents_test_only": true,
+  "unit_tests": 19,
+  "note": "Tests duration and manifest timestamp/backup path may differ; data, predictions, metrics and graphs are byte-identical.",
+  "verified_utc": "2026-11-19T01:48:03.116083+00:00",
+  "script_sha256": "a97237575785d4fc29ad0a4dfc35b28dd41e85a9d20b2c6180db5c57248eebc8",
+  "initial_backup_files_verified": 7,
+  "initial_screenshot_sha256": "d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f",
+  "ficha_sha256": "2e11f27829f85edcebc62b5a79cd994dedd523f7790a0f3bd01ed3cbb2a72f74"
+}

@@ -1,0 +1,1025 @@
+[
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-18T22:54:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 1
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:1"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-18T23:47:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 1
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:6"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-18T23:49:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 2
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:7",
+      "nginx-web.log:8"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-19T00:49:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 3
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:10",
+      "nginx-web.log:11",
+      "nginx-web.log:12"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-19T00:50:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 3
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:13",
+      "nginx-web.log:14",
+      "nginx-web.log:15"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-19T00:51:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 4
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:16",
+      "nginx-web.log:17",
+      "nginx-web.log:18",
+      "nginx-web.log:19"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-19T00:52:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 4
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:20",
+      "nginx-web.log:21",
+      "nginx-web.log:22",
+      "nginx-web.log:23"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-19T00:53:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 4
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:24",
+      "nginx-web.log:25",
+      "nginx-web.log:26",
+      "nginx-web.log:27"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-19T00:54:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 2
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:28",
+      "nginx-web.log:29"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-19T01:10:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "gateway"
+    ],
+    "sources": [
+      "auth"
+    ],
+    "counts": {
+      "AUTH_SUCCESS": 2
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "auth-gateway.log:11",
+      "auth-gateway.log:17"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-19T01:16:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "dns"
+    ],
+    "sources": [
+      "dnsmasq"
+    ],
+    "counts": {
+      "DNS_QUERY": 2
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "dnsmasq-dns.log:1",
+      "dnsmasq-dns.log:3"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-19T01:17:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "dns"
+    ],
+    "sources": [
+      "dnsmasq"
+    ],
+    "counts": {
+      "DNS_QUERY": 11
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "dnsmasq-dns.log:5",
+      "dnsmasq-dns.log:7",
+      "dnsmasq-dns.log:9",
+      "dnsmasq-dns.log:11",
+      "dnsmasq-dns.log:13",
+      "dnsmasq-dns.log:15",
+      "dnsmasq-dns.log:17",
+      "dnsmasq-dns.log:19",
+      "dnsmasq-dns.log:21",
+      "dnsmasq-dns.log:23",
+      "dnsmasq-dns.log:25"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-19T01:18:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "dns"
+    ],
+    "sources": [
+      "dnsmasq"
+    ],
+    "counts": {
+      "DNS_QUERY": 13
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "dnsmasq-dns.log:27",
+      "dnsmasq-dns.log:29",
+      "dnsmasq-dns.log:31",
+      "dnsmasq-dns.log:33",
+      "dnsmasq-dns.log:35",
+      "dnsmasq-dns.log:37",
+      "dnsmasq-dns.log:39",
+      "dnsmasq-dns.log:41",
+      "dnsmasq-dns.log:43",
+      "dnsmasq-dns.log:45",
+      "dnsmasq-dns.log:47",
+      "dnsmasq-dns.log:49",
+      "dnsmasq-dns.log:51"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.10",
+    "window_utc": "2026-11-19T01:19:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "dns",
+      "gateway"
+    ],
+    "sources": [
+      "auth",
+      "dnsmasq"
+    ],
+    "counts": {
+      "DNS_QUERY": 4,
+      "AUTH_SUCCESS": 1
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "dnsmasq-dns.log:53",
+      "dnsmasq-dns.log:55",
+      "dnsmasq-dns.log:57",
+      "dnsmasq-dns.log:59",
+      "auth-gateway.log:29"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.20",
+    "window_utc": "2026-11-18T23:02:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 1
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:2"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.20",
+    "window_utc": "2026-11-18T23:15:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 1
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:3"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.20",
+    "window_utc": "2026-11-18T23:29:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 1
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:4"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.20",
+    "window_utc": "2026-11-18T23:33:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 1
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:5"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "192.168.50.20",
+    "window_utc": "2026-11-19T00:47:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "web"
+    ],
+    "sources": [
+      "nginx"
+    ],
+    "counts": {
+      "HTTP_OTHER": 1
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "nginx-web.log:9"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@dns",
+    "window_utc": "2026-11-19T01:16:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "dns"
+    ],
+    "sources": [
+      "dnsmasq"
+    ],
+    "counts": {
+      "DNS_REFUSED_UNATTRIBUTED": 2
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "dnsmasq-dns.log:2",
+      "dnsmasq-dns.log:4"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@dns",
+    "window_utc": "2026-11-19T01:17:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "dns"
+    ],
+    "sources": [
+      "dnsmasq"
+    ],
+    "counts": {
+      "DNS_REFUSED_UNATTRIBUTED": 11
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "dnsmasq-dns.log:6",
+      "dnsmasq-dns.log:8",
+      "dnsmasq-dns.log:10",
+      "dnsmasq-dns.log:12",
+      "dnsmasq-dns.log:14",
+      "dnsmasq-dns.log:16",
+      "dnsmasq-dns.log:18",
+      "dnsmasq-dns.log:20",
+      "dnsmasq-dns.log:22",
+      "dnsmasq-dns.log:24",
+      "dnsmasq-dns.log:26"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@dns",
+    "window_utc": "2026-11-19T01:18:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "dns"
+    ],
+    "sources": [
+      "dnsmasq"
+    ],
+    "counts": {
+      "DNS_REFUSED_UNATTRIBUTED": 13
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "dnsmasq-dns.log:28",
+      "dnsmasq-dns.log:30",
+      "dnsmasq-dns.log:32",
+      "dnsmasq-dns.log:34",
+      "dnsmasq-dns.log:36",
+      "dnsmasq-dns.log:38",
+      "dnsmasq-dns.log:40",
+      "dnsmasq-dns.log:42",
+      "dnsmasq-dns.log:44",
+      "dnsmasq-dns.log:46",
+      "dnsmasq-dns.log:48",
+      "dnsmasq-dns.log:50",
+      "dnsmasq-dns.log:52"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@dns",
+    "window_utc": "2026-11-19T01:19:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "dns"
+    ],
+    "sources": [
+      "dnsmasq"
+    ],
+    "counts": {
+      "DNS_REFUSED_UNATTRIBUTED": 4
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "dnsmasq-dns.log:54",
+      "dnsmasq-dns.log:56",
+      "dnsmasq-dns.log:58",
+      "dnsmasq-dns.log:60"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@gateway",
+    "window_utc": "2026-11-19T00:48:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "gateway"
+    ],
+    "sources": [
+      "auth"
+    ],
+    "counts": {
+      "SUDO_CONTEXT": 3
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "auth-gateway.log:2",
+      "auth-gateway.log:3",
+      "auth-gateway.log:4"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@gateway",
+    "window_utc": "2026-11-19T00:55:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "gateway"
+    ],
+    "sources": [
+      "auth"
+    ],
+    "counts": {
+      "CRON_CONTEXT": 3
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "auth-gateway.log:5",
+      "auth-gateway.log:6",
+      "auth-gateway.log:7"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@gateway",
+    "window_utc": "2026-11-19T01:05:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "gateway"
+    ],
+    "sources": [
+      "auth"
+    ],
+    "counts": {
+      "CRON_CONTEXT": 3
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "auth-gateway.log:8",
+      "auth-gateway.log:9",
+      "auth-gateway.log:10"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@gateway",
+    "window_utc": "2026-11-19T01:10:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "gateway"
+    ],
+    "sources": [
+      "auth",
+      "sistema"
+    ],
+    "counts": {
+      "SUDO_CONTEXT": 6,
+      "SYSTEM_CONTEXT": 8
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "auth-gateway.log:13",
+      "auth-gateway.log:14",
+      "auth-gateway.log:15",
+      "auth-gateway.log:19",
+      "auth-gateway.log:20",
+      "auth-gateway.log:21",
+      "sistema-gateway.log:1",
+      "sistema-gateway.log:2",
+      "sistema-gateway.log:3",
+      "sistema-gateway.log:4",
+      "sistema-gateway.log:5",
+      "sistema-gateway.log:6",
+      "sistema-gateway.log:7",
+      "sistema-gateway.log:8"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@gateway",
+    "window_utc": "2026-11-19T01:15:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "gateway"
+    ],
+    "sources": [
+      "auth"
+    ],
+    "counts": {
+      "CRON_CONTEXT": 3
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "auth-gateway.log:23",
+      "auth-gateway.log:24",
+      "auth-gateway.log:25"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@gateway",
+    "window_utc": "2026-11-19T01:17:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "gateway"
+    ],
+    "sources": [
+      "auth"
+    ],
+    "counts": {
+      "CRON_CONTEXT": 3
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "auth-gateway.log:26",
+      "auth-gateway.log:27",
+      "auth-gateway.log:28"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@gateway",
+    "window_utc": "2026-11-19T01:19:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "gateway"
+    ],
+    "sources": [
+      "sistema"
+    ],
+    "counts": {
+      "SYSTEM_CONTEXT": 7
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "sistema-gateway.log:9",
+      "sistema-gateway.log:10",
+      "sistema-gateway.log:11",
+      "sistema-gateway.log:12",
+      "sistema-gateway.log:13",
+      "sistema-gateway.log:14",
+      "sistema-gateway.log:15"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@xmpp",
+    "window_utc": "2026-11-19T00:49:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "xmpp"
+    ],
+    "sources": [
+      "prosody"
+    ],
+    "counts": {
+      "XMPP_CONNECT": 3,
+      "XMPP_DISCONNECT": 3
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "prosody-xmpp.log:1",
+      "prosody-xmpp.log:2",
+      "prosody-xmpp.log:3",
+      "prosody-xmpp.log:4",
+      "prosody-xmpp.log:5",
+      "prosody-xmpp.log:6"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@xmpp",
+    "window_utc": "2026-11-19T00:50:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "xmpp"
+    ],
+    "sources": [
+      "prosody"
+    ],
+    "counts": {
+      "XMPP_CONNECT": 3,
+      "XMPP_DISCONNECT": 3
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "prosody-xmpp.log:7",
+      "prosody-xmpp.log:8",
+      "prosody-xmpp.log:9",
+      "prosody-xmpp.log:10",
+      "prosody-xmpp.log:11",
+      "prosody-xmpp.log:12"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@xmpp",
+    "window_utc": "2026-11-19T00:51:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "xmpp"
+    ],
+    "sources": [
+      "prosody"
+    ],
+    "counts": {
+      "XMPP_CONNECT": 4,
+      "XMPP_DISCONNECT": 4
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "prosody-xmpp.log:13",
+      "prosody-xmpp.log:14",
+      "prosody-xmpp.log:15",
+      "prosody-xmpp.log:16",
+      "prosody-xmpp.log:17",
+      "prosody-xmpp.log:18",
+      "prosody-xmpp.log:19",
+      "prosody-xmpp.log:20"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@xmpp",
+    "window_utc": "2026-11-19T00:52:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "xmpp"
+    ],
+    "sources": [
+      "prosody"
+    ],
+    "counts": {
+      "XMPP_CONNECT": 4,
+      "XMPP_DISCONNECT": 4
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "prosody-xmpp.log:21",
+      "prosody-xmpp.log:22",
+      "prosody-xmpp.log:23",
+      "prosody-xmpp.log:24",
+      "prosody-xmpp.log:25",
+      "prosody-xmpp.log:26",
+      "prosody-xmpp.log:27",
+      "prosody-xmpp.log:28"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@xmpp",
+    "window_utc": "2026-11-19T00:53:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "xmpp"
+    ],
+    "sources": [
+      "prosody"
+    ],
+    "counts": {
+      "XMPP_CONNECT": 4,
+      "XMPP_DISCONNECT": 4
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "prosody-xmpp.log:29",
+      "prosody-xmpp.log:30",
+      "prosody-xmpp.log:31",
+      "prosody-xmpp.log:32",
+      "prosody-xmpp.log:33",
+      "prosody-xmpp.log:34",
+      "prosody-xmpp.log:35",
+      "prosody-xmpp.log:36"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "real",
+    "subject": "sin_atribuir@xmpp",
+    "window_utc": "2026-11-19T00:54:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "xmpp"
+    ],
+    "sources": [
+      "prosody"
+    ],
+    "counts": {
+      "XMPP_CONNECT": 2,
+      "XMPP_DISCONNECT": 2
+    },
+    "distinct_dst_ports": 0,
+    "score": 0,
+    "factors": {},
+    "alert": false,
+    "evidence_refs": [
+      "prosody-xmpp.log:37",
+      "prosody-xmpp.log:38",
+      "prosody-xmpp.log:39",
+      "prosody-xmpp.log:40"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  },
+  {
+    "evidence_kind": "sintetica",
+    "subject": "192.168.50.100",
+    "window_utc": "2026-11-19T01:30:00+00:00",
+    "window_seconds": 60,
+    "reporting_hosts": [
+      "gateway",
+      "web"
+    ],
+    "sources": [
+      "auth",
+      "nftables",
+      "nginx"
+    ],
+    "counts": {
+      "AUTH_FAIL": 6,
+      "HTTP_5XX": 3,
+      "NFT_SYN": 12
+    },
+    "distinct_dst_ports": 12,
+    "score": 49,
+    "factors": {
+      "fallos_autenticacion": 30,
+      "errores_http_5xx": 9,
+      "diez_puertos_distintos": 10
+    },
+    "alert": true,
+    "evidence_refs": [
+      "caso09-escenario-sintetico.jsonl:1",
+      "caso09-escenario-sintetico.jsonl:2",
+      "caso09-escenario-sintetico.jsonl:3",
+      "caso09-escenario-sintetico.jsonl:4",
+      "caso09-escenario-sintetico.jsonl:5",
+      "caso09-escenario-sintetico.jsonl:6",
+      "caso09-escenario-sintetico.jsonl:7",
+      "caso09-escenario-sintetico.jsonl:8",
+      "caso09-escenario-sintetico.jsonl:9",
+      "caso09-escenario-sintetico.jsonl:10",
+      "caso09-escenario-sintetico.jsonl:11",
+      "caso09-escenario-sintetico.jsonl:12",
+      "caso09-escenario-sintetico.jsonl:13",
+      "caso09-escenario-sintetico.jsonl:14",
+      "caso09-escenario-sintetico.jsonl:15",
+      "caso09-escenario-sintetico.jsonl:16",
+      "caso09-escenario-sintetico.jsonl:17",
+      "caso09-escenario-sintetico.jsonl:18",
+      "caso09-escenario-sintetico.jsonl:19",
+      "caso09-escenario-sintetico.jsonl:20",
+      "caso09-escenario-sintetico.jsonl:21"
+    ],
+    "recommendation": "Revisar evidencia y contexto; no bloquear automáticamente."
+  }
+]

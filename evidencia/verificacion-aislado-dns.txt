@@ -1,0 +1,28 @@
+==============================================
+ Verificación de laboratorio - rol: dns
+Wed Nov 18 07:47:21 PM -05 2026
+==============================================
+--    Interfaces de red:
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s8           UP             192.168.50.53/24 fe80::a00:27ff:fe63:8daf/64 
+[OK]   IP 192.168.50.53 configurada
+
+--    Conectividad (ping, timeout 1s):
+[OK]   gateway (192.168.50.1) responde
+[OK]   analista (192.168.50.10) responde
+[OK]   web (192.168.50.20) responde
+[OK]   dns (192.168.50.53) responde
+[OK]   xmpp (192.168.50.30) responde
+
+--    Aislamiento (192.0.2.1 NO debe responder):
+[OK]   192.0.2.1 no responde (aislado)
+
+--    Chequeos de dns:
+[OK]   servicio dnsmasq activo
+[OK]   DNS (dnsmasq) escuchando (puerto 53)
+[OK]   resuelve web.lab.local -> 192.168.50.20
+
+==============================================
+ Fin de la verificación
+Wed Nov 18 07:47:22 PM -05 2026
+==============================================

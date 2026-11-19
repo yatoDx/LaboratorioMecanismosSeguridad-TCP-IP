@@ -1,0 +1,10 @@
+# Evidencia: se guarda byte a byte, sin convertir saltos de línea (CRLF/LF),
+# para que los hashes SHA-256 del manifiesto y de evidencia.log coincidan en
+# cualquier clon, en Windows o en Linux.
+evidencia/**        -text
+entrega-parte-i/**  -text
+evidencia.log       -text
+*.pcap   binary
+*.pcapng binary
+*.png    binary
+*.pem    -text

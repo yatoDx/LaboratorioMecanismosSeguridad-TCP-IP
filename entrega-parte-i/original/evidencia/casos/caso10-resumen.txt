@@ -1,0 +1,17 @@
+CASO 10 - XMPP STARTTLS REAL
+2026-11-19T01:43:55.146427+00:00
+Destino 192.168.50.30:5222; VirtualHost xmpp.lab.local
+Certificado autofirmado: confianza explicita solo con -CAfile; NO confianza publica.
+subject=CN=xmpp.lab.local, O=Taller TCPIP laboratorio
+issuer=CN=xmpp.lab.local, O=Taller TCPIP laboratorio
+notBefore=Nov 19 01:42:40 2026 GMT
+notAfter=Dec 19 01:42:40 2026 GMT
+X509v3 Subject Alternative Name: 
+    DNS:xmpp.lab.local
+sha256 Fingerprint=78:10:A5:FE:A2:1E:44:DD:F4:06:C9:2B:09:63:22:5C:3E:E9:59:93:6F:64:80:B4:94:08:AC:F4:A4:16:6C:2B
+confianza_explicita: exit=0
+sin_confianza_local: exit=1
+nombre_incorrecto: exit=1
+Prueba correcta exige exit=0, certificado, nombre y cifrado; Verify return code aislado no basta.
+No se crearon cuentas ni se enviaron mensajes personales.
+SHA256 certificado: 3b90c614249008a0d7c1803d6b57f34704731aad7d5fb433d3898c2eef3b6fc8

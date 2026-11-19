@@ -1,0 +1,128 @@
+[
+  {
+    "reporting_host": "gateway",
+    "source": "auth",
+    "raw": "Nov 18 20:30:00 gateway sshd[999]: Failed password for lab from 192.168.50.100 port 41000 ssh2",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "auth",
+    "raw": "Nov 18 20:30:01 gateway sshd[999]: Failed password for lab from 192.168.50.100 port 41000 ssh2",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "auth",
+    "raw": "Nov 18 20:30:02 gateway sshd[999]: Failed password for lab from 192.168.50.100 port 41000 ssh2",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "auth",
+    "raw": "Nov 18 20:30:03 gateway sshd[999]: Failed password for lab from 192.168.50.100 port 41000 ssh2",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "auth",
+    "raw": "Nov 18 20:30:04 gateway sshd[999]: Failed password for lab from 192.168.50.100 port 41000 ssh2",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "auth",
+    "raw": "Nov 18 20:30:05 gateway sshd[999]: Failed password for lab from 192.168.50.100 port 41000 ssh2",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "web",
+    "source": "nginx",
+    "raw": "192.168.50.100 - - [18/Nov/2026:20:30:10 -0500] \"GET /demo HTTP/1.1\" 503 0",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "web",
+    "source": "nginx",
+    "raw": "192.168.50.100 - - [18/Nov/2026:20:30:11 -0500] \"GET /demo HTTP/1.1\" 503 0",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "web",
+    "source": "nginx",
+    "raw": "192.168.50.100 - - [18/Nov/2026:20:30:12 -0500] \"GET /demo HTTP/1.1\" 503 0",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:20 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8000 SYN",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:21 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8001 SYN",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:22 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8002 SYN",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:23 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8003 SYN",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:24 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8004 SYN",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:25 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8005 SYN",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:26 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8006 SYN",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:27 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8007 SYN",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:28 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8008 SYN",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:29 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8009 SYN",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:30 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8010 SYN",
+    "evidence_kind": "sintetica"
+  },
+  {
+    "reporting_host": "gateway",
+    "source": "nftables",
+    "raw": "Nov 18 20:30:31 gateway kernel: scan-syn: SRC=192.168.50.100 DST=192.168.50.1 PROTO=TCP DPT=8011 SYN",
+    "evidence_kind": "sintetica"
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "status": "historical_superseded",
+  "files": [
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-baseline-paquetes.csv",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-baseline-paquetes.csv",
+      "sha256": "1d5d1ff81a5a661b807d9546fb88b78ad89ce9d7261cc5631c35bb69e63efe65"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-consola.png",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-consola.png",
+      "sha256": "d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-dataset.csv",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-dataset.csv",
+      "sha256": "74d4226fe8d0355b0a5354584a352c030a0a43b21ffa2334a5a694f22fdfe57f"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-manifiesto.json",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-manifiesto.json",
+      "sha256": "c20ed1a88fb993c0e31bcec496c02a751dc40a75cda33900d10b4d6af811519f"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-matriz-confusion.png",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-matriz-confusion.png",
+      "sha256": "b30ca9f43e25873c944bf145b71411a10985a57412a7ff8a55af247b1b779806"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-metricas.json",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-metricas.json",
+      "sha256": "035b4906820c631601d65196981e81a01063c854803ea4764483d02b9ff57b29"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-metricas.txt",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-metricas.txt",
+      "sha256": "59a301f976104c9a61fa84de9cdcd6acf319bb76d6cf470dafd070917ac9f47e"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-modelo-parametros.json",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-modelo-parametros.json",
+      "sha256": "d073fd5b172c3fdf106de9c8884d4a7acd1fb49c973f63cb3129c193135ac01d"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-pantallazos-obsoletos.txt",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-pantallazos-obsoletos.txt",
+      "sha256": "68d4a95f6707a05c44c4bbab266e45f479b195e407d937aa9cde92c33abf27ec"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-predicciones.csv",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-predicciones.csv",
+      "sha256": "2bbdceefae6222863083c584f8d453b8cbef68e0d19db83139f88887c54a983c"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-pruebas.txt",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-pruebas.txt",
+      "sha256": "748278ab52d9d5021e26796dd7a8395b2facdfcc0b4fcb19cc69f4bf8457793e"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-scatter.png",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-scatter.png",
+      "sha256": "47ec1d4f041cea1574bf5a477b1166d4e22b1d91b5908305f22b696e7e2d5f70"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-segmentos.csv",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-segmentos.csv",
+      "sha256": "933915f6597466389c520f887aeebd1def61c3a492380607dc6863e3c4ac03c4"
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-sinteticos-paquetes.csv",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014606Z-e6d6e132\\caso04-sinteticos-paquetes.csv",
+      "sha256": "aebe272b6a2a9a63dbdebaa6b37d802377258c8c3583e93034cd78a5d6962161"
+    }
+  ],
+  "reason": "Versión anterior; no usar screenshots históricos como evidencia vigente"
+}

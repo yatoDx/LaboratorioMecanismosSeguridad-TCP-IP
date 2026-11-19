@@ -1,0 +1,23 @@
+CASO 2 — DNS TUNNELING (análisis)
+============================================================
+
+Total consultas DNS: 37
+
+Tabla por dominio (2LD) y clasificación:
+dominio                     n  max_etiqueta  entropia  clase
+exfil.lab.local            25            52     4.264  TUNEL
+web.lab.local               3             5     2.873  NORMAL
+xmpp.lab.local              3             5     3.039  NORMAL
+gateway.lab.local           3             7     3.220  NORMAL
+dns.lab.local               3             5     3.027  NORMAL
+
+Tabla por host origen:
+origen                n  tunel  normal
+192.168.50.10        37     25      12
+
+Muestras de etiquetas tunelizadas (más largas):
+   52 chars, ent=4.083  5fe878f78e2978aa2447c462ddaed16dc0cf0b9cd7f78df0cac5.exfil.lab.local
+   51 chars, ent=4.175  c15c0c8e9df469611a11f5125227c3712da86a78c49ea20e326.exfil.lab.local
+   50 chars, ent=4.233  1ac826a6fce48478dcb74f21345d2cce8038a39d5e0853964b.exfil.lab.local
+   50 chars, ent=4.264  e40c02d4e518ca6eaac8d82f01b7210760474f36e8b5359309.exfil.lab.local
+   48 chars, ent=4.146  50af03b971722f244f58d669cbee3772a077021721a278f6.exfil.lab.local

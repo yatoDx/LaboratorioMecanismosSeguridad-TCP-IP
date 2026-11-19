@@ -1,0 +1,83 @@
+\documentclass[11pt,a4paper,oneside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[top=2.6cm,bottom=2.6cm,left=2.7cm,right=2.5cm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs,tabularx,longtable,array,multirow}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,fit,shapes.geometric,calc}
+\usepackage{amsmath}
+\usepackage[hidelinks,pdfusetitle]{hyperref}
+\usepackage{bookmark}
+\usepackage{pdfpages}
+
+\hypersetup{pdftitle={Informe técnico - Taller 2: Mecanismos de seguridad para redes IEEE 802.3 con servidores TCP/IP},pdfauthor={Juan Esteban Buitrago Chavez}}
+
+\definecolor{udazul}{HTML}{0B3C78}
+\definecolor{codebg}{HTML}{F5F6F8}
+\definecolor{bgreal}{HTML}{1E7B34}
+\definecolor{bgsint}{HTML}{0B5CAB}
+
+% ---------- títulos
+\titleformat{\chapter}[display]{\bfseries\Large}{\chaptertitlename\ \thechapter}{8pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{20pt}{24pt}
+\titleformat{\section}{\bfseries\large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\bfseries\normalsize}{\thesubsection}{0.8em}{}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername\ \thechapter.\ #1}}{}}
+\fancyhead[L]{\small\itshape\leftmark}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}}
+
+\captionsetup{font=small,labelfont=bf,width=0.92\linewidth}
+\setlist{itemsep=2pt,topsep=4pt}
+\setlength{\parskip}{4pt}
+
+\lstdefinestyle{conf}{basicstyle=\ttfamily\footnotesize,backgroundcolor=\color{codebg},frame=single,rulecolor=\color{black!15},breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,xleftmargin=4pt,xrightmargin=4pt,aboveskip=6pt,belowskip=6pt,
+literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {ñ}{{\~n}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Ó}{{\'O}}1 {—}{{---}}1 {→}{{$\to$}}1 {ü}{{\"u}}1}
+\lstset{style=conf}
+
+\newcommand{\fig}[3][0.95]{\begin{figure}[H]\centering\includegraphics[width=#1\linewidth]{fig/#2}\caption{#3}\end{figure}}
+\newcommand{\cod}[1]{\texttt{\small #1}}
+
+% ficha de registro: tabla de dos columnas
+\newenvironment{ficha}[1]{\begin{table}[H]\centering\caption{#1}\small\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}>{\bfseries}p{3.3cm}>{\raggedright\arraybackslash}p{\dimexpr\linewidth-3.3cm-2\tabcolsep\relax}@{}}\toprule\textbf{Campo}&\textbf{Registro}\\\midrule}{\bottomrule\end{tabular}\end{table}}
+
+\addto\captionsspanish{\renewcommand{\bibname}{Referencias}}
+\begin{document}
+\pagenumbering{roman}
+\setcounter{page}{1}
+\input{secciones/portada}
+\tableofcontents
+\listoffigures
+\listoftables
+\cleardoublepage
+\pagenumbering{arabic}
+\input{secciones/cap1}
+\input{secciones/cap2}
+\input{secciones/cap3}
+\input{secciones/cap4}
+\input{secciones/cap5}
+\input{secciones/cap6}
+\input{secciones/cap7}
+\input{secciones/referencias}
+\appendix
+\input{secciones/anexos}
+\end{document}

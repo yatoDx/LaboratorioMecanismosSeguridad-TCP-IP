@@ -1,0 +1,12 @@
+# CASO 1 — PROPUESTA NO APLICADA. Instalar solo tras revisión en web .20.
+# Gateway .1 no ve tráfico directo de peers de la misma subred.
+# Tabla independiente; no reemplaza reglas existentes ni restringe otros servicios.
+# Token bucket agregado para HTTP IPv4: 10/s, burst20; no es límite por origen.
+# 'over' selecciona EXCESO: sin over se descartarían paquetes bajo el límite.
+# La simulación PCAP no prueba esta regla ni disponibilidad del servidor.
+table inet caso01_syn {
+    chain input {
+        type filter hook input priority 0; policy accept;
+        ip daddr 192.168.50.20 tcp dport 80 tcp flags & (syn | ack) == syn limit rate over 10/second burst 20 packets counter drop
+    }
+}

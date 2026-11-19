@@ -1,0 +1,30 @@
+Nov 18 19:48:19 gateway (systemd)[1796]: pam_unix(systemd-user:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 19:48:30 gateway sudo[1820]:      lab : TTY=tty1 ; PWD=/home/lab ; USER=root ; COMMAND=/usr/sbin/nft list ruleset
+Nov 18 19:48:30 gateway sudo[1820]: pam_unix(sudo:session): session opened for user root(uid=0) by lab(uid=1000)
+Nov 18 19:48:30 gateway sudo[1820]: pam_unix(sudo:session): session closed for user root
+Nov 18 19:55:01 gateway CRON[1837]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Nov 18 19:55:01 gateway CRON[1838]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov 18 19:55:01 gateway CRON[1837]: pam_unix(cron:session): session closed for user root
+Nov 18 20:05:01 gateway CRON[1855]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Nov 18 20:05:01 gateway CRON[1856]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov 18 20:05:01 gateway CRON[1855]: pam_unix(cron:session): session closed for user root
+Nov 18 20:10:08 gateway sshd[1860]: Accepted password for lab from 192.168.50.10 port 49877 ssh2
+Nov 18 20:10:08 gateway sshd[1860]: pam_unix(sshd:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:08 gateway sudo[1923]:      lab : PWD=/home/lab ; USER=root ; COMMAND=/usr/bin/ss -tulpn
+Nov 18 20:10:08 gateway sudo[1923]: pam_unix(sudo:session): session opened for user root(uid=0) by lab(uid=1000)
+Nov 18 20:10:08 gateway sudo[1923]: pam_unix(sudo:session): session closed for user root
+Nov 18 20:10:08 gateway sshd[1860]: pam_unix(sshd:session): session closed for user lab
+Nov 18 20:10:20 gateway sshd[1927]: Accepted password for lab from 192.168.50.10 port 53582 ssh2
+Nov 18 20:10:20 gateway sshd[1927]: pam_unix(sshd:session): session opened for user lab(uid=1000) by lab(uid=0)
+Nov 18 20:10:21 gateway sudo[1977]:      lab : PWD=/home/lab ; USER=root ; COMMAND=/usr/bin/journalctl --no-pager -n 400
+Nov 18 20:10:21 gateway sudo[1977]: pam_unix(sudo:session): session opened for user root(uid=0) by lab(uid=1000)
+Nov 18 20:10:21 gateway sudo[1977]: pam_unix(sudo:session): session closed for user root
+Nov 18 20:10:21 gateway sshd[1927]: pam_unix(sshd:session): session closed for user lab
+Nov 18 20:15:01 gateway CRON[1981]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Nov 18 20:15:01 gateway CRON[1982]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov 18 20:15:01 gateway CRON[1981]: pam_unix(cron:session): session closed for user root
+Nov 18 20:17:01 gateway CRON[1992]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Nov 18 20:17:01 gateway CRON[1993]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+Nov 18 20:17:01 gateway CRON[1992]: pam_unix(cron:session): session closed for user root
+Nov 18 20:19:44 gateway sshd[1995]: Accepted password for lab from 192.168.50.10 port 62706 ssh2
+Nov 18 20:19:44 gateway sshd[1995]: pam_unix(sshd:session): session opened for user lab(uid=1000) by lab(uid=0)

@@ -1,0 +1,47 @@
+{
+  "motivo": "Revision metodologica: ventanas desiguales, etiquetas por PCAP, evaluacion con entrenamiento. Screenshots historicos obsoletos; no borrar.",
+  "archivos": [
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-consola.png",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014046Z-40a56cb8\\caso04-consola.png",
+      "sha256": "d492d66a4f0f9971c1f92386bf21e351a2ce888c4e2c168f3751bfee4ef6806f",
+      "obsoleto": true
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-dataset.csv",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014046Z-40a56cb8\\caso04-dataset.csv",
+      "sha256": "d9d635ebd81d5c288d462d6f219f7839e1b252c139dde0d2e8a52c3e2b8ef176",
+      "obsoleto": true
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-matriz-confusion.png",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014046Z-40a56cb8\\caso04-matriz-confusion.png",
+      "sha256": "76e9384bd105273f06911493cf06ec570730a429d81a185082d6c31ffb4e495f",
+      "obsoleto": true
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-metricas.txt",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014046Z-40a56cb8\\caso04-metricas.txt",
+      "sha256": "cc7b5013f442c2ebcbab16db6b7a965fc048b4777ccc097461dce0e580980f95",
+      "obsoleto": true
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\caso04-scatter.png",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014046Z-40a56cb8\\caso04-scatter.png",
+      "sha256": "64255cfec2e9c6e267d1dc863dfe231567bc2e82cd23f34d58233987589b93ec",
+      "obsoleto": true
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\scripts\\caso04_ml.py",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014046Z-40a56cb8\\caso04_ml.py",
+      "sha256": "60fbef2b02e01a348c36f7f88a1200caeec574a67e5305e6c4f49a6c2f20f8d7",
+      "obsoleto": true
+    },
+    {
+      "original": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\fichas\\caso04-anomalias-ml.md",
+      "backup": "C:\\Users\\yatoG\\Documents\\Qoder\\2026-11-18\\70141794\\lab\\evidencia\\casos\\revision-ml-anterior\\20261119T014046Z-40a56cb8\\caso04-anomalias-ml.md",
+      "sha256": "8bcbdc729c0d0b39f256cef276a22d7fb79bbe3c8d164749eb6dc7510c1afca2",
+      "obsoleto": true
+    }
+  ]
+}

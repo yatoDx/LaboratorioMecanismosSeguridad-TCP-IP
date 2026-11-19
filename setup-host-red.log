@@ -1,0 +1,41 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261118171239
+Nombre de usuario: yato\yatoG
+Usuario RunAs: yato\yatoG
+Nombre de la configuración: 
+Máquina: YATO (Microsoft Windows NT 10.0.26200.0)
+Aplicación host: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\yatoG\Documents\Qoder\2026-11-18\70141794\lab\setup-host-red.ps1
+Id. de proceso: 14144
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\yatoG\Documents\Qoder\2026-11-18\70141794\lab\setup-host-red.log
+=== ConfiguraciÃ³n de la red del analista (192.168.50.0/24) ===
+Adaptador detectado: Ethernet 2 - VirtualBox Host-Only Ethernet Adapter
+
+--- IP resultante ---
+
+IPAddress     PrefixLength
+---------     ------------
+192.168.50.10           24
+
+
+--- DNS resultante ---
+
+ServerAddresses
+---------------
+{192.168.50.53}
+
+
+[OK] Red del analista configurada: 192.168.50.10/24, DNS 192.168.50.53
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20261118171243
+**********************

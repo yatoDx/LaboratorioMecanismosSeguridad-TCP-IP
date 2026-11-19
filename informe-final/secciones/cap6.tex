@@ -1,0 +1,36 @@
+\chapter{Discusión y análisis}\label{cap:discusion}
+
+\section{Interpretación de los resultados}
+Los diez casos comparten una lección: \textbf{un indicador aislado no confirma un ataque}. Una ráfaga de SYN, una etiqueta DNS de alta entropía, un RST con \emph{ack = 0} o un ping de 1300~B tienen explicaciones legítimas. Lo que convierte un indicador en hallazgo es el contexto: la correlación del saludo TCP, la agrupación por origen y dominio, la tupla de la sesión, la comparación con una línea base medida.
+
+Medir corrige supuestos. Contar SYN no es contar puertos (Caso 8: 25 sondeos, 24 puertos); contar paquetes con ACK no es contar conexiones (Caso 1); el tamaño de trama no es el payload (Caso 7); la media de una captura de 21~s no es la tasa de una ráfaga de 10~s. Por eso todas las cifras salen de scripts que cualquiera puede volver a ejecutar, y la re-ejecución para este informe reprodujo las salidas byte a byte.
+
+La ubicación del control importa tanto como el control. El gateway del laboratorio no reenvía tráfico y no ve lo que circula entre peers de la subred; por eso cada regla propuesta se instala en el host protegido y no en el gateway. En una red real esto equivale a preguntarse siempre si el firewall está en la ruta del tráfico que se quiere filtrar.
+
+\section{Efecto de limpiar la línea base}
+La línea base original incluía tráfico ajeno del anfitrión Windows. Se repitieron los casos que la usan sobre la versión limpia (720 paquetes, solo tráfico del laboratorio):
+
+\begin{table}[H]\centering\small\caption{Casos 1, 4 y 7 con la línea base original y con la limpia.}
+\begin{tabularx}{\linewidth}{@{}p{3.6cm}p{3.6cm}p{3.6cm}X@{}}\toprule
+\textbf{Caso} & \textbf{Original} & \textbf{Limpia} & \textbf{Lectura}\\\midrule
+1 SYN flood & 0 SYN en 296,67~s & 0 SYN en 293,26~s & Sin cambio\\
+7 ICMP & 152 echo, máx. 1/s, 0 $>$ 200~B & Igual & Sin cambio\\
+4 z-score (normales) & 1 falso positivo de 11 & 0 de 11 & Mejora: el error venía del ruido del anfitrión\\
+4 Isolation Forest & 5 de 11 & 5 de 11 & Sin cambio\\
+4 sintéticas & 22/22 & 22/22 & Sin cambio\\
+\bottomrule\end{tabularx}\end{table}
+
+Las conclusiones de los casos 1 y 7 no cambian. En el Caso~4, el único falso positivo del z-score lo causaba el tráfico del anfitrión, lo que muestra cuánto depende un detector de la calidad de su ``normal''. Los resultados están en \cod{evidencia/casos-linea-base-limpia/}, fuera del manifiesto para no alterar la evidencia cerrada.
+
+\section{Límites de la evidencia}
+\begin{itemize}
+\item Los PCAP de ataque son sintéticos: prueban que el análisis detecta el patrón diseñado, no que funcione ante un atacante real que se adapta.
+\item Las reglas nftables se validaron sintácticamente; no se midió su efecto con tráfico.
+\item El Caso~4 usa una sola captura de cinco minutos: sus métricas no generalizan.
+\item El Caso~9 correlaciona fragmentos de logs de horas distintas; su única alerta es sintética y el dictamen humano está pendiente.
+\item Cuatro archivos de texto de la evidencia perdieron sus saltos de línea originales en Git; el manifiesto los registra como enmiendas.
+\item Las versiones de herramientas y el uso de un pipeline propio en lugar de Wazuh se asumieron aceptables sin confirmación del docente.
+\end{itemize}
+
+\section{Aprendizaje automático y correlación}
+Los dos enfoques de detección automática del taller apuntan en la misma dirección: sirven para \textbf{ordenar} la atención del analista, no para decidir. Isolation Forest marcó casi la mitad de las ventanas normales posteriores; un bloqueo automático basado en él cortaría tráfico legítimo con frecuencia. La correlación del Caso~9 es útil precisamente porque cada punto de la alerta se explica y enlaza a la línea de log que lo produjo, de modo que una persona puede verificarla.

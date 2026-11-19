@@ -1,0 +1,18 @@
+CASO 8 — LISTA SINTÉTICA PARCIAL, NO DESCUBRIMIENTO REAL
+SYN=25; puertos destino únicos globales=24; pares destino/puerto=25; RST=21; SYN-ACK=4
+Puerto 80 repetido entre .20 y .30: 25 sondeos pero 24 números únicos.
+Ventanas fijas [inicio,fin), ancho=0.1s; por origen/destino (solo ventanas no vacías):
+  [0.0,0.1) 192.168.50.100 -> 192.168.50.20: SYN=10; cardinalidad=10; puertos=[21, 22, 23, 25, 53, 80, 111, 135, 139, 443]
+  [0.1,0.2) 192.168.50.100 -> 192.168.50.20: SYN=10; cardinalidad=10; puertos=[445, 500, 1433, 3306, 3389, 5432, 5900, 6379, 8000, 8080]
+  [0.4,0.5) 192.168.50.100 -> 192.168.50.30: SYN=5; cardinalidad=5; puertos=[80, 5222, 5223, 5269, 5280]
+Ventanas fijas [inicio,fin), ancho=1.0s; por origen/destino (solo ventanas no vacías):
+  [0.0,1.0) 192.168.50.100 -> 192.168.50.20: SYN=20; cardinalidad=20; puertos=[21, 22, 23, 25, 53, 80, 111, 135, 139, 443, 445, 500, 1433, 3306, 3389, 5432, 5900, 6379, 8000, 8080]
+  [0.0,1.0) 192.168.50.100 -> 192.168.50.30: SYN=5; cardinalidad=5; puertos=[80, 5222, 5223, 5269, 5280]
+Respuestas programadas SYN-ACK en el guion, no exposición confirmada:
+  192.168.50.20: [22, 80]
+  192.168.50.30: [5222, 5269]
+.30:22 SSH no fue sondeado en este escenario; sí figura en ss real del caso3.
+25 SYN no implican 25 puertos únicos, ni un contador de SYN equivale a cardinalidad.
+Umbral propuesto para revisión: >=20 puertos distintos por origen/destino en 1s.
+No clasifica intención ni demuestra intrusión; ventanas fijas pueden partir un escaneo.
+nft solo registra SYN con límite antes de log; cardinalidad se calcula aquí, sin policy drop general.

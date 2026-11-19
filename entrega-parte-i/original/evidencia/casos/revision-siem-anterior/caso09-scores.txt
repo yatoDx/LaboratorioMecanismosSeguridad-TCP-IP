@@ -1,0 +1,29 @@
+CASO 9 — SIEM: características por host y puntaje
+============================================================
+
+Host dns:
+  eventos: {'DNS_QUERY': 30, 'DNS_REFUSED': 30}
+  orígenes distintos: 1
+  puntaje: 30  (ALERTA)
+  factores: DNS_REFUSED x30 (+30)
+
+Host gateway:
+  eventos: {'SUDO': 9, 'CRON': 12, 'AUTH_SUCCESS': 3, 'SYSTEM': 15}
+  orígenes distintos: 1
+  puntaje: 9  (ALERTA)
+  factores: SUDO x9 (+9)
+
+Host web:
+  eventos: {'HTTP_OK': 29}
+  orígenes distintos: 2
+  puntaje: 0  (normal)
+
+Host xmpp:
+  eventos: {'XMPP_CONNECT': 40}
+  orígenes distintos: 0
+  puntaje: 0  (normal)
+
+============================================================
+ESCENARIO INYECTADO (sintético, documentado):
+  6 AUTH_FAIL + 3 HTTP_5xx + 1 DNS_REFUSED desde 192.168.50.100
+

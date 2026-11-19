@@ -1,0 +1,67 @@
+test_correlation_has_evidence_and_score (test_caso09_siem.SIEMTests.test_correlation_has_evidence_and_score) ... ok
+test_disconnect_is_not_connect (test_caso09_siem.SIEMTests.test_disconnect_is_not_connect) ... ok
+test_http_client_error_not_server_error (test_caso09_siem.SIEMTests.test_http_client_error_not_server_error) ... ok
+test_real_and_synthetic_never_merge (test_caso09_siem.SIEMTests.test_real_and_synthetic_never_merge) ... ok
+test_refused_is_not_attributed (test_caso09_siem.SIEMTests.test_refused_is_not_attributed) ... ok
+test_unknown_line_ignored (test_caso09_siem.SIEMTests.test_unknown_line_ignored) ... ok
+test_windows_never_merge (test_caso09_siem.SIEMTests.test_windows_never_merge) ... ok
+test_bucket_burst_refill_and_cap (test_casos_parte1.TestCorrecciones.test_bucket_burst_refill_and_cap) ... ok
+test_bucket_keeps_packets_in_second_half (test_casos_parte1.TestCorrecciones.test_bucket_keeps_packets_in_second_half) ... ok
+test_cardinality_deduplicates_and_partitions (test_casos_parte1.TestCorrecciones.test_cardinality_deduplicates_and_partitions) ... ok
+test_categories_exclusive (test_casos_parte1.TestCorrecciones.test_categories_exclusive) ... ok
+test_dns_entropy_uses_longest_label (test_casos_parte1.TestCorrecciones.test_dns_entropy_uses_longest_label) ... ok
+test_dns_heuristic_boundaries (test_casos_parte1.TestCorrecciones.test_dns_heuristic_boundaries) ... ok
+test_dns_wire_question_and_response (test_casos_parte1.TestCorrecciones.test_dns_wire_question_and_response) ... ok
+test_handshake_retransmission_deduplicated (test_casos_parte1.TestCorrecciones.test_handshake_retransmission_deduplicated) ... ok
+test_host_inventory_requires_listen_and_retains_pid (test_casos_parte1.TestCorrecciones.test_host_inventory_requires_listen_and_retains_pid) ... ok
+test_icmp_payload_not_frame (test_casos_parte1.TestCorrecciones.test_icmp_payload_not_frame) ... ok
+test_real_dns_query_source_is_separate (test_casos_parte1.TestCorrecciones.test_real_dns_query_source_is_separate) ... ok
+test_rst_without_ack_not_forgery (test_casos_parte1.TestCorrecciones.test_rst_without_ack_not_forgery) ... ok
+test_rules_scoped_no_general_drop (test_casos_parte1.TestCorrecciones.test_rules_scoped_no_general_drop) ... ok
+test_sequence_wrap (test_casos_parte1.TestCorrecciones.test_sequence_wrap) ... ok
+test_timeout_missing_synack_and_rst (test_casos_parte1.TestCorrecciones.test_timeout_missing_synack_and_rst) ... ok
+test_tshark_failure_not_empty_success (test_casos_parte1.TestCorrecciones.test_tshark_failure_not_empty_success) ... ok
+test_udp_pairs_exclude_unmatched_or_dns (test_casos_parte1.TestCorrecciones.test_udp_pairs_exclude_unmatched_or_dns) ... ok
+test_udp_rates_are_per_second (test_casos_parte1.TestCorrecciones.test_udp_rates_are_per_second) ... ok
+test_windows_include_idle_and_exact_edges (test_casos_parte1.TestCorrecciones.test_windows_include_idle_and_exact_edges) ... ok
+test_wrong_ack_or_tuple_cannot_complete (test_casos_parte1.TestCorrecciones.test_wrong_ack_or_tuple_cannot_complete) ... ok
+test_baseline_read_for_tcp_and_icmp (test_casos_parte1.TestPcapOffline.test_baseline_read_for_tcp_and_icmp) ... ok
+test_case02_label_metrics_on_generated_pcap (test_casos_parte1.TestPcapOffline.test_case02_label_metrics_on_generated_pcap) ... ok
+test_case05_out_of_flow_raw_sequences (test_casos_parte1.TestPcapOffline.test_case05_out_of_flow_raw_sequences) ... ok
+test_case07_generated_payload_sizes (test_casos_parte1.TestPcapOffline.test_case07_generated_payload_sizes) ... ok
+test_case08_exact_counts (test_casos_parte1.TestPcapOffline.test_case08_exact_counts) ... ok
+test_dns_generator_valid_no_malformed_ntp (test_casos_parte1.TestPcapOffline.test_dns_generator_valid_no_malformed_ntp) ... ok
+test_syn_counts_and_correlated_completions (test_casos_parte1.TestPcapOffline.test_syn_counts_and_correlated_completions) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 3.473s
+
+OK
+CASO-04 · pruebas unitarias offline
+Script SHA256: a97237575785d4fc29ad0a4dfc35b28dd41e85a9d20b2c6180db5c57248eebc8
+test_bidirectional_duration_and_retransmissions (__main__.MethodologyTests.test_bidirectional_duration_and_retransmissions) ... ok
+test_dns_suffix_and_background_labels (__main__.MethodologyTests.test_dns_suffix_and_background_labels) ... ok
+test_equal_windows_boundaries_empty_and_tail (__main__.MethodologyTests.test_equal_windows_boundaries_empty_and_tail) ... ok
+test_fit_sees_only_train_features_and_rejects_leakage (__main__.MethodologyTests.test_fit_sees_only_train_features_and_rejects_leakage) ... ok
+test_insufficient_or_anomalous_training_rejected (__main__.MethodologyTests.test_insufficient_or_anomalous_training_rejected) ... ok
+test_malformed_extraction_fails (__main__.MethodologyTests.test_malformed_extraction_fails) ... ok
+test_parse_boolean_dns_flags_across_tshark_versions (__main__.MethodologyTests.test_parse_boolean_dns_flags_across_tshark_versions) ... ok
+test_reject_bad_window (__main__.MethodologyTests.test_reject_bad_window) ... ok
+test_requests_responses_and_zero_denominator (__main__.MethodologyTests.test_requests_responses_and_zero_denominator) ... ok
+test_single_class_metrics_are_not_fake_zeros (__main__.MethodologyTests.test_single_class_metrics_are_not_fake_zeros) ... ok
+test_subprocess_empty_output (__main__.MethodologyTests.test_subprocess_empty_output) ... ok
+test_subprocess_missing_binary (__main__.MethodologyTests.test_subprocess_missing_binary) ... ok
+test_subprocess_nonzero (__main__.MethodologyTests.test_subprocess_nonzero) ... ok
+test_subprocess_readonly_arguments_and_checks (__main__.MethodologyTests.test_subprocess_readonly_arguments_and_checks) ... ok
+test_subprocess_timeout (__main__.MethodologyTests.test_subprocess_timeout) ... ok
+test_syn_labels_require_origin_flags_and_segment (__main__.MethodologyTests.test_syn_labels_require_origin_flags_and_segment) ... ok
+test_synthetic_reproducible_and_only_test_parents (__main__.MethodologyTests.test_synthetic_reproducible_and_only_test_parents) ... ok
+test_temporal_split_disjoint_and_embargo (__main__.MethodologyTests.test_temporal_split_disjoint_and_embargo) ... ok
+test_test_extremes_do_not_change_fitted_statistics (__main__.MethodologyTests.test_test_extremes_do_not_change_fitted_statistics) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.681s
+
+OK
+
+53 pruebas unitarias OK; TLS 0/1/1, identidad y cifrado OK; baseline historico SHA256 intacto; documentos= 11 enlaces locales validos= 33

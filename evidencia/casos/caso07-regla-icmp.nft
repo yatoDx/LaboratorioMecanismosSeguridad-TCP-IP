@@ -1,0 +1,12 @@
+# CASO 7 — PROPUESTA NO APLICADA, para host protegido web .20, NO gateway .1.
+# Tabla independiente: solo descarta EXCESO echo-request IPv4 a .20.
+# policy accept deja intactos otros servicios y tipos ICMP; otras tablas
+# todavía pueden descartar tráfico. No es un firewall integral.
+# Bucket agregado 5/s burst10, no por origen; umbral propuesto no validado.
+# No bloquea por tamaño ni afirma detectar túneles/exfiltración.
+table inet caso07_echo {
+    chain input {
+        type filter hook input priority 0; policy accept;
+        ip daddr 192.168.50.20 icmp type echo-request limit rate over 5/second burst 10 packets counter drop
+    }
+}

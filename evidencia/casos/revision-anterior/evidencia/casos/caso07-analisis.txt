@@ -1,0 +1,17 @@
+CASO 7 — ICMP (análisis)
+============================================================
+
+Total paquetes ICMP: 63
+
+Tabla por IP origen (n, tamaño min/med/max, tipo):
+  192.168.50.100   n= 55  min= 106 med= 106 max=1331  tipos={'8': 55}
+  192.168.50.10    n=  4  min=  51 med=  51 max=  51  tipos={'8': 4}
+  192.168.50.1     n=  1  min=  51 med=  51 max=  51  tipos={'0': 1}
+  192.168.50.20    n=  1  min=  51 med=  51 max=  51  tipos={'0': 1}
+  192.168.50.53    n=  1  min=  51 med=  51 max=  51  tipos={'0': 1}
+  192.168.50.30    n=  1  min=  51 med=  51 max=  51  tipos={'0': 1}
+
+Muestras de payloads atípicos (frame.len > 200):
+  t=7.0s  192.168.50.100 -> 192.168.50.20  len=1331  tipo=8
+  t=7.2s  192.168.50.100 -> 192.168.50.20  len=1331  tipo=8
+  t=7.4s  192.168.50.100 -> 192.168.50.20  len=1331  tipo=8
